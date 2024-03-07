@@ -12,9 +12,9 @@
                 <tool idref='t3'/>
             </tools>
             <time> <!--Container box for time details (**HOW TO LINK TO MEASUREMENTS**)-->
-                <preptime>10</preptime>
-                <cooktime>20</cooktime>
-                <totaltime>30</totaltime>
+                <preptime>10 minutes</preptime>
+                <cooktime>20 minutes</cooktime>
+                <totaltime>30 minutes</totaltime>
             </time>
             <ingredients> <!--Container box for ingredients-->
                 <ingredient idref='i2'>
@@ -23,10 +23,9 @@
                 </ingredient>
             </ingredients>  
             <steps> <!--Container box for cooking instructions-->
-                <step>1. Cut the chicken into strips.</step>
-                <step>2. Coat in marinade.</step>
+                <step>1. Cut the chicken into little strips.</step>
                 <step>3. Put in flour, then egg, then breadcrumbs.</step>
-                <step>4. Bake at 180°C for 15 minutes.</step> <!--(CHANGE THIS)-->
+                <step>4. Bake at 180°C for 15 minutes.</step>
             </steps>
             <information> <!--Container box for recipe categories, allergens, tags, and nutrition information -->
                 <cat_value idref='cv1'/> <!--recipe category-->
@@ -53,11 +52,11 @@
             <telephone>0648963312</telephone>
         </contact>
         <subscriptions>
-            <recipebox idref='rb1'>
-                <orderfrequency></orderfrequency>
-            </recipebox>
+            <recipebox idref='rb1'/>
         </subscriptions>
-        <gastronomy_preferences></gastronomy_preferences> <!--Allergies, preferences, etc. LINK-->
+        <gastronomy_preferences>
+            <pref idref='tv3' idref1='tv7'/>
+        </gastronomy_preferences> <!--Allergies, preferences, etc. LINK-->
     </customer>
 </customers>
 
@@ -65,6 +64,7 @@
     <recipebox id='rb1'> <!-- A single recipe box -->
         <recipe idref='1'/>
         <tags ifdref='tv7'/> <!-- Add a tag to categorize the recipe box?-->
+        <price>45 euros</price> <!-- (**HAVE TO CALCULATE**)-->
     </recipebox>
 </recipeboxes>
 
@@ -94,14 +94,11 @@
 </suppliers>
 
 <orders> <!-- ORDERS INFORMATION -->
-    <customer>
-        <recipebox>
-            <amount>
-            </amount>
-        </recipebox>
-       <invoice_amount></invoice_amount>
-       <order_date></order_date>
-    </customer>
+    <order id='o1'>
+        <customer idref='c1'/>
+        <recipebox idref='rb1'/>
+        <invoice_amount></invoice_amount>
+    </order>
 </orders>
 
 <tools>
@@ -117,15 +114,16 @@
 </authors>
 
 <user_feedback>
-    <customer> <!--Customer who left feedback (ID needed)-->
-        <rating></rating>
-        <comments></comments>
+    <customer idref='c1'> <!--Customer who left feedback (ID needed)-->
+        <recipe idref='1'/>
+        <rating>4.2</rating>
+        <comments>Amazing recipe!</comments>
     </customer>              
 </user_feedback>
 
 <recipe_categorisation> <!--RECIPE CATEGORIES: holds the categories, tags, and allergen categories for recipes-->
     <category>
-        <cat_value id='cv1'>Mains</cat_value>
+        <cat_value id='cv1'>Mains</cat_value><!--ID naming to be easier to remember/identify?-->
         <cat_value id='cv2'>Entrées</cat_value>
         <cat_value id='cv3'>Sides</cat_value>
         <cat_value id='cv4'>Soups and Stews</cat_value>
@@ -160,24 +158,17 @@
 
 
 <measurements> <!--MEASUREMENT DATABASE: holds the measurement values for recipes-->
-    <measure_liters>
-        <value>L</value>
-        <value>dL</value>
-        <value>cL</value>
-        <value>mL</value>
+    <measure_liters id='measure_l'>
+        <ml_value>L</ml_value>
+        <ml_value>dL</ml_value>
+        <ml_value>cL</ml_value>
+        <ml_value>mL</ml_value>
     </measure_liters>
-    <measure_grams>
-        <value>kg</value>
-        <value>g</value>
-        <value>mg</value>  
+    <measure_grams id='measure_g'>
+        <mg_value>kg</mg_value>
+        <mg_value>g</mg_value>
+        <mg_value>mg</mg_value>  
     </measure_grams>
-    <measure_temp>
-        <value>°C</value>
-    </measure_temp>
-    <measure_time>
-        <value>minutes</value>
-        <value>hours</value>
-    </measure_time>
 </measurements>
 
 </recipebox_database>

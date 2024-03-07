@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-testing, testing
+
+<xs:element name='recipes' type='recipeType'/>
+<xs:element name='customers'/>
+<xs:element name='recipeboxes'/>
+<xs:element name='ingredients'/>
+<xs:element name='suppliers'/>
+<xs:element name='orders'/>
+<xs:element name='tools'/>
+<xs:element name='authors'/>
+<xs:element name='user_feedback'/>
+<xs:element name='recipe_categorisation'/>
+<xs:element name='measurements'/>
+
+<xs:complexType name="recipeType"></xs:complexType>
+
 </xs:schema>
