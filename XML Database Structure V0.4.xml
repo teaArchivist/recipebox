@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recipebox_database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="recipebox.xsd">
+
+<recipes> <!--RECIPE DATABASE: holds the recipes-->
+    <recipe> <!--A single recipe (ID needed)-->
+        <title></title> <!--Title of the recipe-->
+        <author></author> <!--Author of the recipe (ID needed) (LINKED)-->
+        <information> <!--Container box for recipe details-->
+            <description></description> <!--Short paragraph about the recipe-->
+            <quantity></quantity> <!--How many servings-->
+            <tools></tools> <!--Cooking utensils needed (LINKED)-->
+            <time> <!--Container box for time details-->
+                <preptime></preptime> <!--How much time needed for prep-->
+                <cooktime></cooktime> <!--How much time needed for cooking-->
+                <totaltime></totaltime> <!--How much total time needed-->
+            </time>
+            <ingredients> <!--List of ingredients needed-->
+                <ingredient> <!--Ingredient singular (LINKED?)-->
+                    <amount></amount>
+                    <unit></unit><!--LINK to measurement database-->
+                </ingredient>
+            </ingredients>  
+            <steps> <!-- Instruction steps -->
+                <step></step>
+            </steps>
+            <information> <!--Enumeration-->
+                <category></category> <!--Vegetarian, Vegan, Fish, Vegetables, CO2 Smart, Meat etc. LINK-->
+                <allergens></allergens> <!--Nut free, dairy free, gluten free LINK-->
+                <nutrition></nutrition> <!--Sodium, Fiber, etc. LINK-->
+            </information>
+        <user_feedback></user_feedback> <!--Linked to customerID and recipeID. Should show commnet text-->
+        <URL></URL> <!--Recipe URL-->
+        </information>
+    </recipe>
+</recipes>
+
+<customers> <!--CUSTOMER DATABASE-->
+    <name> <!-- A single customer -->
+        <address>
+            <street></street>
+            <city></city>
+            <zipcode></zipcode>
+        </address>
+        <contact>
+            <email></email>
+            <telephone></telephone>
+        </contact>
+        <subscriptions>
+            <recipebox>
+                <orderfrequency></orderfrequency>
+            </recipebox>
+        </subscriptions>
+        <gastronomy_preferences></gastronomy_preferences> <!--Allergies, preferences, etc. LINK-->
+    </name>
+</customers>
+
+<recipeboxes> <!--RECIPEBOX DATABASE-->
+    <recipebox> <!-- A single recipe box -->
+        <recipe></recipe>
+        <tags></tags> <!-- Add a tag to categorize the recipe box?-->
+    </recipebox>
+</recipeboxes>
+
+<ingredients> <!--INGREDIENTS DATABASE-->
+    <ingredient_name> <!-- A single ingredient -->
+        <type></type> <!-- Fruit, spice, etc. -->
+        <seasonality></seasonality>
+        <nutrition_info></nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier></supplier> <!--Supplier that handles this ingredient delivery-->
+    </ingredient_name>
+</ingredients>
+
+<suppliers> <!--SUPPLIERS DATABASE-->
+    <supplier_name> <!-- A single supplier + ID -->
+        <address>
+            <street></street>
+            <city></city>
+            <zipcode></zipcode>
+        </address>
+        <contact>
+            <email></email>
+            <telephone></telephone>
+        </contact>
+    </supplier_name>
+</suppliers>
+
+<orders> <!-- ORDERS INFORMATION -->
+    <customer>
+        <recipebox>
+            <amount>
+            </amount>
+        </recipebox>
+       <invoice_amount></invoice_amount>
+       <order_date></order_date>
+    </customer>
+</orders>
+
+<tools>
+    <tool_name> <!--ID--></tool_name>
+</tools>
+
+<author> <!--AUTHORS DATABASE-->
+    <author_name> <!-- A single author -->
+        <address>
+            <street></street>
+            <city></city>
+            <zipcode></zipcode>
+        </address>
+        <contact>
+            <email></email>
+            <telephone></telephone>
+        </contact>
+        <recipeboxID></recipeboxID>
+    </author_name>
+</author>
+
+<user_feedback>
+    <customer> <!--Customer who left feedback (ID needed)-->
+        <rating></rating>
+        <comments></comments>
+    </customer>              
+</user_feedback>
+
+<recipe_categorisation> <!--RECIPE CATEGORIES: holds the categories, tags, and allergen categories for recipes-->
+    <category>
+        <value>Mains</value>
+        <value>Entrées</value>
+        <value>Sides</value>
+        <value>Soups and Stews</value>
+        <value>Pasta</value>
+        <value>Dessert</value>
+        <value>Drinks</value>
+    </category>
+    <recipe_tag>
+        <value>Vegetarian</value>
+        <value>Vegan</value>
+        <value>Protein</value>
+        <value>Seafood</value>
+        <value>Low calorie</value>
+        <value>Quick and Easy</value>
+        <value>Comfort Food</value>
+    </recipe_tag>
+    <allergens>
+        <value>Nut-free</value>
+        <value>Dairy-free</value>
+        <value>Gluten-free</value>
+    </allergens>
+    <nutrition>
+        <value>Calories</value>
+        <value>Fat</value>
+        <value>Protein</value>
+        <value>Carbs</value>
+        <value>Sugar</value>
+        <value>Sodium</value>
+        <value>Fiber</value>
+    </nutrition>
+</recipe_categorisation>
+
+
+<measurements> <!--MEASUREMENT DATABASE: holds the measurement values for recipes-->
+    <measure_liters>
+        <value>L</value>
+        <value>dL</value>
+        <value>cL</value>
+        <value>mL</value>
+    </measure_liters>
+    <measure_grams>
+        <value>kg</value>
+        <value>g</value>
+        <value>mg</value>  
+    </measure_grams>
+    <measure_temp>
+        <value>°C</value>
+    </measure_temp>
+    <measure_time>
+        <value>minutes</value>
+        <value>hours</value>
+    </measure_time>
+</measurements>
+
+</recipebox_database>
