@@ -2,86 +2,95 @@
 <recipebox_database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="recipebox.xsd">
 
 <recipes> <!--RECIPE DATABASE: holds the recipes-->
-    <recipe> <!--A single recipe (ID needed)-->
-        <title></title> <!--Title of the recipe-->
-        <author></author> <!--Author of the recipe (ID needed) (LINKED)-->
+    <recipe id='1'> <!--A single recipe -->
+        <title>Chili con Carne</title>
+        <author idref='8'/>
         <information> <!--Container box for recipe details-->
-            <description></description> <!--Short paragraph about the recipe-->
-            <quantity></quantity> <!--How many servings-->
-            <tools></tools> <!--Cooking utensils needed (LINKED)-->
-            <time> <!--Container box for time details-->
-                <preptime></preptime> <!--How much time needed for prep-->
-                <cooktime></cooktime> <!--How much time needed for cooking-->
-                <totaltime></totaltime> <!--How much total time needed-->
+            <description>A delicious recipe for oven-made chicken tenders!</description>
+            <quantity>4</quantity> <!--How many servings-->
+            <tools> <!--Cooking utensils-->
+                <tool idref='t3'/>
+            </tools>
+            <time> <!--Container box for time details (**HOW TO LINK TO MEASUREMENTS**)-->
+                <preptime>10</preptime>
+                <cooktime>20</cooktime>
+                <totaltime>30</totaltime>
             </time>
-            <ingredients> <!--List of ingredients needed-->
-                <ingredient> <!--Ingredient singular (LINKED?)-->
-                    <amount></amount>
-                    <unit></unit><!--LINK to measurement database-->
+            <ingredients> <!--Container box for ingredients-->
+                <ingredient idref='i2'>
+                    <amount>1</amount>
+                    <unit idref='m3'/>
                 </ingredient>
             </ingredients>  
-            <steps> <!-- Instruction steps -->
-                <step></step>
+            <steps> <!--Container box for cooking instructions-->
+                <step>1. Cut the chicken into strips.</step>
+                <step>2. Coat in marinade.</step>
+                <step>3. Put in flour, then egg, then breadcrumbs.</step>
+                <step>4. Bake at 180°C for 15 minutes.</step> <!--(CHANGE THIS)-->
             </steps>
-            <information> <!--Enumeration-->
-                <category></category> <!--Vegetarian, Vegan, Fish, Vegetables, CO2 Smart, Meat etc. LINK-->
-                <allergens></allergens> <!--Nut free, dairy free, gluten free LINK-->
-                <nutrition></nutrition> <!--Sodium, Fiber, etc. LINK-->
+            <information> <!--Container box for recipe categories, allergens, tags, and nutrition information -->
+                <cat_value idref='cv1'/> <!--recipe category-->
+                <allge_value/> <!--allergen information (**IF NO VALUE, IS THE CONVENTION TO LEAVE IT LIKE THIS?**)-->
+                <tag_value idref='tv3' idref_2='tv7'/> <!--recipe tags e.g. comfort food, quick & easy-->
+                <nutrition></nutrition> <!--(**HOW TO LINK / HAVE TO CALCULATE**)-->
             </information>
         <user_feedback></user_feedback> <!--Linked to customerID and recipeID. Should show commnet text-->
-        <URL></URL> <!--Recipe URL-->
+        <URL>https://www.recipewebsite.com/recipe/chickentenders</URL> <!--Recipe URL-->
         </information>
     </recipe>
 </recipes>
 
 <customers> <!--CUSTOMER DATABASE-->
-    <name> <!-- A single customer -->
+    <customer id='c1'> <!-- A single customer -->
+        <name>Pizza Man</name>
         <address>
-            <street></street>
-            <city></city>
-            <zipcode></zipcode>
+            <street>50 Pepperoni Boulevard</street>
+            <city>Breadsticks D.C.</city>
+            <zipcode>11111</zipcode>
         </address>
         <contact>
-            <email></email>
-            <telephone></telephone>
+            <email>pizzazzman@email.com</email>
+            <telephone>0648963312</telephone>
         </contact>
         <subscriptions>
-            <recipebox>
+            <recipebox idref='rb1'>
                 <orderfrequency></orderfrequency>
             </recipebox>
         </subscriptions>
         <gastronomy_preferences></gastronomy_preferences> <!--Allergies, preferences, etc. LINK-->
-    </name>
+    </customer>
 </customers>
 
 <recipeboxes> <!--RECIPEBOX DATABASE-->
-    <recipebox> <!-- A single recipe box -->
-        <recipe></recipe>
-        <tags></tags> <!-- Add a tag to categorize the recipe box?-->
+    <recipebox id='rb1'> <!-- A single recipe box -->
+        <recipe idref='1'/>
+        <tags ifdref='tv7'/> <!-- Add a tag to categorize the recipe box?-->
     </recipebox>
 </recipeboxes>
 
 <ingredients> <!--INGREDIENTS DATABASE-->
-    <ingredient_name> <!-- A single ingredient -->
-        <type></type> <!-- Fruit, spice, etc. -->
-        <seasonality></seasonality>
-        <nutrition_info></nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
-        <supplier></supplier> <!--Supplier that handles this ingredient delivery-->
-    </ingredient_name>
+    <ingredient id='i2'> <!-- A single ingredient -->
+        <name>Chicken</name>
+        <type>Meat</type> <!-- Fruit, spice, etc. -->
+        <seasonality>All-year</seasonality>
+        <nutrition_info>Protein: 8mg</nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='2'/> <!--Supplier that handles this ingredient delivery-->
+    </ingredient>
 </ingredients>
 
 <suppliers> <!--SUPPLIERS DATABASE-->
-    <supplier_name> <!-- A single supplier + ID -->
+    <supplier id='2'> <!-- A single supplier + ID -->
+        <name>Food 'n Co.</name>
         <address>
-            <street></street>
-            <city></city>
-            <zipcode></zipcode>
+            <street>123 Cool Avenue</street>
+            <city>Random City</city>
+            <zipcode>72000</zipcode>
         </address>
         <contact>
-            <email></email>
-            <telephone></telephone>
+            <email>foodnco@email.com</email>
+            <telephone>0108080808</telephone>
         </contact>
-    </supplier_name>
+    </supplier>
 </suppliers>
 
 <orders> <!-- ORDERS INFORMATION -->
@@ -96,23 +105,16 @@
 </orders>
 
 <tools>
-    <tool_name> <!--ID--></tool_name>
+    <tool id='t3'>
+        <name>Oven</name>
+    </tool>
 </tools>
 
-<author> <!--AUTHORS DATABASE-->
-    <author_name> <!-- A single author -->
-        <address>
-            <street></street>
-            <city></city>
-            <zipcode></zipcode>
-        </address>
-        <contact>
-            <email></email>
-            <telephone></telephone>
-        </contact>
-        <recipeboxID></recipeboxID>
-    </author_name>
-</author>
+<authors> <!--AUTHORS DATABASE-->
+    <author id='a8'> <!-- A single author -->
+        <name>Jane Doe</name>
+    </author>
+</authors>
 
 <user_feedback>
     <customer> <!--Customer who left feedback (ID needed)-->
@@ -123,36 +125,36 @@
 
 <recipe_categorisation> <!--RECIPE CATEGORIES: holds the categories, tags, and allergen categories for recipes-->
     <category>
-        <value>Mains</value>
-        <value>Entrées</value>
-        <value>Sides</value>
-        <value>Soups and Stews</value>
-        <value>Pasta</value>
-        <value>Dessert</value>
-        <value>Drinks</value>
+        <cat_value id='cv1'>Mains</cat_value>
+        <cat_value id='cv2'>Entrées</cat_value>
+        <cat_value id='cv3'>Sides</cat_value>
+        <cat_value id='cv4'>Soups and Stews</cat_value>
+        <cat_value id='cv5'>Pasta</cat_value>
+        <cat_value id='cv6'>Dessert</cat_value>
+        <cat_value id='cv7'>Drinks</cat_value>
     </category>
     <recipe_tag>
-        <value>Vegetarian</value>
-        <value>Vegan</value>
-        <value>Protein</value>
-        <value>Seafood</value>
-        <value>Low calorie</value>
-        <value>Quick and Easy</value>
-        <value>Comfort Food</value>
+        <tag_value id='tv1'>Vegetarian</tag_value>
+        <tag_value id='tv2'>Vegan</tag_value>
+        <tag_value id='tv3'>Protein</tag_value>
+        <tag_value id='tv4'>Seafood</tag_value>
+        <tag_value id='tv5'>Low calorie</tag_value>
+        <tag_value id='tv6'>Quick and Easy</tag_value>
+        <tag_value id='tv7'>Comfort Food</tag_value>
     </recipe_tag>
     <allergens>
-        <value>Nut-free</value>
-        <value>Dairy-free</value>
-        <value>Gluten-free</value>
+        <allge_value id='av1'>Nut-free</allge_value>
+        <allge_value id='av2'>Dairy-free</allge_value>
+        <allge_value id='av3'>Gluten-free</allge_value>
     </allergens>
     <nutrition>
-        <value>Calories</value>
-        <value>Fat</value>
-        <value>Protein</value>
-        <value>Carbs</value>
-        <value>Sugar</value>
-        <value>Sodium</value>
-        <value>Fiber</value>
+        <nutr_value id='nv1'>Calories</nutr_value>
+        <nutr_value id='nv2'>Fat</nutr_value>
+        <nutr_value id='nv3'>Protein</nutr_value>
+        <nutr_value id='nv4'>Carbs</nutr_value>
+        <nutr_value id='nv5'>Sugar</nutr_value>
+        <nutr_value id='nv6'>Sodium</nutr_value>
+        <nutr_value id='nv7'>Fiber</nutr_value>
     </nutrition>
 </recipe_categorisation>
 
