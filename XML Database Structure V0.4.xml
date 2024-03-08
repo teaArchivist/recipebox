@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<recipebox_database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="recipebox.xsd">
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="recipebox.xsd">
 
 <recipes> <!--RECIPE DATABASE: holds the recipes-->
     <recipe id='1'> <!--A single recipe -->
@@ -8,9 +8,7 @@
         <information> <!--Container box for recipe details-->
             <description>A delicious recipe for oven-made chicken tenders!</description>
             <quantity>4</quantity> <!--How many servings-->
-            <tools> <!--Cooking utensils-->
-                <tool idref='t3'/>
-            </tools>
+            <tools idref='t3'/> <!--Cooking utensils-->
             <time> <!--Container box for time details (**HOW TO LINK TO MEASUREMENTS**)-->
                 <preptime>10 minutes</preptime>
                 <cooktime>20 minutes</cooktime>
@@ -27,15 +25,15 @@
                 <step>3. Put in flour, then egg, then breadcrumbs.</step>
                 <step>4. Bake at 180°C for 15 minutes.</step>
             </steps>
-            <information> <!--Container box for recipe categories, allergens, tags, and nutrition information -->
+            <value_information> <!--Container box for recipe categories, allergens, tags, and nutrition information -->
                 <cat_value idref='cv1'/> <!--recipe category-->
                 <allge_value/> <!--allergen information (**IF NO VALUE, IS THE CONVENTION TO LEAVE IT LIKE THIS?**)-->
                 <tag_value idref='tv3' idref_2='tv7'/> <!--recipe tags e.g. comfort food, quick & easy-->
-                <nutrition></nutrition> <!--(**HOW TO LINK / HAVE TO CALCULATE**)-->
-            </information>
-        <user_feedback></user_feedback> <!--Linked to customerID and recipeID. Should show commnet text-->
-        <URL>https://www.recipewebsite.com/recipe/chickentenders</URL> <!--Recipe URL-->
+                <nutrition/> <!--(**HOW TO LINK / HAVE TO CALCULATE**)-->
+            </value_information>
         </information>
+        <user_feedback/> <!--Linked to customerID and recipeID. Should show commnet text-->
+        <URL>https://www.recipewebsite.com/recipe/chickentenders</URL> <!--Recipe URL-->
     </recipe>
 </recipes>
 
@@ -171,4 +169,4 @@
     </measure_grams>
 </measurements>
 
-</recipebox_database>
+</schema>

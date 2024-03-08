@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-<xs:element name='recipes' type='recipeType'/>
 <xs:element name='customers'/>
 <xs:element name='recipeboxes'/>
 <xs:element name='ingredients'/>
@@ -13,6 +12,105 @@
 <xs:element name='recipe_categorisation'/>
 <xs:element name='measurements'/>
 
-<xs:complexType name="recipeType"></xs:complexType>
+<!--RECIPES-->
+<xs:element name="recipes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="recipe" type="recipeType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+<xs:complexType name="recipeType">
+    <xs:sequence>
+        <xs:element name="title" type="xs:string"/>
+        <xs:element name="author" type="authorType"/>
+        <xs:element name="information" type="informationType"/>
+        <xs:element name="userfeedback" type="userfeedbackType"/>
+        <xs:element name="link" type="xs:anyURI"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:integer"/>
+</xs:complexType>
+
+<xs:complexType name="authorType">
+    <xs:attribute name="idref" type="xs:integer"/>
+</xs:complexType>
+
+<xs:complexType name="informationType">
+    <xs:sequence>
+        <xs:element name="description" type="xs:string"/>
+        <xs:element name="quantity" type="xs:integer"/> <!-- Might need to account for 0.5 etc. -->
+        <xs:element name="tools" type="xs:toolsType"/> <!--Issue here-->
+        <xs:element name="time" type="timeType"/> <!--Edit this-->
+        <xs:element name="ingredients" type="ingredientsType"/>
+        <xs:element name="steps" type="stepsType"/>
+        <xs:element name="value_information" type="valinfoType"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="toolsType">
+    <xs:attribute name="idref" type="xs:integer"/>
+</xs:complexType>
+
+<xs:complexType name="timeType">
+    <xs:sequence>
+        <xs:element name="preptime" type="xs:string"/>
+        <xs:element name="cooktime" type="xs:string"/>
+        <xs:element name="totaltime" type="xs:string"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ingredientsType">
+    <xs:sequence>
+        <xs:element name="ingredient" type="ingredientType"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ingredientType">
+    <xs:sequence>
+        <xs:element name="amount" type="xs:integer"/>
+        <xs:element name="unit" type="unitType"/>
+    </xs:sequence>
+    <xs:attribute name="idref" type="xs:string"/>
+</xs:complexType>
+
+<xs:complexType name="unitType">
+    <xs:attribute name="idref" type="xs:string"/>
+</xs:complexType>
+
+<xs:complexType name="stepsType">
+    <xs:sequence>
+        <xs:element name="step" type="xs:string" minOccurs="1"/> <!--Issue here-->
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="valinfoType">
+    <xs:sequence>
+        <xs:element name="cat_value" type="cat_valueType" minOccurs="1"/>
+        <xs:element name="allge_value" type="allge_valueType" minOccurs="0"/>
+        <xs:element name="tag_value" type="tag_valueType" minOccurs="1"/>
+        <xs:element name="nutrition" type="nutritionType" minOccurs="1"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cat_valueType">
+    <xs:attribute name="idref" type="xs:string"/>
+</xs:complexType>
+
+<xs:complexType name="allge_valueType">
+    <xs:attribute name="idref" type="xs:string"/>
+</xs:complexType>
+
+<xs:complexType name="tag_valueType">
+    <xs:attribute name="idref" type="xs:string"/>
+</xs:complexType>
+
+<xs:complexType name="nutritionType">
+    <xs:attribute name="idref" type="xs:string"/>
+</xs:complexType>
+
+<xs:complexType name="userfeedbackType">
+    <xs:attribute name="idref" type="xs:string"/> <!--Issue here-->
+</xs:complexType>
 
 </xs:schema>
