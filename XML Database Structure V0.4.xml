@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="recipebox.xsd">
+<recipebox_database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="recipebox.xsd">
 
 <recipes> <!--RECIPE DATABASE: holds the recipes-->
     <recipe id='1'> <!--A single recipe -->
@@ -169,4 +169,4 @@
     </measure_grams>
 </measurements>
 
-</schema>
+</recipebox_database>

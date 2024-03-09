@@ -1,16 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-<xs:element name='customers'/>
-<xs:element name='recipeboxes'/>
-<xs:element name='ingredients'/>
-<xs:element name='suppliers'/>
-<xs:element name='orders'/>
-<xs:element name='tools'/>
-<xs:element name='authors'/>
-<xs:element name='user_feedback'/>
-<xs:element name='recipe_categorisation'/>
-<xs:element name='measurements'/>
+<!--ROOT ELEMENT-->
+<xs:element name="recipebox_database">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="recipes"/>
+            <xs:element name='customers'/>
+            <xs:element name='recipeboxes'/>
+            <xs:element name='ingredients'/>
+            <xs:element name='suppliers'/>
+            <xs:element name='orders'/>
+            <xs:element name='tools'/>
+            <xs:element name='authors'/>
+            <xs:element name='user_feedback'/>
+            <xs:element name='recipe_categorisation'/>
+            <xs:element name='measurements'/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
 
 <!--RECIPES-->
 <xs:element name="recipes">
@@ -40,7 +47,7 @@
     <xs:sequence>
         <xs:element name="description" type="xs:string"/>
         <xs:element name="quantity" type="xs:integer"/> <!-- Might need to account for 0.5 etc. -->
-        <xs:element name="tools" type="xs:toolsType"/> <!--Issue here-->
+        <xs:element name="tools" type="toolsType"/> <!--Issue here-->
         <xs:element name="time" type="timeType"/> <!--Edit this-->
         <xs:element name="ingredients" type="ingredientsType"/>
         <xs:element name="steps" type="stepsType"/>
@@ -49,7 +56,7 @@
 </xs:complexType>
 
 <xs:complexType name="toolsType">
-    <xs:attribute name="idref" type="xs:integer"/>
+    <xs:attribute name="idref" type="xs:string"/>
 </xs:complexType>
 
 <xs:complexType name="timeType">
