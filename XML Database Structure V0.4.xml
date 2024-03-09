@@ -61,8 +61,8 @@
 <recipeboxes> <!--RECIPEBOX DATABASE-->
     <recipebox id='rb1'> <!-- A single recipe box -->
         <recipe idref='1'/>
-        <tags ifdref='tv7'/> <!-- Add a tag to categorize the recipe box?-->
-        <price>45 euros</price> <!-- (**HAVE TO CALCULATE**)-->
+        <tags idref='tv7'/> <!-- Add a tag to categorize the recipe box?-->
+        <price>45 euros</price>
     </recipebox>
 </recipeboxes>
 
