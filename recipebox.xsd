@@ -5,211 +5,75 @@
     <xs:complexType>
         <xs:sequence>
             <xs:element name="recipes"/>
-            <xs:element name='customers'/>
-            <xs:element name='recipeboxes' type="recipeboxesType"/>
-            <xs:element name='ingredients' type="ingredientsType"/>
-            <xs:element name='suppliers'/>
-            <xs:element name='orders'/>
-            <xs:element name='tools'/>
-            <xs:element name='authors'/>
-            <xs:element name='user_feedback'/>
-            <xs:element name='recipe_categorisation'/>
-            <xs:element name='measurements'/>
+            <xs:element name="customers"/>
+            <xs:element name="recipeboxes"/>
+            <xs:element name="ingredients" type="ingredientsType"/>
+            <xs:element name="suppliers" type="suppliersType"/>
+            <xs:element name="orders"/>
+            <xs:element name="tools"/>
+            <xs:element name="authors"/>
+            <xs:element name="user_feedback"/>
+            <xs:element name="recipe_categorisation"/>
+            <xs:element name="measurements"/>
         </xs:sequence>
     </xs:complexType>
 </xs:element>
 
-<!--RECIPES-->
-<xs:element name="recipes">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="recipe"/>
-            <xs:sequence>
-                <xs:element name="title" type="xs:string"/>
-                <xs:element name="author" type="authorType"/>
-                <xs:element name="information" type="informationType"/>
-                <xs:element name="user_feedback" type="userfeedbackType"/>
-                <xs:element name="link" type="xs:anyURI"/>
-            </xs:sequence>
-            <xs:attribute name="id" type="xs:ID"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-
-
-<!--CUSTOMERS-->
-<xs:complexType name="customersType">
-    <xs:sequence>
-        <xs:attribute name="id" type="xs:ID"/>
-        <xs:sequence>
-            <xs:element name="name" type="xs:string" minOccurs="1"/>
-            <xs:element name="address" minOccurs="1">
-                <xs:complexType>
-                    <xs:sequence>   
-                        <xs:element name="street" type="xs:string"/>
-                        <xs:element name="city" type="xs:string"/>
-                        <xs:element name="zipcode" type="xs:integer"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-            <xs:element name="contact" minOccurs="1">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="email" type="xs:string" minOccurs="1"/>
-                        <xs:element name="telephone" type="xs:integer" minOccurs="1"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-            <xs:element name="subscriptions" minOccurs="0" > <!--to be reviewed-->
-                <xs:selector xpath="recipeboxesType"/>
-            </xs:element>
-            <xs:element name="gastronomy_preferences" minOccurs="0"> <!--to be reviewed-->
-                <xs:complexType name="pref" type="xs:string">
-                    <xs:element name="idref" type="xs:string"/> 
-                </xs:complexType>
-            </xs:element>
-        </xs:sequence>   
-    </xs:sequence>
-</xs:complexType>
-
-<!--RECIPEBOXES-->
-<xs:complexType name="recipeboxesType">
-    <xs:sequence>
-        <xs:element name="recipeboxinfoType"/>
-            <xs:complexType name="recipe"/>
-                <xs:element name="idref" type="xs:integer"/>
-            <xs:complexType name="tags"/>
-                <xs:element name="idref" type="xs:integer"/>
-            <xs:element name="price" type="xs:string"/>  
-        <xs:attribute name="id" type="xs:ID"/>
-    </xs:sequence>
-</xs:complexType>
-
-<!--INGREDIENTS-->
 <xs:complexType name="ingredientsType">
     <xs:sequence>
-        <xs:complexType name="ingredientinfoType"/>
+        <xs:element name="ingredient"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:element name="ingredientType">
+    <xs:complexType>
+        <xs:sequence minOccurs="1">
             <xs:element name="name" type="xs:string"/>
             <xs:element name="type" type="xs:string"/>
             <xs:element name="seasonality" type="xs:string"/>
             <xs:element name="nutrition_info" type="xs:string"/>
-            <xs:complexType name="supplier"/>
-                <xs:attribute name="idref" type="xs:ID"/>
-        <xs:attribute name="id" type="xs:ID"/>    
-    </xs:sequence>
-</xs:complexType>
-
-<!--SUPPLIERS-->
-<xs:complexType name="supplierType">
-    <xs:sequence>
-        <xs:complexType name="supplierinfoType"/>
-            <xs:element name="name" type="xs:string"/>
-            <xs:complexType name="address">
-                <xs:element name="street" type="xs:string"/>
-                <xs:element name="city" type="xs:string"/>
-                <xs:element name="zipcode" type="xs:string"/>
-            </xs:complexType>
-            <xs:complexType name="contact">
-                <xs:element name="email" type="xs:string"/>
-                <xs:element name="telephone" type="xs:integer"/>
-            </xs:complexType>
+        </xs:sequence>
         <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+    <xs:key name="ingredientKey">
+        <xs:selector xpath="ingredients/ingredient"/>
+        <xs:field xpath="@idref"/>
+    </xs:key>
+    <xs:keyref name="supplierKeyRef" refer="ingredientKey">
+        <xs:selector xpath="suppliers/supplier"/>
+        <xs:field xpath="@id"/>
+    </xs:keyref>
+</xs:element>
+
+<xs:complexType name="suppliersType">
+    <xs:sequence>
+        <xs:element name="supplier" type="supplierType"/>
     </xs:sequence>
 </xs:complexType>
 
-<!--ORDERS-->
-<xs:complexType name="ordersType">
+<xs:complexType name="supplierType">
+    <xs:sequence minOccurs="1">
+        <xs:element name="name" type="xs:string"/>
+        <xs:element name="address" type="addressType"/>
+        <xs:element name="contact" type="contactType"/>
+    </xs:sequence>
     <xs:attribute name="id" type="xs:integer"/>
-    <xs:sequence>
-        <xs:attribute name="idref" type="xs:IDREF"/>
-        <xs:selector xpath="recipeboxesType" /> <!--Questionable-->
-        <xs:selector xpath="customersInfoType" />
-        <xs:element name="invoice_amount" type="xs:integer" />
-    </xs:sequence>
- </xs:complexType>
+</xs:complexType>
 
-<xs:key name="CustomerKey">
-    <xs:selector xpath="customers/customer"/>
-    <xs:field xpath="name"/>
-    <xs:field xpath="address"/>
-</xs:key>
-<xs:keyref name="CustomerKeyRef" refer="CustomerKey">
-      <xs:selector xpath="orders/order"/>
-      <xs:field xpath="@idref"/>
-</xs:keyref>
-
-
-<xs:complexType name="recipeType">
-    <xs:sequence>
-        <xs:element name="ingredients" type="ingredientsType"/>
-        <xs:element name="steps" type="stepsType"/>
-        <xs:element name="value_information" type="valinfoType"/>
+<xs:complexType name="addressType">
+    <xs:sequence minOccurs="1" maxOccurs="1">
+        <xs:element name="street" type="xs:string"/>
+        <xs:element name="city" type="xs:string"/>
+        <xs:element name="zipcode" type="xs:string"/>
     </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="toolsType">
-    <xs:attribute name="idref" type="xs:string"/>
-</xs:complexType>
-
-<xs:complexType name="timeType">
-    <xs:sequence>
-        <xs:element name="preptime" type="xs:string"/>
-        <xs:element name="cooktime" type="xs:string"/>
-        <xs:element name="totaltime" type="xs:string"/>
+<xs:complexType name="contactType">
+    <xs:sequence minOccurs="1" maxOccurs="1">
+        <xs:element name="email" type="xs:string"/>
+        <xs:element name="telephone" type="xs:string"/>
     </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="ingredientsType">
-    <xs:sequence>
-        <xs:element name="ingredient" type="ingredientType"/>
-    </xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="ingredientinfoType">
-    <xs:sequence>
-        <xs:element name="amount" type="xs:integer"/>
-        <xs:element name="unit" type="unitType"/>
-    </xs:sequence>
-    <xs:attribute name="idref" type="xs:string"/>
-</xs:complexType>
-
-<xs:complexType name="unitType">
-    <xs:attribute name="idref" type="xs:string"/>
-</xs:complexType>
-
-<xs:complexType name="stepsType">
-    <xs:sequence>
-        <xs:element name="step" type="xs:string" minOccurs="1"/>
-    </xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="valinfoType">
-    <xs:sequence>
-        <xs:element name="cat_value" type="cat_valueType" minOccurs="1"/>
-        <xs:element name="allge_value" type="allge_valueType" minOccurs="0"/>
-        <xs:element name="tag_value" type="tag_valueType" minOccurs="1"/>
-        <xs:element name="nutrition" type="nutritionType" minOccurs="1"/>
-    </xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="cat_valueType">
-    <xs:attribute name="idref" type="xs:string"/>
-</xs:complexType>
-
-<xs:complexType name="allge_valueType">
-    <xs:attribute name="idref" type="xs:string"/>
-</xs:complexType>
-
-<xs:complexType name="tag_valueType">
-    <xs:attribute name="idref" type="xs:string"/>
-</xs:complexType>
-
-<xs:complexType name="nutritionType">
-    <xs:attribute name="idref" type="xs:string"/>
-</xs:complexType>
-
-<xs:complexType name="userfeedbackType">
-    <xs:attribute name="idref" type="xs:string"/>
-</xs:complexType>
 
 </xs:schema>
