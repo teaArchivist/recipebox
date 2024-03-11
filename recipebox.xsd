@@ -38,12 +38,12 @@
 
 
 <!--CUSTOMERS-->
-<xs:complexType name="customersInfoType">
+<xs:complexType name="customersType">
     <xs:sequence>
         <xs:attribute name="id" type="xs:ID"/>
         <xs:sequence>
             <xs:element name="name" type="xs:string" minOccurs="1"/>
-            <xs:element name="address" type="xs:string" minOccurs="1">
+            <xs:element name="address" minOccurs="1">
                 <xs:complexType>
                     <xs:sequence>   
                         <xs:element name="street" type="xs:string"/>
@@ -52,7 +52,7 @@
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="contact" type="xs:string" minOccurs="1">
+            <xs:element name="contact" minOccurs="1">
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element name="email" type="xs:string" minOccurs="1"/>
