@@ -62,7 +62,7 @@
     <recipebox id='rb1'> <!-- A single recipe box -->
         <recipe idref='1'/>
         <tags idref='tv7'/> <!-- Add a tag to categorize the recipe box?-->
-        <price>45 euros</price>
+        <price currency="euro">45.00</price>
     </recipebox>
 </recipeboxes>
 
