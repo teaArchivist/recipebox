@@ -4,7 +4,7 @@
 <xs:element name="recipebox_database">
     <xs:complexType>
         <xs:sequence>
-            <xs:element name="recipes"/>
+            <xs:element name="recipes" type="recipeType"/>
             <xs:element name='customers' type="customersType"/>
             <xs:element name='recipeboxes' type="recipeboxesType"/>
             <xs:element name='ingredients' type="ingredientsType"/>
@@ -13,8 +13,8 @@
             <xs:element name='tools' type="toolsType"/>
             <xs:element name='authors' type="authorType"/>
             <xs:element name='user_feedback' type="userfeedbackType"/>
-            <xs:element name='recipe_categorisation'/>
-            <xs:element name='measurements'/>
+            <xs:element name='recipe_categorisation' type="recipecategorisationType"/>
+            <xs:element name='measurements' type="measurementsType"/>
         </xs:sequence>
     </xs:complexType>
 </xs:element>
@@ -298,6 +298,68 @@
                 <xs:attribute name="id" type="xs:ID"/>
             </xs:complexType>
         </xs:element>
+    </xs:sequence>
+</xs:complexType>
+
+<!--RECIPE CATEGORISATION-->
+<xs:complexType name="recipecategorisationType">
+    <xs:sequence>
+        <xs:element name="category" type="categoryType"/>
+        <xs:element name="recipe_tag" type="recipe_tagType"/>
+        <xs:element name="allergens" type="allergensType"/>
+        <xs:element name="nutrition" type="nutritionType"/>
+    </xs:sequence>
+</xs:complexType>
+
+<!--category-->
+<xs:complexType name="categoryType">
+    <xs:sequence>
+        <xs:element name="cat_value" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID"/>
+</xs:complexType>
+
+<!--recipe_tagType-->
+<xs:complexType name="recipe_tagType">
+    <xs:sequence>
+        <xs:element name="tag_value" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID"/>
+</xs:complexType>
+
+<!--allergens-->
+<xs:complexType name="allergensType">
+    <xs:sequence>
+        <xs:element name="allge_value" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID"/>
+</xs:complexType>
+
+<!--MEASUREMENTS-->
+<xs:complexType name="measurementsType">
+    <xs:sequence>
+        <xs:element name="measure_liters" type="measure_litersType"/>
+        <xs:element name="measure_grams" type="measure_gramsType"/>
+    </xs:sequence>
+</xs:complexType>
+
+<!--measure_liters-->
+<xs:complexType name="measure_litersType">
+    <xs:sequence>
+        <xs:element name="L" type="xs:string"/>
+        <xs:element name="dL" type="xs:string"/>
+        <xs:element name="cL" type="xs:string"/>
+        <xs:element name="mL" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="measure_L" type="xs:ID"/>
+</xs:complexType>
+
+<!--measure_grams-->
+<xs:complexType name="measure_gramsType">
+    <xs:sequence>
+        <xs:element name="kg" type="xs:string"/>
+        <xs:element name="g" type="xs:string"/>
+        <xs:element name="mg" type="xs:string"/>
     </xs:sequence>
 </xs:complexType>
 
