@@ -8,11 +8,11 @@
             <xs:element name='customers' type="customersType"/>
             <xs:element name='recipeboxes' type="recipeboxesType"/>
             <xs:element name='ingredients' type="ingredientsType"/>
-            <xs:element name='suppliers'/>
-            <xs:element name='orders'/>
-            <xs:element name='tools'/>
-            <xs:element name='authors'/>
-            <xs:element name='user_feedback'/>
+            <xs:element name='suppliers' type="supplierType"/>
+            <xs:element name='orders' type="ordersType"/>
+            <xs:element name='tools' type="toolsType"/>
+            <xs:element name='authors' type="authorType"/>
+            <xs:element name='user_feedback' type="userfeedbackType"/>
             <xs:element name='recipe_categorisation'/>
             <xs:element name='measurements'/>
         </xs:sequence>
@@ -41,7 +41,6 @@
 <xs:complexType name="customersType">
     <xs:sequence>
         <xs:element name="customer" minOccurs="1" maxOccurs="unbounded">
-            <!--<xs:attribute name="id" type="xs:positiveInteger"/> -->
             <xs:complexType>
                 <xs:sequence>
                     <xs:element name="name" type="xs:string" minOccurs="1"/>
@@ -93,7 +92,8 @@
                             </xs:sequence>
                         </xs:complexType>
                     </xs:element>
-                </xs:sequence> 
+                </xs:sequence>
+                <xs:attribute name="id" type="xs:ID"/> 
             </xs:complexType>
         </xs:element>
     </xs:sequence>
@@ -239,7 +239,37 @@
 </xs:complexType>
 
 <xs:complexType name="userfeedbackType">
-    <xs:attribute name="idref" type="xs:string"/>
+    <xs:sequence>
+        <xs:element name="customer" minOccurs="1">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="recipe">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="idref" type="xs:int"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="rating" type="xs:float"/>
+                    <xs:element name="comments" type="xs:string"/>
+                </xs:sequence>
+                <xs:attribute name="idref" type="xs:string"/>
+            </xs:complexType>
+        </xs:element>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="authorType">
+    <xs:sequence>
+        <xs:element name="author" minOccurs="0">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                </xs:sequence>
+                <xs:attribute name="id" type="xs:ID"/>
+            </xs:complexType>
+        </xs:element>
+    </xs:sequence>
 </xs:complexType>
 
 </xs:schema>
