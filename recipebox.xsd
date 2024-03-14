@@ -84,7 +84,7 @@
                                         <xs:simpleContent>
                                             <xs:extension base="xs:string">
                                                 <xs:attribute name="idref" type="xs:ID"/>
-                                                <xs:attribute name="idref1" type="xs:ID"/> <!--TO BE -->
+                                                <xs:attribute name="idref1" type="xs:ID"/> <!--HOW TO ADD A SECOND REFERENCE -->
                                             </xs:extension>
                                         </xs:simpleContent>
                                     </xs:complexType>
@@ -93,7 +93,7 @@
                         </xs:complexType>
                     </xs:element>
                 </xs:sequence>
-                <xs:attribute name="id" type="xs:ID"/> 
+                <xs:attribute name="id" type="xs:ID"/> <!-- NOT TOO SURE HOW TO REFERENCE THIS-->
             </xs:complexType>
         </xs:element>
     </xs:sequence>
@@ -103,13 +103,24 @@
 <!--RECIPEBOXES-->
 <xs:complexType name="recipeboxesType">
     <xs:sequence>
-        <xs:element name="recipebox"/>
-            <xs:complexType name="recipe"/>
-                <xs:element name="idref" type="xs:integer"/>
-            <xs:complexType name="tags"/>
-                <xs:element name="idref" type="xs:integer"/>
-            <xs:element name="price" type="xs:string"/>  
-        <xs:attribute name="id" type="xs:ID"/>
+        <xs:element name="recipebox" minOccurs="1"> 
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="recipe" minOccurs="1">
+                        <xs:complexType>
+                            <xs:attribute name="idref" type="xs:integer"/>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="tags" minOccurs="1">
+                        <xs:complexType>
+                            <xs:attribute name="idref" type="xs:string"/>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="price" type="xs:string"/>
+                </xs:sequence>
+                <xs:attribute name="id" type="xs:ID"/>
+            </xs:complexType>
+        </xs:element>
     </xs:sequence>
 </xs:complexType>
 
@@ -132,18 +143,31 @@
 <!--SUPPLIERS-->
 <xs:complexType name="supplierType">
     <xs:sequence>
-        <xs:complexType name="supplierinfoType"/>
-            <xs:element name="name" type="xs:string"/>
-            <xs:complexType name="address">
-                <xs:element name="street" type="xs:string"/>
-                <xs:element name="city" type="xs:string"/>
-                <xs:element name="zipcode" type="xs:string"/>
+        <xs:element name="supplier" minOccurs="1">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="name" type="xs:string" minOccurs="1"/>
+                    <xs:element name="address" minOccurs="1">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="street" type="xs:string"/>
+                                <xs:element name="city" type="xs:string"/>
+                                <xs:element name="zipcode" type="xs:string"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="contact" minOccurs="1">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="email" type="xs:string"/>
+                                <xs:element name="telephone" type="xs:integer"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+                <xs:attribute name="id" type="xs:ID"/>
             </xs:complexType>
-            <xs:complexType name="contact">
-                <xs:element name="email" type="xs:string"/>
-                <xs:element name="telephone" type="xs:integer"/>
-            </xs:complexType>
-        <xs:attribute name="id" type="xs:ID"/>
+        </xs:element>
     </xs:sequence>
 </xs:complexType>
 
@@ -177,7 +201,18 @@
     </xs:sequence>
 </xs:complexType>
 
+<!--TOOLS INFORMATION-->
 <xs:complexType name="toolsType">
+    <xs:sequence>
+        <xs:element name="tool" minOccurs="0" maxOccurs="unbounded">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                </xs:sequence>
+                <xs:attribute name="id" type="xs:ID"/>
+            </xs:complexType>
+        </xs:element>
+    </xs:sequence>
     <xs:attribute name="idref" type="xs:string"/>
 </xs:complexType>
 
@@ -186,12 +221,6 @@
         <xs:element name="preptime" type="xs:string"/>
         <xs:element name="cooktime" type="xs:string"/>
         <xs:element name="totaltime" type="xs:string"/>
-    </xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="ingredientsType">
-    <xs:sequence>
-        <xs:element name="ingredient" type="ingredientType"/>
     </xs:sequence>
 </xs:complexType>
 
@@ -210,7 +239,7 @@
 <xs:complexType name="stepsType">
     <xs:sequence>
         <xs:element name="step" type="xs:string" minOccurs="1"/>
-    </xs:sequence>
+    </xs:sequence>`
 </xs:complexType>
 
 <xs:complexType name="valinfoType">
@@ -238,6 +267,7 @@
     <xs:attribute name="idref" type="xs:string"/>
 </xs:complexType>
 
+<!--USER FEEDBACK-->
 <xs:complexType name="userfeedbackType">
     <xs:sequence>
         <xs:element name="customer" minOccurs="1">
@@ -245,9 +275,7 @@
                 <xs:sequence>
                     <xs:element name="recipe">
                         <xs:complexType>
-                            <xs:sequence>
-                                <xs:element name="idref" type="xs:int"/>
-                            </xs:sequence>
+                                <xs:attribute name="idref" type="xs:int"/>
                         </xs:complexType>
                     </xs:element>
                     <xs:element name="rating" type="xs:float"/>
@@ -259,6 +287,7 @@
     </xs:sequence>
 </xs:complexType>
 
+<!--AUTHORS-->
 <xs:complexType name="authorType">
     <xs:sequence>
         <xs:element name="author" minOccurs="0">
