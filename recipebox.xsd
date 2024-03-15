@@ -33,8 +33,8 @@
         <xs:element name="title" type="xs:string"/>
         <xs:element name="author" type="authorRefType"/>
         <xs:element name="information" type="informationType"/>
-        <xs:element name="user_feedback" type="userfeedbackType"/>
-        <xs:element name="link" type="xs:anyURI"/>
+        <xs:element name="user_feedback" type="userfeedbackType"/> <!-- user feedback in XML is highlighted ???-->
+        <xs:element name="URL" type="xs:anyURI"/>
     </xs:sequence>
     <xs:attribute name="id" type="xs:integer"/>
 </xs:complexType>
@@ -53,9 +53,7 @@
         <xs:element name="time" type="timeType"/>
         <xs:element name="ingredients" type="ingredientsRefType"/>
         <xs:element name="steps" type="stepsType"/>
-        <xs:element name="value_information" type=""/>
-        <xs:element name="user_feedback" type="userfeedbackType"/>
-        <xs:element name="URL" type="xs:anyURI"/>
+        <xs:element name="value_information" type="valueInformationType"/>
     </xs:sequence>
 </xs:complexType>
 
@@ -77,11 +75,22 @@
 <xs:complexType name="ingredientsRefType">
     <xs:sequence minOccurs="1">
         <xs:element name="ingredient" type="ingredientRefType"/>
-        <xs:attribute name="idref" type="xs:IDREF"/>
     </xs:sequence>
 </xs:complexType>
 
+<!--ingredient information -->
+<xs:complexType name="ingredientRefType">
+    <xs:sequence>
+        <xs:element name="amount" type="xs:positiveInteger"/>
+        <xs:element name="unit" type="unitType"/>
+    </xs:sequence>
+    <xs:attribute name="idref" type="xs:IDREF"/>
+</xs:complexType>
 
+<!--unit reference-->
+<xs:complexType name="unitType">
+    <xs:attribute name="idref" type="xs:IDREF"/>
+</xs:complexType>
 
 <!--steps-->
 <xs:complexType name="stepsType">
@@ -89,6 +98,17 @@
         <xs:element name="step" type="xs:string"/>
     </xs:sequence>
 </xs:complexType>
+
+<!-- value information-->
+<xs:complexType name="valueInformationType">
+    <xs:sequence>
+        <xs:element name="cat_value" type=""/>
+        <xs:element name="allge_value" type=""/>
+        <xs:element name="tag_value" type=""/>
+        <xs:element name="nutrition" type=""/>
+    </xs:sequence>
+</xs:complexType>
+
 
 <!--#########################################################################-->
 <!--CUSTOMERS-->
