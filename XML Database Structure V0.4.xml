@@ -156,17 +156,17 @@
 
 
 <measurements> <!--MEASUREMENT DATABASE: holds the measurement values for recipes-->
-    <measure_liters id='measure_l'>
-        <ml_value>L</ml_value>
-        <ml_value>dL</ml_value>
-        <ml_value>cL</ml_value>
-        <ml_value>mL</ml_value>
-    </measure_liters>
-    <measure_grams id='measure_g'>
-        <mg_value>kg</mg_value>
-        <mg_value>g</mg_value>
-        <mg_value>mg</mg_value>  
-    </measure_grams>
+    <measurement id="volume">
+        <unit>L</unit>
+        <unit>dL</unit>
+        <unit>cL</unit>
+        <unit>mL</unit>
+    </measurement>
+    <measurement id="weight">
+        <unit>kg</unit>
+        <unit>g</unit>
+        <unit>mg</unit>  
+    </measurement>
 </measurements>
 
 </recipebox_database>

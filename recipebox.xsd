@@ -403,25 +403,17 @@
 <!--MEASUREMENTS-->
 <xs:complexType name="measurementsType">
     <xs:sequence>
-        <xs:element name="measure_liters" type="measure_litersType"/>
-        <xs:element name="measure_grams" type="measure_gramsType"/>
+        <xs:element name="measurement" type="measurementType"/>
     </xs:sequence>
 </xs:complexType>
 
-<!--measure_liters-->
-<xs:complexType name="measure_litersType">
+<!--measurement-->
+<xs:complexType name="measurementType">
     <xs:sequence minOccurs="1" maxOccurs="unbounded">
-        <xs:element name="ml_value" type="xs:string"/>
+        <xs:element name="unit" type="xs:string"/>
     </xs:sequence>
     <xs:attribute name="id" type="xs:ID"/>
 </xs:complexType>
 
-<!--measure_grams-->
-<xs:complexType name="measure_gramsType">
-    <xs:sequence minOccurs="1" maxOccurs="unbounded">
-        <xs:element name="mg_value" type="xs:string"/>
-    </xs:sequence>
-    <xs:attribute name="id" type="xs:ID"/>
-</xs:complexType>
 
 </xs:schema>
