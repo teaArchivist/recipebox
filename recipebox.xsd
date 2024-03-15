@@ -22,19 +22,71 @@
 <!--#########################################################################-->
 <!--RECIPES-->
 <xs:complexType name="recipesType">
-      <xs:sequence>
-        <xs:element name="recipe"/>
-            <xs:sequence>
-                <xs:element name="title" type="xs:string"/>
-                <xs:element name="author" type="authorType"/>
-                <xs:element name="information" type="informationType"/>
-                <xs:element name="user_feedback" type="userfeedbackType"/>
-                <xs:element name="link" type="xs:anyURI"/>
-            </xs:sequence>
-            <xs:attribute name="id" type="xs:ID"/>
-      </xs:sequence>
+    <xs:sequence minOccurs="1" maxOccurs="unbounded">
+        <xs:element name="recipe" type="recipeInfoType"/>
+    </xs:sequence>
   </xs:complexType>
 
+<!--recipe information -->
+<xs:complexType name="recipeInfoType">
+    <xs:sequence>
+        <xs:element name="title" type="xs:string"/>
+        <xs:element name="author" type="authorRefType"/>
+        <xs:element name="information" type="informationType"/>
+        <xs:element name="user_feedback" type="userfeedbackType"/>
+        <xs:element name="link" type="xs:anyURI"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:integer"/>
+</xs:complexType>
+
+<!--author reference-->
+<xs:complexType name="authorRefType">
+    <xs:attribute name="idref" type="xs:integer"/>
+</xs:complexType>
+
+<!--information-->
+<xs:complexType name="informationType">
+    <xs:sequence>
+        <xs:element name="description" type="xs:string"/>
+        <xs:element name="quantity" type="xs:positiveInteger"/>
+        <xs:element name="tools" type="toolRefType"/>
+        <xs:element name="time" type="timeType"/>
+        <xs:element name="ingredients" type="ingredientsRefType"/>
+        <xs:element name="steps" type="stepsType"/>
+        <xs:element name="value_information" type=""/>
+    </xs:sequence>
+</xs:complexType>
+
+<!--tool reference -->
+<xs:complexType name="toolRefType">
+    <xs:attribute name="idref" type="xs:IDREF"/>
+</xs:complexType>
+
+<!--time for cooking-->
+<xs:complexType name="timeType">
+    <xs:sequence minOccurs="1" maxOccurs="unbounded">
+        <xs:element name="preptime" type="xs:string"/>
+        <xs:element name="cooktime" type="xs:string"/>
+        <xs:element name="totaltime" type="xs:string"/>
+    </xs:sequence>
+</xs:complexType>
+
+<!--ingredients reference-->
+<xs:complexType name="ingredientsRefType">
+    <xs:sequence minOccurs="1">
+        <xs:element name="ingredient" type="ingredientRefType"/>
+        <xs:attribute name="idref" type="xs:IDREF"/>
+    </xs:sequence>
+</xs:complexType>
+
+
+
+<!--steps-->
+<xs:complexType name="stepsType">
+    <xs:sequence minOccurs="1" maxOccurs="unbounded">
+        <xs:element name="steps" type="xs:string"/>
+    </xs:sequence>
+</xs:complexType>
 
 <!--#########################################################################-->
 <!--CUSTOMERS-->

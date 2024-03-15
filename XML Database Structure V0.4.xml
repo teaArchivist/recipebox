@@ -22,8 +22,8 @@
             </ingredients>  
             <steps> <!--Container box for cooking instructions-->
                 <step>1. Cut the chicken into little strips.</step>
-                <step>3. Put in flour, then egg, then breadcrumbs.</step>
-                <step>4. Bake at 180°C for 15 minutes.</step>
+                <step>2. Put in flour, then egg, then breadcrumbs.</step>
+                <step>3. Bake at 180°C for 15 minutes.</step>
             </steps>
             <value_information> <!--Container box for recipe categories, allergens, tags, and nutrition information -->
                 <cat_value idref='cv1'/> <!--recipe category-->
