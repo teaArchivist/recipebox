@@ -22,17 +22,17 @@
             </ingredients>  
             <steps> <!--Container box for cooking instructions-->
                 <step>1. Cut the chicken into little strips.</step>
-                <step>2. Put in flour, then egg, then breadcrumbs.</step>
-                <step>3. Bake at 180°C for 15 minutes.</step>
+                <step>3. Put in flour, then egg, then breadcrumbs.</step>
+                <step>4. Bake at 180°C for 15 minutes.</step>
             </steps>
             <value_information> <!--Container box for recipe categories, allergens, tags, and nutrition information -->
                 <cat_value idref='cv1'/> <!--recipe category-->
                 <allge_value/> <!--allergen information (**IF NO VALUE, IS THE CONVENTION TO LEAVE IT LIKE THIS?**)-->
-                <tag_value idref='tv3' idref_2='tv7'/> <!--recipe tags e.g. comfort food, quick & easy-->
+                <tag_value idref='tv3' idref='tv7'/> <!--recipe tags e.g. comfort food, quick & easy-->
                 <nutrition/> <!--(**HOW TO LINK / HAVE TO CALCULATE**)-->
             </value_information>
         </information>
-        <user_feedback/> <!--Linked to customerID and recipeID. Should show commnet text-->
+        <comments/> <!--Linked to customerID and recipeID. Should show commnet text-->
         <URL>https://www.recipewebsite.com/recipe/chickentenders</URL> <!--Recipe URL-->
     </recipe>
 </recipes>
@@ -62,7 +62,7 @@
     <recipebox id='rb1'> <!-- A single recipe box -->
         <recipe idref='1'/>
         <tags idref='tv7'/> <!-- Add a tag to categorize the recipe box?-->
-        <price currency='euros'>45</price>
+        <price currency="euro">45.00</price>
     </recipebox>
 </recipeboxes>
 
@@ -95,7 +95,7 @@
     <order id='o1'>
         <customer idref='c1'/>
         <recipebox idref='rb1'/>
-        <invoice_amount></invoice_amount>
+        <invoice_amount>50.0</invoice_amount>
     </order>
 </orders>
 

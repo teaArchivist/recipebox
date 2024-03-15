@@ -27,19 +27,19 @@
     </xs:sequence>
   </xs:complexType>
 
-<!--recipe information -->
+<!--recipe-->
 <xs:complexType name="recipeInfoType">
     <xs:sequence>
         <xs:element name="title" type="xs:string"/>
         <xs:element name="author" type="authorRefType"/>
         <xs:element name="information" type="informationType"/>
-        <xs:element name="user_feedback" type="userfeedbackType"/> <!-- user feedback in XML is highlighted ???-->
+        <xs:element name="comments" type="commentsType"/> <!-- user feedback in XML is highlighted ???-->
         <xs:element name="URL" type="xs:anyURI"/>
     </xs:sequence>
     <xs:attribute name="id" type="xs:integer"/>
 </xs:complexType>
 
-<!--author reference-->
+<!--author-->
 <xs:complexType name="authorRefType">
     <xs:attribute name="idref" type="xs:integer"/>
 </xs:complexType>
@@ -57,12 +57,12 @@
     </xs:sequence>
 </xs:complexType>
 
-<!--tool reference -->
+<!--tool-->
 <xs:complexType name="toolRefType">
     <xs:attribute name="idref" type="xs:IDREF"/>
 </xs:complexType>
 
-<!--time for cooking-->
+<!--cooking time-->
 <xs:complexType name="timeType">
     <xs:sequence minOccurs="1" maxOccurs="unbounded">
         <xs:element name="preptime" type="xs:string"/>
@@ -71,14 +71,14 @@
     </xs:sequence>
 </xs:complexType>
 
-<!--ingredients reference-->
+<!--ingredients-->
 <xs:complexType name="ingredientsRefType">
     <xs:sequence minOccurs="1">
         <xs:element name="ingredient" type="ingredientRefType"/>
     </xs:sequence>
 </xs:complexType>
 
-<!--ingredient information -->
+<!--ingredient-->
 <xs:complexType name="ingredientRefType">
     <xs:sequence>
         <xs:element name="amount" type="xs:positiveInteger"/>
@@ -87,7 +87,7 @@
     <xs:attribute name="idref" type="xs:IDREF"/>
 </xs:complexType>
 
-<!--unit reference-->
+<!--unit-->
 <xs:complexType name="unitType">
     <xs:attribute name="idref" type="xs:IDREF"/>
 </xs:complexType>
@@ -99,16 +99,43 @@
     </xs:sequence>
 </xs:complexType>
 
-<!-- value information-->
+<!--nutrition/category-->
 <xs:complexType name="valueInformationType">
     <xs:sequence>
-        <xs:element name="cat_value" type=""/>
-        <xs:element name="allge_value" type=""/>
-        <xs:element name="tag_value" type=""/>
-        <xs:element name="nutrition" type=""/>
+        <xs:element name="cat_value" type="cat_valueType"/>
+        <xs:element name="allge_value" type="allge_valueType"/>
+        <xs:element name="tag_value" type="tag_valueType"/>
+        <xs:element name="nutrition" type="nutrition_valueType"/>
     </xs:sequence>
 </xs:complexType>
 
+<!--category value-->
+<xs:complexType name="cat_valueType">
+    <xs:attribute name="idref" type="xs:IDREF"/>
+</xs:complexType>
+
+<!--allergy value-->
+<xs:complexType name="allge_valueType">
+    <xs:attribute name="idref" type="xs:IDREF"/>
+</xs:complexType>
+
+<!--tag value-->
+<xs:complexType name="tag_valueType">
+    <xs:attribute name="idref" type="xs:IDREF"/>
+</xs:complexType>
+
+<!--nutrition value-->
+<xs:complexType name="nutrition_valueType">
+    <xs:attribute name="idref" type="xs:IDREF"/>
+</xs:complexType>
+
+
+<!--comments-->
+<xs:complexType name="commentsType">
+    <xs:sequence>
+        <xs:element type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+</xs:complexType>
 
 <!--#########################################################################-->
 <!--CUSTOMERS-->
@@ -185,11 +212,12 @@
 </xs:complexType>
 
 <!--price-->
-<xs:complexType name="priceType"> <!--LITTLE ISSUE HERE-->
-    <xs:sequence>
-        <xs:element name="price" type="xs:integer"/>
-    </xs:sequence>
-    <xs:attribute name="currency" type="xs:string"/>
+<xs:complexType name="priceType">
+    <xs:simpleContent>
+        <xs:extension base="xs:decimal">
+            <xs:attribute name="currency" type="xs:string"/>
+        </xs:extension>
+    </xs:simpleContent>
 </xs:complexType>
 
 
