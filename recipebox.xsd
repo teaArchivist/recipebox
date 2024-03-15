@@ -186,8 +186,8 @@
 
 <!--price-->
 <xs:complexType name="priceType"> <!--LITTLE ISSUE HERE-->
-    <xs:sequence maxOccurs="1">
-        <xs:element name="price" type="xs:string"/>
+    <xs:sequence>
+        <xs:element name="price" type="xs:integer"/>
     </xs:sequence>
     <xs:attribute name="currency" type="xs:string"/>
 </xs:complexType>
