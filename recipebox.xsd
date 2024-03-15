@@ -54,6 +54,8 @@
         <xs:element name="ingredients" type="ingredientsRefType"/>
         <xs:element name="steps" type="stepsType"/>
         <xs:element name="value_information" type=""/>
+        <xs:element name="user_feedback" type="userfeedbackType"/>
+        <xs:element name="URL" type="xs:anyURI"/>
     </xs:sequence>
 </xs:complexType>
 
@@ -84,7 +86,7 @@
 <!--steps-->
 <xs:complexType name="stepsType">
     <xs:sequence minOccurs="1" maxOccurs="unbounded">
-        <xs:element name="steps" type="xs:string"/>
+        <xs:element name="step" type="xs:string"/>
     </xs:sequence>
 </xs:complexType>
 
