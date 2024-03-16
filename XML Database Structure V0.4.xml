@@ -233,6 +233,8 @@
     <measurement id="other">
         <unit id="dash">dash</unit>
         <unit id="whole">whole</unit>
+        <unit id="units">unit(s)</unit>
+        <unit id="sachets">sachet(s)</unit>
     </measurement>
 </measurements>
 
