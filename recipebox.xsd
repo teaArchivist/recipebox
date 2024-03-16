@@ -49,7 +49,7 @@
         <xs:element name="comments" type="commentsType"/> <!-- user feedback in XML is highlighted ???-->
         <xs:element name="URL" type="xs:anyURI"/>
     </xs:sequence>
-    <xs:unique name="id" type="xs:ID"/>
+    <xs:attribute name="id" type="xs:ID"/>
 </xs:complexType>
 
 <!--author-->
@@ -348,7 +348,7 @@
                 <xs:field xpath="@contactType"/>
             </xs:key>
         </xs:element>
-        <xs:element name="recipeboxref" type='recipeboxrefType'/>
+        <xs:element name="recipebox" type='recipeboxorderrefType'/>
         <xs:element name="invoice_amount" type="invoice_amountType"/>
     </xs:sequence>
     <xs:attribute name="orderAttribute" type="xs:ID"/>
@@ -358,7 +358,7 @@
     <xs:attribute name="idref" type="xs:IDREF"/>
 </xs:complexType>
 
-<xs:complexType name="recipeboxrefType">
+<xs:complexType name="recipeboxorderrefType">
     <xs:attribute name="idref" type="xs:IDREF"/>
 </xs:complexType>
 
@@ -416,14 +416,14 @@
 <!--customer-->
 <xs:complexType name="customerfeedbackType">
     <xs:sequence minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="recipe" type="reciperefType"/>
+        <xs:element name="recipe" type="recipecommentrefType"/>
         <xs:element name="rating" type="xs:float"/>
         <xs:element name="comment" type="xs:string"/>
     </xs:sequence>
     <xs:attribute name="idref" type="xs:IDREF"/>
 </xs:complexType>
 
-<xs:complexType name="reciperefType">
+<xs:complexType name="recipecommentrefType">
     <xs:attribute name="idref" type="xs:IDREF"/>
 </xs:complexType>
 
