@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <recipebox_database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="recipebox.xsd">
 
-<recipes> <!--RECIPE DATABASE: holds the recipes-->
+<!--########################################################################################################################-->
+<!--RECIPES-->
+<recipes>
     <recipe id='1'> <!--A single recipe -->
         <title>Chili con Carne</title>
         <author idref='8'/>
@@ -39,12 +41,16 @@
                 <nutrition/> <!--(**HOW TO LINK / HAVE TO CALCULATE**)-->
             </value_information>
         </information>
-        <comments/> <!--Linked to customerID and recipeID. Should show commnet text-->
+        <comments> <!--Linked to customerID and recipeID. Should show commnet text-->
+            <comment id="1"/>
+        </comments>
         <URL>https://www.recipewebsite.com/recipe/chickentenders</URL> <!--Recipe URL-->
     </recipe>
 </recipes>
 
-<customers> <!--CUSTOMER DATABASE-->
+<!--########################################################################################################################-->
+<!--CUSTOMERS-->
+<customers>
     <customer id='1'> <!-- A single customer -->
         <name>Pizza Man</name>
         <address>
@@ -66,7 +72,9 @@
     </customer>
 </customers>
 
-<recipeboxes> <!--RECIPEBOX DATABASE-->
+<!--########################################################################################################################-->
+<!--RECIPEBOXES-->
+<recipeboxes>
     <recipebox id='1'> <!-- A single recipe box -->
         <recipe idref='1'/>
         <tags> <!-- Add a tag to categorize the recipe box?-->
@@ -76,7 +84,9 @@
     </recipebox>
 </recipeboxes>
 
-<ingredients> <!--INGREDIENTS DATABASE-->
+<!--########################################################################################################################-->
+<!--INGREDIENTS-->
+<ingredients>
     <ingredient id='chicken'> <!-- A single ingredient -->
         <name>Chicken</name>
         <type>Meat</type> <!-- Fruit, spice, etc. -->
@@ -88,7 +98,9 @@
     </ingredient>
 </ingredients>
 
-<suppliers> <!--SUPPLIERS DATABASE-->
+<!--########################################################################################################################-->
+<!--SUPPLIERS-->
+<suppliers>
     <supplier id='1'> <!-- A single supplier + ID -->
         <name>Food 'n Co.</name>
         <address>
@@ -103,7 +115,9 @@
     </supplier>
 </suppliers>
 
-<orders> <!-- ORDERS INFORMATION -->
+<!--########################################################################################################################-->
+<!--ORDERS-->
+<orders>
     <order id='1'>
         <customer idref='1'/>
         <recipebox idref='1'/>
@@ -111,26 +125,35 @@
     </order>
 </orders>
 
+<!--########################################################################################################################-->
+<!--TOOLS-->
 <tools>
     <tool id='oven'>
         <name>Oven</name>
     </tool>
 </tools>
 
-<authors> <!--AUTHORS DATABASE-->
+<!--########################################################################################################################-->
+<!--AUTHORS-->
+<authors>
     <author id='8'> <!-- A single author -->
         <name>Jane Doe</name>
     </author>
 </authors>
 
+<!--########################################################################################################################-->
+<!--USER COMMENTS-->
 <user_feedback>
-    <customer idref='1'> <!--Customer who left feedback (ID needed)-->
+    <comment id='1'>
+        <customer idref='1'/> <!--Customer who left feedback (ID needed)-->
         <recipe idref='1'/>
         <rating>4.2</rating>
         <comment>Amazing recipe!</comment>
-    </customer>              
+    </comment>              
 </user_feedback>
 
+<!--########################################################################################################################-->
+<!--RECIPE CATEGORISATION-->
 <recipe_categorisation> <!--RECIPE CATEGORIES: holds the categories, tags, and allergen categories for recipes-->
     <category>
         <cat_value id='mains'>Mains</cat_value><!--ID naming to be easier to remember/identify?-->
@@ -166,8 +189,8 @@
     </nutrition>
 </recipe_categorisation>
 
-
-<!--MEASUREMENT DATA: holds the measurement values for the recipes-->
+<!--########################################################################################################################-->
+<!--MEASUREMENT DATA-->
 <measurements>
     <measurement id="volume">
         <unit id="L">L</unit>
