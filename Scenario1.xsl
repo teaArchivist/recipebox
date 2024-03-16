@@ -8,17 +8,15 @@
                 <title>Low Glycemic Recipes</title>
             </head>
             <body>
-                <h2>Here is the list of <xsl:value-of select="count(//recipes)"/>recipes</h2>
+                <h2>Here is the list of <xsl:value-of select="count(//recipes/recipe[information/value_information/nutrition/nutr_value[@idref='sugar' and . &lt; 5]])"/> recipes</h2>
 
-                <xsl:for-each select="recipes/recipe/value_information/nutrition/nutr_value[@idref='sugar' and . &lt; 5]">
-                    <xsl:sort select="@nutr_value[@idref='sugar']" order="descending"/>
+                <xsl:for-each select="//recipes/recipe[information/value_information/nutrition/nutr_value[@idref='sugar' and . &lt; 5]]">
+                    <xsl:sort select="information/value_information/nutrition/nutr_value[@idref='sugar']" data-type="number" order="ascending"/>
                     <p>
-                        <b><td><xsl:value-of select="@nutr_value[@idref='sugar']"/></td>:
-                        <td><xsl:value-of select="title"/></td></b>
+                        <b><xsl:value-of select="information/value_information/nutrition/nutr_value[@idref='sugar']"/>g:</b>
+                        <xsl:value-of select="title"/>
                     </p>
-
                 </xsl:for-each>
-
             </body>
         </html>
 
