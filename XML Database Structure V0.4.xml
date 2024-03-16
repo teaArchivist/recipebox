@@ -5,13 +5,20 @@
 <!--RECIPES-->
 <recipes>
     <recipe id='1'> <!--A single recipe -->
-        <title>Chili con Carne</title>
+        <title>Roasted Carrot and Avocado Salad</title>
         <author idref='8'/>
         <information> <!--Container box for recipe details-->
-            <description>A delicious recipe for oven-made chicken tenders!</description>
+            <description>
+                In this salad, we're roasting carrots with garlic, cumin, and
+                thyme until they're fragrant and caramelized. Tossed with
+                nutty couscous, peppery arugula, and creamy avocado,
+                contrast is the name of the game.
+            </description>
             <quantity>4</quantity> <!--How many servings-->
             <tools> <!--Cooking utensils-->
-                <tool idref='oven'/>
+                <tool idref='knife'/>
+                <tool idref='pot'/>
+                <tool idref='cutting_board'/>
             </tools>
             <time> <!--Container box for time details (**HOW TO LINK TO MEASUREMENTS**)-->
                 <preptime>10 minutes</preptime>
@@ -19,9 +26,17 @@
                 <totaltime>30 minutes</totaltime>
             </time>
             <ingredients> <!--Container box for ingredients-->
-                <ingredient idref='chicken'>
+                <ingredient idref='carrot'>
                     <amount>1</amount>
-                    <unit idref='g'/>
+                    <unit idref='kg'/>
+                </ingredient>
+                <ingredient idref='thyme'>
+                    <amount>1</amount>
+                    <unit idref='dash'/>
+                </ingredient>
+                <ingredient idref='lemon'>
+                    <amount>2</amount>
+                    <unit idref='dash'/>
                 </ingredient>
             </ingredients>  
             <steps> <!--Container box for cooking instructions-->
@@ -131,6 +146,18 @@
     <tool id='oven'>
         <name>Oven</name>
     </tool>
+    <tool id='knife'>
+        <name>Knife</name>
+    </tool>
+    <tool id='bowl'>
+        <name>Bowl</name>
+    </tool>
+    <tool id='pot'>
+        <name>Pot</name>
+    </tool>
+    <tool id='cutting_board'>
+        <name>Cutting Board</name>
+    </tool>
 </tools>
 
 <!--########################################################################################################################-->
@@ -202,6 +229,10 @@
         <unit id="kg">kg</unit>
         <unit id="g">g</unit>
         <unit id="mg">mg</unit>  
+    </measurement>
+    <measurement id="other">
+        <unit id="dash">dash</unit>
+        <unit id="whole">whole</unit>
     </measurement>
 </measurements>
 
