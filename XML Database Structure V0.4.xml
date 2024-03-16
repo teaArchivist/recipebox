@@ -296,6 +296,109 @@
         <comments/> <!--Linked to customerID and recipeID. Should show commnet text-->
         <URL>https://www.hellofresh.co.uk/recipes/peri-peri-pork-and-bean-stew-659594b6aa12a55eb352d9de</URL> <!--Recipe URL-->
     </recipe>
+    <recipe id='pistPesto_Pasta'> <!--A single recipe -->
+        <title>Pistachio Pesto With Fresh Tagliatelle</title>
+        <author idref='8'/>
+        <information> <!--Container box for recipe details-->
+            <description>ou say perfection, we say perfetto. For the speediest, greenest Italian pasta sauce going, you'll blitz mint, basil and zingy lemon juice with Italian cheese. Warm together with fresh tagliatelle, and serve with blanched peas.</description>
+            <quantity>2</quantity> <!--How many servings-->
+            <tools> <!--Cooking utensils-->
+                <tool idref='food_processor'/>
+                <tool id='bowl' />
+                <tool id='pot' />
+            </tools>
+            <time> <!--Container box for time details (**HOW TO LINK TO MEASUREMENTS**)-->
+                <preptime>5 minutes</preptime>
+                <cooktime>5 minutes</cooktime>S
+                <totaltime>10minutes</totaltime>
+            </time>
+            <ingredients> <!--Container box for ingredients-->
+                <ingredient idref='basil'>
+                    <amount>10</amount>
+                    <unit idref='g'/>
+                </ingredient>
+                <ingredient idref='blanche_peas'>
+                    <amount>160</amount>
+                    <unit idref='g'/>
+                </ingredient>
+                <ingredient idref='fresh_tag'>
+                    <amount>250</amount>
+                    <unit idref='g'/>
+                </ingredient>
+                 <ingredient idref='grate_italianCheese'>
+                    <amount>30</amount>
+                    <unit idref='g'/>
+                </ingredient>
+                <ingredient idref='garlic_clove'>
+                    <amount>1</amount>
+                    <unit idref='units'/>
+                </ingredient>
+                <ingredient idref='lemon'>
+                    <amount>1</amount>
+                    <unit idref='units'/>
+                </ingredient>
+                <ingredient idref='mint'>
+                    <amount>5</amount>
+                    <unit idref='g'/>
+                </ingredient>
+                <ingredient idref='pistachios'>
+                    <amount>25</amount>
+                    <unit idref='g'/>
+                </ingredient>
+                 <ingredient idref='oliveOil'>
+                    <amount>9.8</amount>
+                    <unit idref='mL'/>
+                </ingredient>
+                <ingredient idref='salt'>
+                    <amount>2</amount>
+                    <unit idref='dash'/>
+                </ingredient>
+                <ingredient idref='pepper'>
+                    <amount>1</amount>
+                    <unit idref='dash'/>
+                </ingredient>
+            </ingredients>  
+            <steps> <!--Container box for cooking instructions-->
+                <step>1. Boil a large pot of water and add salt.</step>
+                <step>2. Add basil, garlic, Italian cheese lemon, mint, and pistachios into the food processor. Add salt and pepper to taste.</step>
+                <step>3.Put the pesto in a bowl and add the peas.</step>
+                <step>4. Drain the pasta, but put some pasta water on the side.</step>
+                <step>5. Add the pasta to the pesto. Then, slowly add small amounts of pasta water until it's a creamy consistancy.</step>   
+                <step>6. Enjoy! </step>          
+            </steps>
+            <value_information> <!--Container box for recipe categories, allergens, tags, and nutrition information -->
+                <cat_values> <!--recipe category-->
+                    <cat_value idref='mains'/>
+                </cat_values>
+                <allge_values> <!--allergen information (**IF NO VALUE, IS THE CONVENTION TO LEAVE IT LIKE THIS?**)-->
+                    <allge_value id='not_glutenfree' />
+                    <allge_value id='milk' />
+                    <allge_value id='soya' />
+                    <allge_value id='nut' />
+                    <allge_value id='peanut' />
+                    <allge_value id='sesame' />
+                    <allge_value id='mustard' />
+                </allge_values>
+                <tag_values> <!--recipe tags e.g. comfort food, quick & easy-->
+                    <tag_value idref='quickeasy'/>
+                    <tag_value idref='vegatarian'/>
+                </tag_values>
+                <nutrition> Per 100 grams:
+                    <nutr_value id='calories'>187<unit id="kcal"/></nutr_value>
+                    <nutr_value id='fat'>4.5<unit id="g"/></nutr_value>
+                    <nutr_value id='protein'>8<unit id="g"/></nutr_value>
+                    <nutr_value id='carbs'>26.1<unit id="g"/></nutr_value>
+                    <nutr_value id='sugar'>2.5<unit id="g"/></nutr_value>
+                    <nutr_value id='sodium'>0.06<unit id="g"/></nutr_value>
+                    <nutr_value id='fiber'>2.7<unit id="g"/></nutr_value>
+                </nutrition> <!--(**HOW TO LINK / HAVE TO CALCULATE**)-->
+            </value_information>
+        </information>
+        <comments/> <!--Linked to customerID and recipeID. Should show commnet text-->
+        <URL>
+        <a href="https://www.gousto.co.uk/menu?collection=quick-easy"/>
+        </URL> <!--Recipe URL-->
+    </recipe>
 
 </recipes>
 
@@ -342,73 +445,263 @@
         <name>Beef Mince</name>
         <type>Meat</type> <!-- Fruit, spice, etc. -->
         <seasonality>All-year</seasonality>
+        <nutrition_info> <!--DO WE NEED THIS? Fiber, etc. LINK to nurtriction and allergens-->
+            
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
-    <ingredient id='bellPepper'> 
+    <ingredient id='porkMince'> <!-- A single ingredient -->
+        <name>Pork Mince</name>
+        <type>Meat</type> <!-- Fruit, spice, etc. -->
+        <seasonality>All-year</seasonality>
+        <nutrition_info> <!--DO WE NEED THIS? Fiber, etc. LINK to nurtriction and allergens-->
+            
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+    </ingredient>
+    <ingredient id='dicChorizo'> <!-- A single ingredient -->
+        <name>Diced Chorizo</name>
+        <type>Sausage</type> <!-- Fruit, spice, etc. -->
+        <seasonality>All-year</seasonality>
+        <nutrition_info> <!--DO WE NEED THIS? Fiber, etc. LINK to nurtriction and allergens-->
+            
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+    </ingredient>
+    <ingredient id='bellPepper'> <!-- A single ingredient -->
         <name>Bell pepper</name>
-        <type>Vegtable</type> 
+        <type>Vegtable</type> <!-- Fruit, spice, etc. -->
         <seasonality>All-year</seasonality>
-        <supplier idref='1'/> 
+        <nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+            May contain Celery
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
-    <ingredient id='eggNoodle'>
+    <ingredient id='mixBeans'> <!-- A single ingredient -->
+        <name>Mixed Beans</name>
+        <type>Vegtable</type> <!-- Fruit, spice, etc. -->
+        <seasonality>All-year</seasonality>
+        <nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+    
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+    </ingredient>
+    <ingredient id='garlic_clove'> <!-- A single ingredient -->
+        <name>Garlic clove</name>
+        <type>Vegtable</type> <!-- Fruit, spice, etc. -->
+        <seasonality>All-year</seasonality>
+        <nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+            
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+    </ingredient>
+    <ingredient id='basil'> <!-- A single ingredient -->
+        <name>Basil</name>
+        <type>Herb</type> <!-- Fruit, spice, etc. -->
+        <seasonality>All-year</seasonality>
+        <nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+            
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+    </ingredient>
+    <ingredient id='mint'> <!-- A single ingredient -->
+        <name>Mint</name>
+        <type>Herb</type> <!-- Fruit, spice, etc. -->
+        <seasonality>All-year</seasonality>
+        <nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+            
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+    </ingredient>
+    <ingredient id='blanche_peas'> <!-- A single ingredient -->
+        <name>Blanched Peas</name>
+        <type>Vegtable</type> <!-- Fruit, spice, etc. -->
+        <seasonality>All-year</seasonality>
+        <nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+            
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+    </ingredient>
+    <ingredient id='fresh_tag'> <!-- A single ingredient -->
+        <name>Fresh Tagliatelle</name>
+        <type>Pasta</type> <!-- Fruit, spice, etc. -->
+        <seasonality>All-year</seasonality>
+        <nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+            
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+    </ingredient>
+    <ingredient id='eggNoodle'> <!-- A single ingredient -->
         <name>Egg Noodle Nest</name>
-        <type>Pasta</type>
+        <type>Pasta</type> <!-- Fruit, spice, etc. -->
         <seasonality>All-year</seasonality>
-        <supplier idref='1'/> 
+        <nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+            
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
-    <ingredient id='ketjapManis'>
+    <ingredient id='grate_italianCheese'> <!-- A single ingredient -->
+        <name>Grated Italian Hard Cheese</name>
+        <type>Cheese</type> <!-- Fruit, spice, etc. -->
+        <seasonality>All-year</seasonality>
+        <nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+            
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+    </ingredient>
+    <ingredient id='ketjapManis'> <!-- A single ingredient -->
         <name>Ketjap Manis</name>
-        <type>Sauce</type>
+        <type>Sauce</type> <!-- Fruit, spice, etc. -->
         <seasonality>All-year</seasonality>
-        <supplier idref='1'/> 
+        <nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+            (Contains Soya)
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
-    <ingredient id='indoSpiceMix'>
+    <ingredient id='indoSpiceMix'> <!-- A single ingredient -->
         <name>Indonesian Style Spice Mix</name>
-        <type>Sauce</type> 
+        <type>Spice mix</type> <!-- Fruit, spice, etc. -->
         <seasonality>All-year</seasonality>
-        <supplier idref='1'/>
+        <nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+            
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
-    <ingredient id='riceVinegar'> 
+    <ingredient id='peri_seasoning'> <!-- A single ingredient -->
+        <name>Peri Peri Seasoning</name>
+        <type>Spice mix</type> <!-- Fruit, spice, etc. -->
+        <seasonality>All-year</seasonality>
+        <nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+            
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+    </ingredient>
+    <ingredient id='salt'> <!-- A single ingredient -->
+        <name>Salt</name>
+        <type>Spice</type> <!-- Fruit, spice, etc. -->
+        <seasonality>All-year</seasonality>
+        <nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+            
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+    </ingredient>
+    <ingredient id='pepper'> <!-- A single ingredient -->
+        <name>Pepper</name>
+        <type>Spice</type> <!-- Fruit, spice, etc. -->
+        <seasonality>All-year</seasonality>
+        <nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+            
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+    </ingredient>
+    <ingredient id='red-wine_paste'> <!-- A single ingredient -->
+        <name>Red Wine Stock Paste</name>
+        <type>Paste</type> <!-- Fruit, spice, etc. -->
+        <seasonality>All-year</seasonality>
+        <nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+            
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+    </ingredient>
+    <ingredient id='riceVinegar'> <!-- A single ingredient -->
         <name>Rice Vinegar</name>
-        <type>Vinegar</type> 
+        <type>Vinegar</type> <!-- Fruit, spice, etc. -->
         <seasonality>All-year</seasonality>
-        <supplier idref='1'/> 
+        <nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+            
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
-    <ingredient id='honey'>
+    <ingredient id='sugar'> <!-- A single ingredient -->
+        <name>Sugar</name>
+        <type>Sugar</type> <!-- Fruit, spice, etc. -->
+        <seasonality>All-year</seasonality>
+        <nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+            <nutr_value id='sugar' />
+            <nutr_value id='carbs'/>
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+    </ingredient>
+    <ingredient id='honey'> <!-- A single ingredient -->
         <name>Honey</name>
-        <type>Sugar</type>
+        <type>Sugar</type> <!-- Fruit, spice, etc. -->
         <seasonality>All-year</seasonality>
-        <supplier idref='1'/> 
+        <nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+            <nutr_value id='sugar' />
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
-    <ingredient id='saltPeanuts'> 
+    <ingredient id='saltPeanuts'> <!-- A single ingredient -->
         <name>Salted Peanuts</name>
-        <type>Nut</type>
+        <type>Nut</type> <!-- Fruit, spice, etc. -->
         <seasonality>All-year</seasonality>
-        <supplier idref='1'/>
+        <nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+            Nut
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
-    <ingredient id='lime'>
+        <ingredient id='pistachios'> <!-- A single ingredient -->
+        <name>Pistachios</name>
+        <type>Nut</type> <!-- Fruit, spice, etc. -->
+        <seasonality>All-year</seasonality>
+        <nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+            Nut
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+    </ingredient>
+    <ingredient id='fineChop_tomatoes'> <!-- A single ingredient -->
+        <name>Finely Chopped Tomatoes</name>
+        <type>Vegtable</type> <!-- Fruit, spice, etc. -->
+        <seasonality>All-year</seasonality>
+        <nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+    
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+    </ingredient>
+    <ingredient id='lime'> <!-- A single ingredient -->
         <name>Lime</name>
-        <type>Fruit</type> 
+        <type>Fruit</type> <!-- Fruit, spice, etc. -->
         <seasonality>All-year</seasonality>
-        <supplier idref='1'/>
+        <nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+    
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
-    <ingredient id='ciabetta'> 
+    <ingredient id='lemon'> <!-- A single ingredient -->
+        <name>Lemon</name>
+        <type>Fruit</type> <!-- Fruit, spice, etc. -->
+        <seasonality>All-year</seasonality>
+        <nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+    
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+    </ingredient>
+    <ingredient id='ciabetta'> <!-- A single ingredient -->
         <name>Ciabatta</name>
-        <type>Bread</type> 
+        <type>Bread</type> <!-- Fruit, spice, etc. -->
         <seasonality>All-year</seasonality>
-        <supplier idref='1'/> 
+        <nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+            <nutr_value id='carbs'/>
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
-    <ingredient id='oliveOil'>
+    <ingredient id='oliveOil'> <!-- A single ingredient -->
         <name>Olive Oil</name>
-        <type>Oil</type> 
+        <type>Oil</type> <!-- Fruit, spice, etc. -->
         <seasonality>All-year</seasonality>
-        <supplier idref='1'/> 
+        <nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+            
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
-    <ingredient id='water'> 
+    <ingredient id='water'> <!-- A single ingredient -->
         <name>Water</name>
-        <type>Liquid</type> 
+        <type>Liquid</type> <!-- Fruit, spice, etc. -->
         <seasonality>All-year</seasonality>
-        <supplier idref='1'/> 
+        <nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+            
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
 </ingredients>
 
@@ -479,6 +772,7 @@
     <tool id='garlic_press'>
         <name>Garlic Press</name>
     </tool>
+    <tool idref='food_processor'/>
 </tools>
 
 <!--########################################################################################################################-->
@@ -525,9 +819,14 @@
         <allge_value id='nut'>Nuts</allge_value>
         <allge_value id='dairy'>Dairy</allge_value>
         <allge_value id='gluten'>Gluten</allge_value>
+        <allge_value id='not_glutenfree'>Contains Cereals containing gluten</allge_value>
+        <allge_value id='milk'>Milk</allge_value>
         <allge_value id='egg'>Egg</allge_value>
         <allge_value id='soya'>Soya</allge_value>
+        <allge_value id='nut'>nut</allge_value>
         <allge_value id='peanut'>Peanut</allge_value>
+        <allge_value id='sesame'>Sesame</allge_value>
+        <allge_value id='mustard'>mustard</allge_value>
         <allge_value id='sulphites'>Sulphites </allge_value>
     </allergens>
     <nutrition>
@@ -552,6 +851,7 @@
     </measurement>
     <measurement id="weight">
         <unit id="kg">kg</unit>
+        <unit id="kcal">kcal</unit>
         <unit id="g">g</unit>
         <unit id="mg">mg</unit>  
     </measurement>
