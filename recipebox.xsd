@@ -98,6 +98,16 @@
         <xs:field xpath="@idref"/>
     </xs:keyref>
 
+    <!--Comment-->
+    <xs:key name="CommentKey">
+        <xs:selector xpath="./user_feedback/comment"/>
+        <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:keyref name="CommentKeyRef" refer="CommentKey">
+        <xs:selector xpath="./recipes/recipe/comments/comment"/>
+        <xs:field xpath="@idref"/>
+    </xs:keyref>
+
     <!--Category Key-->
     <xs:key name="CategoryKey">
         <xs:selector xpath="./recipe_categorisation/category/cat_value"/>
@@ -220,7 +230,7 @@
 <!--ingredient-->
 <xs:complexType name="ingredientRefType">
     <xs:sequence minOccurs="1" maxOccurs="1">
-        <xs:element name="amount" type="xs:positiveInteger"/>
+        <xs:element name="amount" type="xs:float"/>
         <xs:element name="unit" type="unitType"/>
     </xs:sequence>
     <xs:attribute name="idref" type="xs:string"/>
@@ -303,7 +313,7 @@
 </xs:complexType>
 
 <xs:complexType name="commentType">
-    <xs:attribute name="id" type="xs:integer"/>
+    <xs:attribute name="idref" type="xs:integer"/>
 </xs:complexType>
 
 <!--########################################################################################################################-->
@@ -410,7 +420,6 @@
         <xs:element name="name" type="xs:string"/>
         <xs:element name="type" type="xs:string"/>
         <xs:element name="seasonality" type="xs:string"/>
-        <xs:element name="nutrition_info" type="xs:string"/> <!--Might need to edit the way we present the info in the database-->
         <xs:element name="supplier" type="supplierrefType"/>
     </xs:sequence>
     <xs:attribute name="id" type="xs:string" />

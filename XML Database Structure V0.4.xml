@@ -36,7 +36,7 @@
                 </ingredient>
                 <ingredient idref='lemon'>
                     <amount>2</amount>
-                    <unit idref='dash'/>
+                    <unit idref='whole'/>
                 </ingredient>
             </ingredients>  
             <steps> <!--Container box for cooking instructions-->
@@ -53,14 +53,250 @@
                     <tag_value idref='quickeasy'/>
                     <tag_value idref='comfortfood'/>
                 </tag_values>
-                <nutrition/> <!--(**HOW TO LINK / HAVE TO CALCULATE**)-->
+                <nutrition>
+                    <nutr_value idref='calories'>350</nutr_value>
+                    <nutr_value idref='fat'>15g</nutr_value>
+                    <nutr_value idref='protein'>10g</nutr_value>
+                    <nutr_value idref='carbs'>45g</nutr_value>
+                    <nutr_value idref='sugar'>10g</nutr_value>
+                    <nutr_value idref='sodium'>500mg</nutr_value>
+                    <nutr_value idref='fiber'>8g</nutr_value>
+                </nutrition>
             </value_information>
         </information>
         <comments> <!--Linked to customerID and recipeID. Should show commnet text-->
-            <comment id="1"/>
+            <comment idref="1"/>
         </comments>
         <URL>https://www.recipewebsite.com/recipe/chickentenders</URL> <!--Recipe URL-->
     </recipe>
+
+    <recipe id='2'> <!--A single recipe -->
+        <title>Indonesian Inspired Beef Noodles with Stir-Fried Pepper, Lime and Peanuts</title>
+        <author idref='8'/>
+        <information> <!--Container box for recipe details-->
+            <description>Looking for a quick and tasty midweek dinner option? Try cooking up our Indonesian Inspired Beef Noodles in just 20-25 minutes for a delicious and speedy meal.</description>
+            <quantity>4</quantity> <!--How many servings-->
+            <tools> <!--Cooking utensils-->
+                <tool idref='kettle'/>
+                <tool idref='lg_fryingpan'/>
+                <tool idref='sieve'/>
+                <tool idref='med_saucepan'/>
+                <tool idref='rolling_pin'/>
+            </tools>
+            <time> <!--Container box for time details (**HOW TO LINK TO MEASUREMENTS**)-->
+                <preptime>25 minutes</preptime>
+                <cooktime>20 minutes</cooktime>
+                <totaltime>45 minutes</totaltime>
+            </time>
+            <ingredients> <!--Container box for ingredients-->
+                <ingredient idref='beefMince'>
+                    <amount>480</amount>
+                    <unit idref='g'/>
+                </ingredient>
+                <ingredient idref='bellPepper'>
+                    <amount>2</amount>
+                    <unit idref='units'/>
+                </ingredient>
+                 <ingredient idref='eggNoodle'>
+                    <amount>250</amount>
+                    <unit idref='g'/>
+                </ingredient>
+                <ingredient idref='indoSpiceMix'>
+                    <amount>2</amount>
+                    <unit idref='sachets'/>
+                </ingredient>
+                <ingredient idref='ketjapManis'>
+                    <amount>100</amount>
+                    <unit idref='g'/>
+                </ingredient>
+                <ingredient idref='riceVinegar'>
+                    <amount>30</amount>
+                    <unit idref='mL'/>
+                </ingredient>
+                <ingredient idref='honey'>
+                    <amount>30</amount>
+                    <unit idref='g'/>
+                </ingredient>
+                <ingredient idref='saltPeanuts'>
+                    <amount>50</amount>
+                    <unit idref='g'/>
+                </ingredient>
+                <ingredient idref='lime'>
+                    <amount>1</amount>
+                    <unit idref='unit(s)'/>
+                </ingredient>
+            </ingredients>  
+            <steps> <!--Container box for cooking instructions-->
+                <step>1.
+                a. Boil a full kettle.
+                b. Halve the bell pepper and remove the core and seeds. Slice into thin strips.
+                c. Heat a large frying pan on medium-high heat (no oil).
+                d. Once hot, add the beef mince and sliced pepper. 
+                Fry until browned and tender, 5-6 mins. Use a spoon to break it up as it cooks. 
+                IMPORTANT: Wash your hands and equipment after handling raw mince. </step>
+                <step>2. 
+                    a. Meanwhile, pour the boiled water into a medium saucepan with 1/4 tsp salt on high heat.
+                    b. Add the noodles and cook until tender, 4 mins. 
+                    c. Once cooked, drain in a sieve and run under cold water to stop them sticking together. </step>
+                <step>3.a. Once the mince is cooked, drain and discard any excess fat. IMPORTANT: The mince is cooked when no longer pink in the middle.
+                        b. Add the Indonesian style spice mix and cook until fragrant, 1 min.
+                        c. Stir in the ketjap manis, rice vinegar, honey and water for the sauce (see pantry for amount). Bring to the boil and simmer, 3-4 mins. 
+                        TIP: If your honey has hardened, pop it in a bowl of hot water for 1 min.</step>
+                <step>4.a. Meanwhile, crush the peanuts in the unopened sachet using a rolling pin.
+                        b. Halve the lime (see ingredients for amount).</step>
+                <step>5. a. When the sauce has thickened, add the cooked noodles, a good squeeze of lime and half the peanuts to the pan.
+                        b. Stir to coat the noodles in the sauce and cook until piping hot, 1-2 mins.
+                        c. Taste, and season with salt and pepper if needed. Add a splash more water if the noodles look a little dry.</step>
+                <step>6. a. Share the beef noodles between your bowls.
+                        b. Finish with a sprinkle of the remaining peanuts for those who'd like them.
+                        Enjoy!</step>             
+            </steps>
+            <value_information> <!--Container box for recipe categories, allergens, tags, and nutrition information -->
+                <cat_values> <!--recipe category-->
+                    <cat_value idref='mains'/>
+                </cat_values>
+                <allge_values/> <!--allergen information (**IF NO VALUE, IS THE CONVENTION TO LEAVE IT LIKE THIS?**)-->
+                <tag_values> <!--recipe tags e.g. comfort food, quick & easy-->
+                    <tag_value idref='quickeasy'/>
+                    <tag_value idref='comfortfood'/>
+                </tag_values>
+                <nutrition>
+                    <nutr_value idref='calories'>350</nutr_value>
+                    <nutr_value idref='fat'>15g</nutr_value>
+                    <nutr_value idref='protein'>10g</nutr_value>
+                    <nutr_value idref='carbs'>45g</nutr_value>
+                    <nutr_value idref='sugar'>10g</nutr_value>
+                    <nutr_value idref='sodium'>500mg</nutr_value>
+                    <nutr_value idref='fiber'>8g</nutr_value>
+                </nutrition> <!--(**HOW TO LINK / HAVE TO CALCULATE**)-->
+            </value_information>
+        </information>
+       <comments>
+       </comments>
+        <URL>https://www.hellofresh.co.uk/recipes/indonesian-inspired-beef-noodles-651557c5be675f371f89ef48</URL> <!--Recipe URL-->
+    </recipe>
+
+    <recipe id='3'> <!--A single recipe -->
+        <title>Peri Peri Pork and Bean Stew with Garlic Ciabatta</title>
+        <author idref='8'/>
+        <information> <!--Container box for recipe details-->
+            <description>Looking for a quick and tasty midweek dinner option? Try cooking up our Peri Peri Pork and Bean Stew in just 20-25 minutes for a delicious and speedy meal.</description>
+            <quantity>2</quantity> <!--How many servings-->
+            <tools> <!--Cooking utensils-->
+                <tool idref='baking_tray'/>
+                <tool idref='pan'/>
+                <tool idref='sieve'/>
+                <tool idref='garlic_press'/>
+            </tools>
+            <time> <!--Container box for time details (**HOW TO LINK TO MEASUREMENTS**)-->
+                <preptime>20 minutes</preptime>
+                <cooktime>10 minutes</cooktime>
+                <totaltime>30 minutes</totaltime>
+            </time>
+            <ingredients> <!--Container box for ingredients-->
+                <ingredient idref='porkMince'>
+                    <amount>120</amount>
+                    <unit idref='g'/>
+                </ingredient>
+                <ingredient idref='dicChorizo'>
+                    <amount>60</amount>
+                    <unit idref='g'/>
+                </ingredient>
+                <ingredient idref='bellPepper'>
+                    <amount>1</amount>
+                    <unit idref='units'/>
+                </ingredient>
+                 <ingredient idref='mixBeans'>
+                    <amount>1</amount>
+                    <unit idref='cartons'/>
+                </ingredient>
+                <ingredient idref='garlic_clove'>
+                    <amount>2</amount>
+                    <unit idref='units'/>
+                </ingredient>
+                <ingredient idref='peri_seasoning'>
+                    <amount>1</amount>
+                    <unit idref='sachets'/>
+                </ingredient>
+                <ingredient idref='fineChop_tomatoes'>
+                    <amount>1</amount>
+                    <unit idref='cartons'/>
+                </ingredient>
+                <ingredient idref='red-wine_paste'>
+                    <amount>28</amount>
+                    <unit idref='g'/>
+                </ingredient>
+                <ingredient idref='ciabatta'>
+                    <amount>1</amount>
+                    <unit idref='units'/>
+                </ingredient>
+                 <ingredient idref='sugar'>
+                    <amount>5</amount>
+                    <unit idref='g'/>
+                </ingredient>
+                 <ingredient idref='oliveOil'>
+                    <amount>10</amount>
+                    <unit idref='mL'/>
+                </ingredient>
+                 <ingredient idref='water'>
+                    <amount>200</amount>
+                    <unit idref='mL'/>
+                </ingredient>
+            </ingredients>  
+            <steps> <!--Container box for cooking instructions-->
+                <step>1.
+                a. Preheat your oven to 240°C/220°C fan/gas mark 9.
+                b. Halve the bell pepper and discard the core and seeds. Slice into thin strips. 
+                c. Pop the sliced pepper onto a baking tray. Drizzle with oil, season with salt and pepper, then toss to coat. Spread out in a single layer.
+                d. When the oven is hot, roast on the top shelf until soft and slightly charred, 10-12 mins. </step>
+                <step>2. 
+                    a. Meanwhile, heat a large frying pan on medium-high heat (no oil).
+                    b. Once hot, add the pork mince and diced chorizo. IMPORTANT: Wash your hands and equipment after handling raw mince.
+                    c. Cook until browned, 5-6 mins. Use a spoon to break up the mince as it cooks. IMPORTANT: Wash your hands and equipment after handling raw mince. It's cooked when no longer pink in the middle. </step>
+                <step>3.a. Meanwhile, drain and rinse the mixed beans in a sieve.
+                        b. Peel and grate the garlic (or use a garlic press).</step>
+                <step>4.a. Once the mince has browned, stir in the peri peri seasoning and half the garlic. Cook for 1 min.
+                        b. Stir in the chopped tomatoes, mixed beans, red wine stock paste, sugar and water for the sauce (see pantry for both amounts), then bring to the boil.
+                        c. Simmer until the sauce has thickened slightly, 5-6 mins.
+                        d. Once cooked, stir the roasted peppers into the sauce.</step>
+                <step>5. a. Meanwhile, halve the ciabatta and lay onto the (now empty) pepper baking tray, cut-side up.
+                        b. Spread over the remaining garlic and drizzle with the olive oil for the garlic bread (see pantry for amount).
+                        c. Bake on the top shelf of your oven until golden, 3-4 mins.
+                        d. Once golden, slice into triangles ready for serving.
+                       </step>   
+                <step>6. 
+                        a. When everything's ready, taste and season with salt, pepper or a pinch of sugar (if needed).
+                        b. Add a splash of water if it's a little too thick.
+                        c. Serve your peri peri stew in bowls with the garlic ciabatta alongside.
+                        Enjoy!
+                    </step>          
+            </steps>
+            <value_information> <!--Container box for recipe categories, allergens, tags, and nutrition information -->
+                <cat_values> <!--recipe category-->
+                    <cat_value idref='mains'/>
+                </cat_values>
+                <allge_values> <!--allergen information (**IF NO VALUE, IS THE CONVENTION TO LEAVE IT LIKE THIS?**)-->
+                    <allge_value id='not_glutenfree' />
+                    <allge_value id='sulphites' />
+                </allge_values>
+                <tag_values> <!--recipe tags e.g. comfort food, quick & easy-->
+                    <tag_value idref='quickeasy'/>
+                </tag_values>
+                <nutrition>
+                    <nutr_value idref='calories'>350</nutr_value>
+                    <nutr_value idref='fat'>15g</nutr_value>
+                    <nutr_value idref='protein'>10g</nutr_value>
+                    <nutr_value idref='carbs'>45g</nutr_value>
+                    <nutr_value idref='sugar'>10g</nutr_value>
+                    <nutr_value idref='sodium'>500mg</nutr_value>
+                    <nutr_value idref='fiber'>8g</nutr_value>
+                </nutrition> <!--(**HOW TO LINK / HAVE TO CALCULATE**)-->
+            </value_information>
+        </information>
+        <comments/> <!--Linked to customerID and recipeID. Should show commnet text-->
+        <URL>https://www.hellofresh.co.uk/recipes/peri-peri-pork-and-bean-stew-659594b6aa12a55eb352d9de</URL> <!--Recipe URL-->
+    </recipe>
+
 </recipes>
 
 <!--########################################################################################################################-->
@@ -106,12 +342,82 @@
         <name>Chicken</name>
         <type>Meat</type> <!-- Fruit, spice, etc. -->
         <seasonality>All-year</seasonality>
-        <nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
-            
-        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
+    <ingredient id='beefMince'>
+        <name>Beef Mince</name>
+        <type>Meat</type>
+        <seasonality>All-year</seasonality>
+        <supplier idref='1'/> 
+    </ingredient>
+    <ingredient id='bellPepper'> 
+        <name>Bell pepper</name>
+        <type>Vegtable</type> 
+        <seasonality>All-year</seasonality>
+        <supplier idref='1'/> 
+    </ingredient>
+    <ingredient id='eggNoodle'>
+        <name>Egg Noodle Nest</name>
+        <type>Pasta</type>
+        <seasonality>All-year</seasonality>
+        <supplier idref='1'/> 
+    </ingredient>
+    <ingredient id='ketjapManis'>
+        <name>Ketjap Manis</name>
+        <type>Sauce</type>
+        <seasonality>All-year</seasonality>
+        <supplier idref='1'/> 
+    </ingredient>
+    <ingredient id='indoSpiceMix'>
+        <name>Indonesian Style Spice Mix</name>
+        <type>Sauce</type> 
+        <seasonality>All-year</seasonality>
+        <supplier idref='1'/>
+    </ingredient>
+    <ingredient id='riceVinegar'> 
+        <name>Rice Vinegar</name>
+        <type>Vinegar</type> 
+        <seasonality>All-year</seasonality>
+        <supplier idref='1'/> 
+    </ingredient>
+    <ingredient id='honey'>
+        <name>Honey</name>
+        <type>Sugar</type>
+        <seasonality>All-year</seasonality>
+        <supplier idref='1'/> 
+    </ingredient>
+    <ingredient id='saltPeanuts'> 
+        <name>Salted Peanuts</name>
+        <type>Nut</type>
+        <seasonality>All-year</seasonality>
+        <supplier idref='1'/>
+    </ingredient>
+    <ingredient id='lime'>
+        <name>Lime</name>
+        <type>Fruit</type> 
+        <seasonality>All-year</seasonality>
+        <supplier idref='1'/>
+    </ingredient>
+    <ingredient id='ciabetta'> 
+        <name>Ciabatta</name>
+        <type>Bread</type> 
+        <seasonality>All-year</seasonality>
+        <supplier idref='1'/> 
+    </ingredient>
+    <ingredient id='oliveOil'>
+        <name>Olive Oil</name>
+        <type>Oil</type> 
+        <seasonality>All-year</seasonality>
+        <supplier idref='1'/> 
+    </ingredient>
+    <ingredient id='water'> 
+        <name>Water</name>
+        <type>Liquid</type> 
+        <seasonality>All-year</seasonality>
+        <supplier idref='1'/> 
+    </ingredient>
 </ingredients>
+
 
 <!--########################################################################################################################-->
 <!--SUPPLIERS-->
@@ -158,6 +464,27 @@
     <tool id='cutting_board'>
         <name>Cutting Board</name>
     </tool>
+    <tool id='kettle'>
+        <name>Kettle</name>
+    </tool>
+    <tool id='lg_fryingpan'>
+        <name>Large Frying Pan</name>
+    </tool>
+    <tool id='med_saucepan'>
+        <name>Medium Saucepan</name>
+    </tool>
+    <tool id='sieve'>
+        <name>Sieve</name>
+    </tool>
+    <tool id='rolling_pin'>
+        <name>Rolling Pin</name>
+    </tool>
+    <tool id='pan'>
+        <name>Pan</name>
+    </tool>
+    <tool id='garlic_press'>
+        <name>Garlic Press</name>
+    </tool>
 </tools>
 
 <!--########################################################################################################################-->
@@ -201,9 +528,13 @@
         <tag_value id='comfortfood'>Comfort Food</tag_value>
     </recipe_tag>
     <allergens>
-        <allge_value id='nutfree'>Nut-free</allge_value>
-        <allge_value id='dairyfree'>Dairy-free</allge_value>
-        <allge_value id='glutenfree'>Gluten-free</allge_value>
+        <allge_value id='nutfree'>Nuts</allge_value>
+        <allge_value id='dairyfree'>Dairy</allge_value>
+        <allge_value id='glutenfree'>Gluten</allge_value>
+        <allge_value id='egg'>Egg</allge_value>
+        <allge_value id='soya'>Soya</allge_value>
+        <allge_value id='peanut'>Peanut</allge_value>
+        <allge_value id='sulphites'>Sulphites </allge_value>
     </allergens>
     <nutrition>
         <nutr_value id='calories'>Calories</nutr_value>
@@ -233,6 +564,9 @@
     <measurement id="other">
         <unit id="dash">dash</unit>
         <unit id="whole">whole</unit>
+        <unit id="units">unit(s)</unit>
+        <unit id="sachets">sachet(s)</unit>
+        <unit id="cartons">carton(s)</unit>
     </measurement>
 </measurements>
 
