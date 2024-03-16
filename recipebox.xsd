@@ -18,17 +18,40 @@
         </xs:sequence>
     </xs:complexType>
 
-    <!--Get the title, put it in recipebox-->
     <xs:key name="RecipeKey">
-        <xs:selector xpath="recipe"/>
-        <xs:field xpath="title"/>
+        <xs:selector xpath=".//recipes/recipe"/>
+        <xs:field xpath="@id"/>
     </xs:key>
     <xs:keyref name="RecipeKeyRef" refer="RecipeKey">
-        <xs:selector xpath="recipebox/recipe"/>
+        <xs:selector xpath=".//user_feedback/customer/recipe"/>
         <xs:field xpath="@idref"/>
     </xs:keyref>
 
+    <xs:key name="CustomerKey">
+        <xs:selector xpath=".//customers/customer"/>
+        <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:keyref name="CustomerOrderKeyRef" refer="CustomerKey">
+        <xs:selector xpath=".//orders/order"/>
+        <xs:field xpath="@idref"/>
+    </xs:keyref>
+    <xs:keyref name="CustomerCommentKeyRef" refer="CustomerKey">
+        <xs:selector xpath=".//user_feedback/customer"/>
+        <xs:field xpath="@idref"/>
+    </xs:keyref>
 
+    <xs:key name="RecipeboxKey">
+        <xs:selector xpath=".//customers/customer"/>
+        <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:keyref name="CustomerOrderKeyRef" refer="CustomerKey">
+        <xs:selector xpath=".//orders/order"/>
+        <xs:field xpath="@idref"/>
+    </xs:keyref>
+    <xs:keyref name="CustomerCommentKeyRef" refer="CustomerKey">
+        <xs:selector xpath=".//user_feedback/customer"/>
+        <xs:field xpath="@idref"/>
+    </xs:keyref>
 
 </xs:element>
 
@@ -49,7 +72,7 @@
         <xs:element name="comments" type="commentsType"/> <!-- user feedback in XML is highlighted ???-->
         <xs:element name="URL" type="xs:anyURI"/>
     </xs:sequence>
-    <xs:attribute name="id" type="xs:ID"/>
+    <xs:attribute name="id" type="xs:integer"/>
 </xs:complexType>
 
 <!--author-->
@@ -78,9 +101,9 @@
 </xs:complexType>
 
 <!--tool-->
-<complexType name="toolRefType">
+<xs:complexType name="toolRefType">
     <xs:attribute name="idref" type="xs:IDREF"/>
-</complexType>
+</xs:complexType>
 
 
 <!--cooking time-->
@@ -340,7 +363,7 @@
 
 <xs:complexType name="orderType">
     <xs:sequence>
-        <xs:element name="customerrefType" type='customerrefType'>
+        <xs:element name="customer" type='customerrefType'>
             <xs:key name="CustomerOrderKey">
                 <xs:selector xpath="customers/customerInfoType"/>
                 <xs:field xpath="name"/>
@@ -447,17 +470,20 @@
 </xs:complexType>
 
 <xs:complexType name="cat_valueType">
-    <xs:attribute name="id" type="xs:ID"/>
+    <xs:simpleContent>
+        <xs:extension base="xs:string"/>
+        <xs:attribute name="id" type="xs:ID"/>
+    </xs:simpleContent>
 </xs:complexType>
 
 <!--recipe_tagType-->
 <xs:complexType name="recipetagType">
     <xs:sequence minOccurs="1" maxOccurs="unbounded">
-        <xs:element name="tag_value" type="tag_valueType"/>
+        <xs:element name="tag_value" type="tagvalueType"/>
     </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="tag_valueType">
+<xs:complexType name="tagvalueType">
     <xs:attribute name="id" type="xs:ID"/>
 </xs:complexType>
 
