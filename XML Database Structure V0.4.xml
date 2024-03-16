@@ -58,7 +58,7 @@
                     <nutr_value idref='fat'>15g</nutr_value>
                     <nutr_value idref='protein'>10g</nutr_value>
                     <nutr_value idref='carbs'>45g</nutr_value>
-                    <nutr_value idref='sugar'>10g</nutr_value>
+                    <nutr_value idref='sugar'>4g</nutr_value>
                     <nutr_value idref='sodium'>500mg</nutr_value>
                     <nutr_value idref='fiber'>8g</nutr_value>
                 </nutrition>
