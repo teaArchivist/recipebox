@@ -8,7 +8,9 @@
         <information> <!--Container box for recipe details-->
             <description>A delicious recipe for oven-made chicken tenders!</description>
             <quantity>4</quantity> <!--How many servings-->
-            <tools idref='t3'/> <!--Cooking utensils-->
+            <tools> <!--Cooking utensils-->
+                <tool idref='1'/>
+            </tools>
             <time> <!--Container box for time details (**HOW TO LINK TO MEASUREMENTS**)-->
                 <preptime>10 minutes</preptime>
                 <cooktime>20 minutes</cooktime>
@@ -26,9 +28,14 @@
                 <step>4. Bake at 180°C for 15 minutes.</step>
             </steps>
             <value_information> <!--Container box for recipe categories, allergens, tags, and nutrition information -->
-                <cat_value idref='cv1'/> <!--recipe category-->
-                <allge_value/> <!--allergen information (**IF NO VALUE, IS THE CONVENTION TO LEAVE IT LIKE THIS?**)-->
-                <tag_value idref='tv3' idref='tv7'/> <!--recipe tags e.g. comfort food, quick & easy-->
+                <cat_values> <!--recipe category-->
+                    <cat_value idref='cv1'/>
+                </cat_values>
+                <allge_values/> <!--allergen information (**IF NO VALUE, IS THE CONVENTION TO LEAVE IT LIKE THIS?**)-->
+                <tag_values> <!--recipe tags e.g. comfort food, quick & easy-->
+                    <tag_value idref='tv3'/>
+                    <tag_value idref='tv7'/>
+                </tag_values>
                 <nutrition/> <!--(**HOW TO LINK / HAVE TO CALCULATE**)-->
             </value_information>
         </information>
@@ -38,7 +45,7 @@
 </recipes>
 
 <customers> <!--CUSTOMER DATABASE-->
-    <customer id='c1'> <!-- A single customer -->
+    <customer id='1'> <!-- A single customer -->
         <name>Pizza Man</name>
         <address>
             <street>50 Pepperoni Boulevard</street>
@@ -50,34 +57,39 @@
             <telephone>0648963312</telephone>
         </contact>
         <subscriptions>
-            <recipebox idref='rb1'/>
+            <recipebox idref='1'/>
         </subscriptions>
         <gastronomy_preferences>
-            <pref idref='tv3' idref1='tv7'/>
+            <pref idref='tv3'/> 
+            <pref idref='tv7'/>
         </gastronomy_preferences> <!--Allergies, preferences, etc. LINK-->
     </customer>
 </customers>
 
 <recipeboxes> <!--RECIPEBOX DATABASE-->
-    <recipebox id='rb1'> <!-- A single recipe box -->
+    <recipebox id='1'> <!-- A single recipe box -->
         <recipe idref='1'/>
-        <tags idref='tv7'/> <!-- Add a tag to categorize the recipe box?-->
+        <tags> <!-- Add a tag to categorize the recipe box?-->
+            <tag idref='tv7'/>
+        </tags>
         <price currency="euro">45.00</price>
     </recipebox>
 </recipeboxes>
 
 <ingredients> <!--INGREDIENTS DATABASE-->
-    <ingredient id='i2'> <!-- A single ingredient -->
+    <ingredient id='1'> <!-- A single ingredient -->
         <name>Chicken</name>
         <type>Meat</type> <!-- Fruit, spice, etc. -->
         <seasonality>All-year</seasonality>
-        <nutrition_info>Protein: 8mg</nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
-        <supplier idref='2'/> <!--Supplier that handles this ingredient delivery-->
+        <nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+            
+        </nutrition_info> <!--Fiber, etc. LINK to nurtriction and allergens-->
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
 </ingredients>
 
 <suppliers> <!--SUPPLIERS DATABASE-->
-    <supplier id='2'> <!-- A single supplier + ID -->
+    <supplier id='1'> <!-- A single supplier + ID -->
         <name>Food 'n Co.</name>
         <address>
             <street>123 Cool Avenue</street>
@@ -92,80 +104,81 @@
 </suppliers>
 
 <orders> <!-- ORDERS INFORMATION -->
-    <order id='o1'>
-        <customer idref='c1'/>
-        <recipebox idref='rb1'/>
-        <invoice_amount>50.0</invoice_amount>
+    <order id='1'>
+        <customer idref='1'/>
+        <recipebox idref='1'/>
+        <invoice_amount currency="euro">50.0</invoice_amount>
     </order>
 </orders>
 
 <tools>
-    <tool id='t3'>
+    <tool id='1'>
         <name>Oven</name>
     </tool>
 </tools>
 
 <authors> <!--AUTHORS DATABASE-->
-    <author id='a8'> <!-- A single author -->
+    <author id='1'> <!-- A single author -->
         <name>Jane Doe</name>
     </author>
 </authors>
 
 <user_feedback>
-    <customer idref='c1'> <!--Customer who left feedback (ID needed)-->
+    <customer idref='1'> <!--Customer who left feedback (ID needed)-->
         <recipe idref='1'/>
         <rating>4.2</rating>
-        <comments>Amazing recipe!</comments>
+        <comment>Amazing recipe!</comment>
     </customer>              
 </user_feedback>
 
 <recipe_categorisation> <!--RECIPE CATEGORIES: holds the categories, tags, and allergen categories for recipes-->
     <category>
-        <cat_value id='cv1'>Mains</cat_value><!--ID naming to be easier to remember/identify?-->
-        <cat_value id='cv2'>Entrées</cat_value>
-        <cat_value id='cv3'>Sides</cat_value>
-        <cat_value id='cv4'>Soups and Stews</cat_value>
-        <cat_value id='cv5'>Pasta</cat_value>
-        <cat_value id='cv6'>Dessert</cat_value>
-        <cat_value id='cv7'>Drinks</cat_value>
+        <cat_value id='mains'>Mains</cat_value><!--ID naming to be easier to remember/identify?-->
+        <cat_value id='entrees'>Entrées</cat_value>
+        <cat_value id='sides'>Sides</cat_value>
+        <cat_value id='soups_stews'>Soups and Stews</cat_value>
+        <cat_value id='pasta'>Pasta</cat_value>
+        <cat_value id='dessert'>Dessert</cat_value>
+        <cat_value id='drinks'>Drinks</cat_value>
     </category>
     <recipe_tag>
-        <tag_value id='tv1'>Vegetarian</tag_value>
-        <tag_value id='tv2'>Vegan</tag_value>
-        <tag_value id='tv3'>Protein</tag_value>
-        <tag_value id='tv4'>Seafood</tag_value>
-        <tag_value id='tv5'>Low calorie</tag_value>
-        <tag_value id='tv6'>Quick and Easy</tag_value>
-        <tag_value id='tv7'>Comfort Food</tag_value>
+        <tag_value id='vegetarian'>Vegetarian</tag_value>
+        <tag_value id='vegan'>Vegan</tag_value>
+        <tag_value id='protein'>Protein</tag_value>
+        <tag_value id='seafood'>Seafood</tag_value>
+        <tag_value id='lowcalorie'>Low calorie</tag_value>
+        <tag_value id='quickeasy'>Quick and Easy</tag_value>
+        <tag_value id='comfortfood'>Comfort Food</tag_value>
     </recipe_tag>
     <allergens>
-        <allge_value id='av1'>Nut-free</allge_value>
-        <allge_value id='av2'>Dairy-free</allge_value>
-        <allge_value id='av3'>Gluten-free</allge_value>
+        <allge_value id='nutfree'>Nut-free</allge_value>
+        <allge_value id='dairyfree'>Dairy-free</allge_value>
+        <allge_value id='glutenfree'>Gluten-free</allge_value>
     </allergens>
     <nutrition>
-        <nutr_value id='nv1'>Calories</nutr_value>
-        <nutr_value id='nv2'>Fat</nutr_value>
-        <nutr_value id='nv3'>Protein</nutr_value>
-        <nutr_value id='nv4'>Carbs</nutr_value>
-        <nutr_value id='nv5'>Sugar</nutr_value>
-        <nutr_value id='nv6'>Sodium</nutr_value>
-        <nutr_value id='nv7'>Fiber</nutr_value>
+        <nutr_value id='calories'>Calories</nutr_value>
+        <nutr_value id='fat'>Fat</nutr_value>
+        <nutr_value id='protein'>Protein</nutr_value>
+        <nutr_value id='carbs'>Carbs</nutr_value>
+        <nutr_value id='sugar'>Sugar</nutr_value>
+        <nutr_value id='sodium'>Sodium</nutr_value>
+        <nutr_value id='fiber'>Fiber</nutr_value>
     </nutrition>
 </recipe_categorisation>
 
 
-<measurements> <!--MEASUREMENT DATABASE: holds the measurement values for recipes-->
+<!--MEASUREMENT DATA: holds the measurement values for the recipes-->
+<measurements>
     <measurement id="volume">
-        <unit>L</unit>
-        <unit>dL</unit>
-        <unit>cL</unit>
-        <unit>mL</unit>
+        <unit id="L">L</unit>
+        <unit id="dL">dL</unit>
+        <unit id="cL">cL</unit>
+        <unit id="mL">mL</unit>
     </measurement>
     <measurement id="weight">
-        <unit>kg</unit>
-        <unit>g</unit>
-        <unit>mg</unit>  
+        <unit id="kg">kg</unit>
+        <unit id="g">g</unit>
+        <unit id="mg">mg</unit>  
     </measurement>
 </measurements>
 
