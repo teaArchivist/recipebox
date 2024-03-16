@@ -20,113 +20,117 @@
 
     <!--Recipe Key-->
     <xs:key name="RecipeKey">
-        <xs:selector xpath=".//recipes/recipe"/>
+        <xs:selector xpath="./recipes/recipe"/>
         <xs:field xpath="@id"/>
     </xs:key>
     <xs:keyref name="RecipeKeyRef" refer="RecipeKey">
-        <xs:selector xpath=".//user_feedback/customer/recipe"/>
+        <xs:selector xpath="./user_feedback/customer/recipe"/>
         <xs:field xpath="@idref"/>
     </xs:keyref>
 
     <!--Customer Key-->
     <xs:key name="CustomerKey">
-        <xs:selector xpath=".//customers/customer"/>
+        <xs:selector xpath="./customers/customer"/>
         <xs:field xpath="@id"/>
     </xs:key>
     <xs:keyref name="CustomerOrderKeyRef" refer="CustomerKey">
-        <xs:selector xpath=".//orders/order"/>
+        <xs:selector xpath="./orders/order"/>
         <xs:field xpath="@idref"/>
     </xs:keyref>
     <xs:keyref name="CustomerCommentKeyRef" refer="CustomerKey">
-        <xs:selector xpath=".//user_feedback/customer"/>
+        <xs:selector xpath="./user_feedback/customer"/>
         <xs:field xpath="@idref"/>
     </xs:keyref>
 
     <!--Recipebox Key-->
     <xs:key name="RecipeboxKey">
-        <xs:selector xpath=".//recipeboxes/recipebox"/>
+        <xs:selector xpath="./recipeboxes/recipebox"/>
         <xs:field xpath="@id"/>
     </xs:key>
     <xs:keyref name="RecipeboxCustomerKeyRef" refer="RecipeboxKey">
-        <xs:selector xpath=".//customers/customer/subscriptions"/>
+        <xs:selector xpath="./customers/customer/subscriptions"/>
         <xs:field xpath="@idref"/>
     </xs:keyref>
     <xs:keyref name="RecipeboxOrderKeyRef" refer="RecipeboxKey">
-        <xs:selector xpath=".//orders/order/recipebox"/>
+        <xs:selector xpath="./orders/order/recipebox"/>
         <xs:field xpath="@idref"/>
     </xs:keyref>
 
     <!--Ingredient Key-->
     <xs:key name="IngredientKey">
-        <xs:selector xpath=".//ingredients/ingredient"/>
+        <xs:selector xpath="./ingredients/ingredient"/>
         <xs:field xpath="@id"/>
     </xs:key>
     <xs:keyref name="IngredientKeyRef" refer="IngredientKey">
-        <xs:selector xpath=".//recipes/recipe/ingredients/ingredient"/>
+        <xs:selector xpath="./recipes/recipe/ingredients/ingredient"/>
         <xs:field xpath="@idref"/>
     </xs:keyref>
 
     <!--Supplier Key-->
     <xs:key name="SupplierKey">
-        <xs:selector xpath=".//suppliers/supplier"/>
+        <xs:selector xpath="./suppliers/supplier"/>
         <xs:field xpath="@id"/>
     </xs:key>
     <xs:keyref name="SupplierKeyRef" refer="SupplierKey">
-        <xs:selector xpath=".//ingredients/ingredient/supplier"/>
+        <xs:selector xpath="./ingredients/ingredient/supplier"/>
         <xs:field xpath="@idref"/>
     </xs:keyref>
 
     <!--Tool Key-->
     <xs:key name="ToolKey">
-        <xs:selector xpath=".//tools"/>
+        <xs:selector xpath="./tools/tool"/>
         <xs:field xpath="@id"/>
     </xs:key>
     <xs:keyref name="ToolKeyRef" refer="ToolKey">
-        <xs:selector xpath=".//recipes/recipe/information/tools"/>
+        <xs:selector xpath="./recipes/recipe/information/tools"/>
         <xs:field xpath="@idref"/>
     </xs:keyref>
 
     <!--Author Key-->
     <xs:key name="AuthorKey">
-        <xs:selector xpath=".//authors/author"/>
+        <xs:selector xpath="./authors/author"/>
         <xs:field xpath="@id"/>
     </xs:key>
     <xs:keyref name="AuthorKeyRef" refer="AuthorKey">
-        <xs:selector xpath=".//recipes/recipe/author"/>
+        <xs:selector xpath="./recipes/recipe/author"/>
         <xs:field xpath="@idref"/>
     </xs:keyref>
 
     <!--Category Key-->
     <xs:key name="CategoryKey">
-        <xs:selector xpath=".//recipe_categorisation/category/cat_value"/>
+        <xs:selector xpath="./recipe_categorisation/category/cat_value"/>
         <xs:field xpath="@id"/>
     </xs:key>
     <xs:keyref name="CategoryRecipeKeyRef" refer="CategoryKey">
-        <xs:selector xpath=".//recipes/recipe/value_information/cat_values/cat_value"/>
+        <xs:selector xpath="./recipes/recipe/value_information/cat_values/cat_value"/>
         <xs:field xpath="@idref"/>
     </xs:keyref>
 
     <!--Tag Key-->
     <xs:key name="TagKey">
-        <xs:selector xpath=".//recipe_categorisation/recipe_tag/tag_value"/>
+        <xs:selector xpath="./recipe_categorisation/recipe_tag/tag_value"/>
         <xs:field xpath="@id"/>
     </xs:key>
     <xs:keyref name="TagCustomerKeyRef" refer="TagKey">
-        <xs:selector xpath=".//customers/customer/gastronomy_preferences/pref"/>
+        <xs:selector xpath="./customers/customer/gastronomy_preferences/pref"/>
         <xs:field xpath="@idref"/>
     </xs:keyref>
     <xs:keyref name="TagRecipeboxKeyRef" refer="TagKey">
-        <xs:selector xpath=".//recipeboxes/recipebox/tags/tag"/>
+        <xs:selector xpath="./recipeboxes/recipebox/tags/tag"/>
+        <xs:field xpath="@idref"/>
+    </xs:keyref>
+    <xs:keyref name="TagRecipeKeyRef" refer="TagKey">
+        <xs:selector xpath="./recipes/recipe/information/value_information/tag_values/tag_value"/>
         <xs:field xpath="@idref"/>
     </xs:keyref>
 
     <!--Measurement Key-->
     <xs:key name="MeasurementKey">
-        <xs:selector xpath=".//recipe_categorisation/recipe_tag/tag_value"/>
+        <xs:selector xpath="./recipe_categorisation/recipe_tag/tag_value"/>
         <xs:field xpath="@id"/>
     </xs:key>
     <xs:keyref name="MeasurementKeyRef" refer="MeasurementKey">
-        <xs:selector xpath=".//measurements/measurement/unit"/>
+        <xs:selector xpath="./measurements/measurement/unit"/>
         <xs:field xpath="@idref"/>
     </xs:keyref>
 
@@ -180,7 +184,7 @@
 
 <!--tool-->
 <xs:complexType name="toolRefType">
-    <xs:attribute name="idref" type="xs:IDREF"/>
+    <xs:attribute name="idref" type="xs:string"/>
 </xs:complexType>
 
 
@@ -206,12 +210,12 @@
         <xs:element name="amount" type="xs:positiveInteger"/>
         <xs:element name="unit" type="unitType"/>
     </xs:sequence>
-    <xs:attribute name="idref" type="xs:IDREF"/>
+    <xs:attribute name="idref" type="xs:string"/>
 </xs:complexType>
 
 <!--unit-->
 <xs:complexType name="unitType">
-    <xs:attribute name="idref" type="xs:IDREF"/>
+    <xs:attribute name="idref" type="xs:string"/>
 </xs:complexType>
 
 <!--steps-->
@@ -236,7 +240,7 @@
     <xs:sequence minOccurs="1" maxOccurs="unbounded">
         <xs:element name="cat_value"/>
     </xs:sequence>
-    <xs:attribute name="idref" type="xs:IDREF"/>
+    <xs:attribute name="idref" type="xs:string"/>
 </xs:complexType>
 
 <!--allergy value-->
@@ -247,7 +251,7 @@
 </xs:complexType>
 
 <xs:complexType name="allge_valueTyp">
-    <xs:attribute name="idref" type="xs:IDREF"/>
+    <xs:attribute name="idref" type="xs:string"/>
 </xs:complexType>
 
 
@@ -259,12 +263,12 @@
 </xs:complexType>
 
 <xs:complexType name="tag_valueType">
-    <xs:attribute name="idref" type="xs:IDREF"/>
+    <xs:attribute name="idref" type="xs:string"/>
 </xs:complexType>
 
 <!--nutrition value--> <!--To look at later-->
 <xs:complexType name="nutrition_valuesType">
-    <xs:attribute name="idref" type="xs:IDREF"/>
+    <xs:attribute name="idref" type="xs:string"/>
 </xs:complexType>
 
 
@@ -276,7 +280,7 @@
 </xs:complexType>
 
 <xs:complexType name="commentType">
-    <xs:attribute name="idref" type="xs:IDREF"/>
+    <xs:attribute name="id" type="xs:integer"/>
 </xs:complexType>
 
 <!--#########################################################################-->
@@ -320,7 +324,7 @@
 
 <!-- pref -->
 <xs:complexType name="prefType">
-    <xs:attribute name="idref" type="xs:IDREF"/>
+    <xs:attribute name="idref" type="xs:string"/>
 </xs:complexType>
 
 
@@ -355,7 +359,7 @@
 </xs:complexType>
 
 <xs:complexType name="tagType">
-    <xs:attribute name="idref" type="xs:IDREF"/>
+    <xs:attribute name="idref" type="xs:string"/>
 </xs:complexType>
 
 
@@ -503,17 +507,22 @@
 <!--USER FEEDBACK-->
 <xs:complexType name="userfeedbackType">
     <xs:sequence>
-        <xs:element name="customer" type="customerfeedbackType"/>
+        <xs:element name="comment" type="commentfeedbackType"/>
     </xs:sequence>
 </xs:complexType>
 
 <!--customer-->
-<xs:complexType name="customerfeedbackType">
+<xs:complexType name="commentfeedbackType">
     <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="customer" type="customercommentrefType"/>
         <xs:element name="recipe" type="recipecommentrefType"/>
         <xs:element name="rating" type="xs:float"/>
         <xs:element name="comment" type="xs:string"/>
     </xs:sequence>
+    <xs:attribute name="id" type="xs:integer"/>
+</xs:complexType>
+
+<xs:complexType name="customercommentrefType">
     <xs:attribute name="idref" type="xs:integer"/>
 </xs:complexType>
 
@@ -568,7 +577,6 @@
     <xs:sequence minOccurs="1" maxOccurs="unbounded">
         <xs:element name="allge_value" type="allge_valueType"/>
     </xs:sequence>
-    <xs:attribute name="id" type="xs:ID"/>
 </xs:complexType>
 
 <xs:complexType name="allge_valueType">
@@ -584,7 +592,6 @@
     <xs:sequence minOccurs="1" maxOccurs="unbounded">
         <xs:element name="nutr_value" type="nutr_valueType"/>
     </xs:sequence>
-    <xs:attribute name="id" type="xs:ID"/>
 </xs:complexType>
 
 <xs:complexType name="nutr_valueType">

@@ -118,7 +118,7 @@
 </tools>
 
 <authors> <!--AUTHORS DATABASE-->
-    <author id='1'> <!-- A single author -->
+    <author id='8'> <!-- A single author -->
         <name>Jane Doe</name>
     </author>
 </authors>
