@@ -10,24 +10,13 @@
             <body>
                 <h2>Here is the list of <xsl:value-of select="count(//recipes)"/>recipes</h2>
 
-                <xsl:for-each select="recipes/recipe">
-                    <xsl:sort select="@nutr_value" idref="sugar" order="descending"/>
-                    <xsl:choose>
-                        <xsl:when test="@nutr_value &gt; 5">
-                            <p>
-                                <b><td><xsl:value-of select="@nutr_value"/></td>:
-            					<td><xsl:value-of select="ttitle"/></td></b>
-            				</p>
-                        </xsl:when>
-                    
-                        <xsl:otherwise>
-                        <p>
-                            <b><td><xsl:value-of select="@nutr_value"/></td>:
-                            <td><xsl:value-of select="ttitle"/></td></b>
-                        </p>
-                    </xsl:otherwise>
+                <xsl:for-each select="recipes/recipe/value_information/nutrition/nutr_value[@idref='sugar' and . &lt; 5]">
+                    <xsl:sort select="@nutr_value[@idref='sugar']" order="descending"/>
+                    <p>
+                        <b><td><xsl:value-of select="@nutr_value[@idref='sugar']"/></td>:
+                        <td><xsl:value-of select="title"/></td></b>
+                    </p>
 
-                    </xsl:choose>
                 </xsl:for-each>
 
             </body>
