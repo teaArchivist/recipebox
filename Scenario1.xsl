@@ -8,9 +8,9 @@
                 <title>Low Glycemic Recipes</title>
             </head>
             <body>
-                <h2>Here is the list of <xsl:value-of select="count(//recipes/recipe[information/value_information/nutrition/nutr_value[@idref='sugar' and . &lt; 5]])"/> recipes</h2>
+                <h2>Here is the list of <xsl:value-of select="count(//recipes/recipe/information/value_information/nutrition/nutr_value[@idref='sugar' and . &lt; 5])"/> recipes</h2>
 
-                <xsl:for-each select="//recipes/recipe[information/value_information/nutrition/nutr_value[@idref='sugar' and . &lt; 5]]">
+                <xsl:for-each select="//recipes/recipe/information/value_information/nutrition/nutr_value[@idref='sugar' and . &lt; 5]">
                     <xsl:sort select="information/value_information/nutrition/nutr_value[@idref='sugar']" data-type="number" order="ascending"/>
                     <p>
                         <b><xsl:value-of select="information/value_information/nutrition/nutr_value[@idref='sugar']"/>g:</b>
