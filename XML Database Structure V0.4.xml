@@ -338,17 +338,11 @@
 <!--########################################################################################################################-->
 <!--INGREDIENTS-->
 <ingredients>
-    <ingredient id='chicken'> <!-- A single ingredient -->
-        <name>Chicken</name>
+    <ingredient id='beefMince'> <!-- A single ingredient -->
+        <name>Beef Mince</name>
         <type>Meat</type> <!-- Fruit, spice, etc. -->
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
-    </ingredient>
-    <ingredient id='beefMince'>
-        <name>Beef Mince</name>
-        <type>Meat</type>
-        <seasonality>All-year</seasonality>
-        <supplier idref='1'/> 
     </ingredient>
     <ingredient id='bellPepper'> 
         <name>Bell pepper</name>
@@ -461,9 +455,6 @@
     <tool id='pot'>
         <name>Pot</name>
     </tool>
-    <tool id='cutting_board'>
-        <name>Cutting Board</name>
-    </tool>
     <tool id='kettle'>
         <name>Kettle</name>
     </tool>
@@ -471,13 +462,16 @@
         <name>Large Frying Pan</name>
     </tool>
     <tool id='med_saucepan'>
-        <name>Medium Saucepan</name>
+        <name>Medium saucepan</name>
     </tool>
     <tool id='sieve'>
         <name>Sieve</name>
     </tool>
     <tool id='rolling_pin'>
         <name>Rolling Pin</name>
+    </tool>
+    <tool id='baking_tray'>
+        <name>Baking Tray</name>
     </tool>
     <tool id='pan'>
         <name>Pan</name>
@@ -528,9 +522,9 @@
         <tag_value id='comfortfood'>Comfort Food</tag_value>
     </recipe_tag>
     <allergens>
-        <allge_value id='nutfree'>Nuts</allge_value>
-        <allge_value id='dairyfree'>Dairy</allge_value>
-        <allge_value id='glutenfree'>Gluten</allge_value>
+        <allge_value id='nut'>Nuts</allge_value>
+        <allge_value id='dairy'>Dairy</allge_value>
+        <allge_value id='gluten'>Gluten</allge_value>
         <allge_value id='egg'>Egg</allge_value>
         <allge_value id='soya'>Soya</allge_value>
         <allge_value id='peanut'>Peanut</allge_value>
