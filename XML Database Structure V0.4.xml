@@ -9,7 +9,7 @@
             <description>A delicious recipe for oven-made chicken tenders!</description>
             <quantity>4</quantity> <!--How many servings-->
             <tools> <!--Cooking utensils-->
-                <tool idref='1'/>
+                <tool idref='oven'/>
             </tools>
             <time> <!--Container box for time details (**HOW TO LINK TO MEASUREMENTS**)-->
                 <preptime>10 minutes</preptime>
@@ -17,9 +17,9 @@
                 <totaltime>30 minutes</totaltime>
             </time>
             <ingredients> <!--Container box for ingredients-->
-                <ingredient idref='i2'>
+                <ingredient idref='chicken'>
                     <amount>1</amount>
-                    <unit idref='m3'/>
+                    <unit idref='g'/>
                 </ingredient>
             </ingredients>  
             <steps> <!--Container box for cooking instructions-->
@@ -29,12 +29,12 @@
             </steps>
             <value_information> <!--Container box for recipe categories, allergens, tags, and nutrition information -->
                 <cat_values> <!--recipe category-->
-                    <cat_value idref='cv1'/>
+                    <cat_value idref='mains'/>
                 </cat_values>
                 <allge_values/> <!--allergen information (**IF NO VALUE, IS THE CONVENTION TO LEAVE IT LIKE THIS?**)-->
                 <tag_values> <!--recipe tags e.g. comfort food, quick & easy-->
-                    <tag_value idref='tv3'/>
-                    <tag_value idref='tv7'/>
+                    <tag_value idref='quickeasy'/>
+                    <tag_value idref='comfortfood'/>
                 </tag_values>
                 <nutrition/> <!--(**HOW TO LINK / HAVE TO CALCULATE**)-->
             </value_information>
@@ -60,8 +60,8 @@
             <recipebox idref='1'/>
         </subscriptions>
         <gastronomy_preferences>
-            <pref idref='tv3'/> 
-            <pref idref='tv7'/>
+            <pref idref='protein'/> 
+            <pref idref='vegan'/>
         </gastronomy_preferences> <!--Allergies, preferences, etc. LINK-->
     </customer>
 </customers>
@@ -70,14 +70,14 @@
     <recipebox id='1'> <!-- A single recipe box -->
         <recipe idref='1'/>
         <tags> <!-- Add a tag to categorize the recipe box?-->
-            <tag idref='tv7'/>
+            <tag idref='vegan'/>
         </tags>
         <price currency="euro">45.00</price>
     </recipebox>
 </recipeboxes>
 
 <ingredients> <!--INGREDIENTS DATABASE-->
-    <ingredient id='1'> <!-- A single ingredient -->
+    <ingredient id='chicken'> <!-- A single ingredient -->
         <name>Chicken</name>
         <type>Meat</type> <!-- Fruit, spice, etc. -->
         <seasonality>All-year</seasonality>
@@ -112,7 +112,7 @@
 </orders>
 
 <tools>
-    <tool id='1'>
+    <tool id='oven'>
         <name>Oven</name>
     </tool>
 </tools>
