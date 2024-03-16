@@ -126,6 +126,16 @@
         <xs:field xpath="@idref"/>
     </xs:keyref>
 
+    <!--Nutrition Key-->
+    <xs:key name="NutritionKey">
+        <xs:selector xpath="./recipe_categorisation/nutrition/nutr_value"/>
+        <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:keyref name="NutritionKeyRef" refer="NutritionKey">
+        <xs:selector xpath="./recipes/recipe/information/value_information/nutrition/nutr_value"/>
+        <xs:field xpath="@idref"/>
+    </xs:keyref>
+
     <!--Measurement Key-->
     <xs:key name="MeasurementKey">
         <xs:selector xpath="./recipe_categorisation/recipe_tag/tag_value"/>
@@ -269,9 +279,19 @@
     <xs:attribute name="idref" type="xs:string"/>
 </xs:complexType>
 
-<!--nutrition value--> <!--To look at later-->
+<!--nutrition value-->
 <xs:complexType name="nutrition_valuesType">
-    <xs:attribute name="idref" type="xs:string"/>
+    <xs:sequence minOccurs="1" maxOccurs="unbounded">
+        <xs:element name="nutr_value" type="nutrition_valueType"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nutrition_valueType">
+    <xs:simpleContent>
+        <xs:extension base="xs:string">
+            <xs:attribute name="idref" type="xs:string"/>
+        </xs:extension>
+    </xs:simpleContent>
 </xs:complexType>
 
 
