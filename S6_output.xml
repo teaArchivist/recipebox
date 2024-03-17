@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recipeboxes>
+   <recipebox>
+      <id>1</id>
+      <recipes>
+         <recipe>
+            <name>Roasted Carrot and Avocado Salad</name>
+            <ingredients>
+               <ingredient>
+                  <amount>1</amount>
+                  <unit>kg</unit>
+                  <name>carrot</name>
+               </ingredient>
+               <ingredient>
+                  <amount>1</amount>
+                  <unit>dash</unit>
+                  <name>thyme</name>
+               </ingredient>
+               <ingredient>
+                  <amount>2</amount>
+                  <unit>whole</unit>
+                  <name>lemon</name>
+               </ingredient>
+            </ingredients>
+         </recipe>
+      </recipes>
+   </recipebox>
+   <recipebox>
+      <id>2</id>
+      <recipes>
+         <recipe>
+            <name>Indonesian Inspired Beef Noodles with Stir-Fried Pepper, Lime and Peanuts</name>
+            <ingredients>
+               <ingredient>
+                  <amount>480</amount>
+                  <unit>g</unit>
+                  <name>beef mince</name>
+               </ingredient>
+               <ingredient>
+                  <amount>2</amount>
+                  <unit>units</unit>
+                  <name>bell pepper</name>
+               </ingredient>
+               <ingredient>
+                  <amount>250</amount>
+                  <unit>g</unit>
+                  <name>egg noodle nest</name>
+               </ingredient>
+               <ingredient>
+                  <amount>2</amount>
+                  <unit>sachets</unit>
+                  <name>indonesian style spice mix</name>
+               </ingredient>
+               <ingredient>
+                  <amount>100</amount>
+                  <unit>g</unit>
+                  <name>ketjap manis</name>
+               </ingredient>
+               <ingredient>
+                  <amount>30</amount>
+                  <unit>mL</unit>
+                  <name>rice vinegar</name>
+               </ingredient>
+               <ingredient>
+                  <amount>30</amount>
+                  <unit>g</unit>
+                  <name>honey</name>
+               </ingredient>
+               <ingredient>
+                  <amount>50</amount>
+                  <unit>g</unit>
+                  <name>salted peanuts</name>
+               </ingredient>
+               <ingredient>
+                  <amount>1</amount>
+                  <unit>units</unit>
+                  <name>lime</name>
+               </ingredient>
+            </ingredients>
+         </recipe>
+         <recipe>
+            <name>Peri Peri Pork and Bean Stew with Garlic Ciabatta</name>
+            <ingredients>
+               <ingredient>
+                  <amount>120</amount>
+                  <unit>g</unit>
+                  <name>pork mince</name>
+               </ingredient>
+               <ingredient>
+                  <amount>60</amount>
+                  <unit>g</unit>
+                  <name>diced chorizo</name>
+               </ingredient>
+               <ingredient>
+                  <amount>1</amount>
+                  <unit>units</unit>
+                  <name>bell pepper</name>
+               </ingredient>
+               <ingredient>
+                  <amount>1</amount>
+                  <unit>cartons</unit>
+                  <name>mixed beans</name>
+               </ingredient>
+               <ingredient>
+                  <amount>2</amount>
+                  <unit>units</unit>
+                  <name>garlic clove</name>
+               </ingredient>
+               <ingredient>
+                  <amount>1</amount>
+                  <unit>sachets</unit>
+                  <name>peri peri seasoning</name>
+               </ingredient>
+               <ingredient>
+                  <amount>1</amount>
+                  <unit>cartons</unit>
+                  <name>finely chopped tomatoes</name>
+               </ingredient>
+               <ingredient>
+                  <amount>28</amount>
+                  <unit>g</unit>
+                  <name>red wine stock paste</name>
+               </ingredient>
+               <ingredient>
+                  <amount>1</amount>
+                  <unit>units</unit>
+                  <name>ciabatta</name>
+               </ingredient>
+               <ingredient>
+                  <amount>5</amount>
+                  <unit>g</unit>
+                  <name>sugar</name>
+               </ingredient>
+               <ingredient>
+                  <amount>10</amount>
+                  <unit>mL</unit>
+                  <name>olive oil</name>
+               </ingredient>
+               <ingredient>
+                  <amount>200</amount>
+                  <unit>mL</unit>
+                  <name>water</name>
+               </ingredient>
+            </ingredients>
+         </recipe>
+      </recipes>
+   </recipebox>
+</recipeboxes>
