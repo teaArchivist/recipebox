@@ -549,14 +549,14 @@
 <!--########################################################################################################################-->
 <!--USER FEEDBACK-->
 <xs:complexType name="userfeedbackType">
-    <xs:sequence>
+    <xs:sequence minOccurs="1" maxOccurs="unbounded">
         <xs:element name="comment" type="commentfeedbackType"/>
     </xs:sequence>
 </xs:complexType>
 
 <!--customer-->
 <xs:complexType name="commentfeedbackType">
-    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+    <xs:sequence minOccurs="1" maxOccurs="unbounded">
         <xs:element name="customer" type="customercommentrefType"/>
         <xs:element name="recipe" type="recipecommentrefType"/>
         <xs:element name="rating" type="xs:float"/>

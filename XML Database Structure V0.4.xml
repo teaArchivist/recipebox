@@ -173,6 +173,8 @@
             </value_information>
         </information>
        <comments> <!--Refers to comment section-->
+            <comment idref='2'/>
+            <comment idref='3'/>
        </comments>
         <URL>https://www.hellofresh.co.uk/recipes/indonesian-inspired-beef-noodles-651557c5be675f371f89ef48</URL> <!--Recipe URL-->
     </recipe>
@@ -277,7 +279,7 @@
                     <cat_value idref='mains'/>
                 </cat_values>
                 <allge_values>
-                    <allge_value idref='not_glutenfree' />
+                    <allge_value idref='gluten'/>
                     <allge_value idref='sulphites' />
                 </allge_values>
                 <tag_values>
@@ -372,10 +374,10 @@
                     <cat_value idref='mains'/>
                 </cat_values>
                 <allge_values> <!--allergen information-->
-                    <allge_value idref='not_glutenfree' />
-                    <allge_value idref='milk' />
+                    <allge_value idref='gluten'/>
+                    <allge_value idref='dairy' />
                     <allge_value idref='soya' />
-                    <allge_value idref='nut' />
+                    <allge_value idref='nuts' />
                     <allge_value idref='peanut' />
                     <allge_value idref='sesame' />
                     <allge_value idref='mustard' />
@@ -494,8 +496,8 @@
                     <cat_value idref='sides'/>
                 </cat_values>
                 <allge_values> 
-                    <allge_value idref='not_glutenfree' />
-                    <allge_value idref='milk' />
+                    <allge_value idref='gluten'/>
+                    <allge_value idref='dairy' />
                     <allge_value idref='sulphites' />
                 </allge_values>
                 <tag_values> 
@@ -605,8 +607,8 @@
                     <cat_value idref='salad'/>
                 </cat_values>
                 <allge_values>
-                    <allge_value idref='not_glutenfree' />
-                    <allge_value idref='milk' />
+                    <allge_value idref='gluten'/>
+                    <allge_value idref='dairy' />
                     <allge_value idref='sulphites' />
                 </allge_values>
                 <tag_values> 
@@ -1022,7 +1024,19 @@
         <recipe idref='1'/>
         <rating>4.2</rating>
         <comment_desc>Amazing recipe!</comment_desc>
-    </comment>              
+    </comment>
+    <comment id='2'>
+        <customer idref='1'/> <!--Customer who left feedback-->
+        <recipe idref='2'/>
+        <rating>3.2</rating>
+        <comment_desc>Could have used more spices...</comment_desc>
+    </comment>           
+    <comment id='3'>
+        <customer idref='1'/> <!--Customer who left feedback-->
+        <recipe idref='2'/>
+        <rating>1.2</rating>
+        <comment_desc>Could have used more spices...</comment_desc>
+    </comment>           
 </user_feedback>
 
 <!--########################################################################################################################-->
@@ -1051,14 +1065,11 @@
         <allge_value id='nut'>Nuts</allge_value>
         <allge_value id='dairy'>Dairy</allge_value>
         <allge_value id='gluten'>Gluten</allge_value>
-        <allge_value id='not_glutenfree'>Contains Cereals containing gluten</allge_value>
-        <allge_value id='milk'>Milk</allge_value>
         <allge_value id='egg'>Egg</allge_value>
         <allge_value id='soya'>Soya</allge_value>
-        <allge_value id='nut'>nut</allge_value>
         <allge_value id='peanut'>Peanut</allge_value>
         <allge_value id='sesame'>Sesame</allge_value>
-        <allge_value id='mustard'>mustard</allge_value>
+        <allge_value id='mustard'>Mustard</allge_value>
         <allge_value id='sulphites'>Sulphites </allge_value>
     </allergens>
     <nutrition>

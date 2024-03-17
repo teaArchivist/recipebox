@@ -4,36 +4,30 @@
 
     <xsl:template match="/">
         <html>
-            <head>
-                <title>Most Popular Recipes</title>
-            </head>
-            <body>
-                <h2>Here is the list of <xsl:value-of select="count(//recipes/recipe)"/> recipes</h2>
+		<head><title>Most Popular Recipes</title></head>
+		<body>
+		<h1>Here is the list of <xsl:value-of select="count(//recipes/recipe/comments)" /> recipes</h1>
+		<xsl:for-each select="//recipes/recipe/comments">
+            <xsl:value-of select="@idref">
+					<xsl:apply-templates select="user_feedback"/>
+			</xsl:value-of>
+		</xsl:for-each>
+		</body>
+		</html>
+	</xsl:template>
 
-				  <xsl:template match="/">
-					<xsl:element name="user_feedback">
-					  <xsl:apply-templates select="//user_feedback">
-							<xsl:sort select="rating" order="ascending" />
-					  </xsl:apply-templates>
-					</xsl:element>  
-				  </xsl:template>s
-				  
-				  <xsl:template match="user_feedback">
-					<xsl:copy>
-						<xsl:attribute name="comment">
-							<xsl:value-of select="//recipes/recipe/comments/comment/@idref" />
-						</xsl:attribute>
-						<xsl:apply-templates select="rating"/>
-					</xsl:copy>
-				  </xsl:template>
-					
-				  <xsl:template match="rating">
-					<xsl:copy>
-					<xsl:apply-templates/>
-					</xsl:copy>
-				  </xsl:template>
-								
-            </body>
-        </html>
-    </xsl:template>
+	<xsl:template match="user_feedback">
+		<xsl:attribute name="comment">
+			<xsl:value-of select="//user_feedback/comment/@id" />
+			<xsl:if test="//user_feedback/comment/@id == //recipes/recipe/comments/@idref">
+				<recipe><xsl:value-of select="//recipes/recipe/title"/></recipe>
+				<xsl:apply-templates select="rating"/>
+			</xsl:if>
+		</xsl:attribute>
+	</xsl:template>
+
+	<xsl:template match="rating">
+		<xsl:value-of select="rating"/>
+	</xsl:template>
+			
 </xsl:stylesheet>
