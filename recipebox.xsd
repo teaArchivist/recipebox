@@ -25,8 +25,12 @@
         <xs:selector xpath="./recipes/recipe"/>
         <xs:field xpath="@id"/>
     </xs:key>
-    <xs:keyref name="RecipeKeyRef" refer="RecipeKey">
+    <xs:keyref name="RecipeCommentKeyRef" refer="RecipeKey">
         <xs:selector xpath="./user_feedback/customer/recipe"/>
+        <xs:field xpath="@idref"/>
+    </xs:keyref>
+    <xs:keyref name="RecipeRecipeboxKeyRef" refer="RecipeKey">
+        <xs:selector xpath="./recipeboxes/recipebox/recipe"/>
         <xs:field xpath="@idref"/>
     </xs:keyref>
 
