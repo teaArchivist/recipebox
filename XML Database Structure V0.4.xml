@@ -396,7 +396,7 @@
             </value_information>
         </information>
         <comments/> <!--Linked to customerID and recipeID. Should show commnet text-->
-        <URL>https://www.gousto.co.uk/menu?collection=quick-easy</URL> <!--Recipe URL-->
+        <URL><a href='https://www.gousto.co.uk/menu?collection=quick-easy' /></URL> <!--Recipe URL-->
     </recipe>
     <recipe id='chickenHarissa_vegFlatbread'> <!--A single recipe -->
         <title>Honey Glazed Chicken and Harissa Veg Flatbread</title>
