@@ -11,7 +11,7 @@ It selectes the recipes with the tag_value of 'summer' and selects/outputs the r
                 <title>Summer Recipes</title>
             </head>
             <body>
-                <h2>Here is the list of <xsl:value-of select="count(//recipe[information/value_information/tag_values/tag_value[@idref='summer']])"/>Summer recipes:</h2>
+                <h2>Here is the list of <xsl:value-of select="count(//recipe[information/value_information/tag_values/tag_value[@idref='summer']])"/> Summer recipes:</h2>
 
                 <xsl:for-each select="//recipe[information/value_information/tag_values/tag_value[@idref='summer']]">
                     <p>

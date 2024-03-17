@@ -6,7 +6,7 @@
 <recipes>
     <recipe id='1'> <!--A single recipe -->
         <title>Roasted Carrot and Avocado Salad</title>
-        <author idref='8'/>
+        <author idref='1'/>
         <information> <!--Container box for recipe details-->
             <description>
                 In this salad, we're roasting carrots with garlic, cumin, and
@@ -72,7 +72,7 @@
 
     <recipe id='2'> <!--A single recipe -->
         <title>Indonesian Inspired Beef Noodles with Stir-Fried Pepper, Lime and Peanuts</title>
-        <author idref='8'/>
+        <author idref='2'/>
         <information> <!--Container box for recipe details-->
             <description>Looking for a quick and tasty midweek dinner option? Try cooking up our Indonesian Inspired Beef Noodles in just 20-25 minutes for a delicious and speedy meal.</description>
             <quantity>4</quantity> <!--How many servings-->
@@ -180,7 +180,7 @@
 
     <recipe id='3'> <!--A single recipe -->
         <title>Peri Peri Pork and Bean Stew with Garlic Ciabatta</title>
-        <author idref='8'/>
+        <author idref='1'/>
         <information> <!--Container box for recipe details-->
             <description>Looking for a quick and tasty midweek dinner option? Try cooking up our Peri Peri Pork and Bean Stew in just 20-25 minutes for a delicious and speedy meal.</description>
             <quantity>2</quantity> <!--How many servings-->
@@ -295,12 +295,14 @@
                 </nutrition>
             </value_information>
         </information>
-        <comments/><!--Refers to comment section-->
+        <comments> <!--Refers to comment section-->
+            <comment idref='4'/>
+        </comments>
         <URL>https://www.hellofresh.co.uk/recipes/peri-peri-pork-and-bean-stew-659594b6aa12a55eb352d9de</URL> <!--Recipe URL-->
     </recipe>
     <recipe id='4'> <!--A single recipe -->
         <title>Pistachio Pesto With Fresh Tagliatelle</title>
-        <author idref='8'/>
+        <author idref='2'/>
         <information> <!--Container box for recipe details-->
             <description>ou say perfection, we say perfetto. For the speediest, greenest Italian pasta sauce going, you'll blitz mint, basil and zingy lemon juice with Italian cheese. Warm together with fresh tagliatelle, and serve with blanched peas.</description>
             <quantity>2</quantity> <!--How many servings-->
@@ -397,12 +399,14 @@
                 </nutrition>
             </value_information>
         </information>
-        <comments/> <!--Refers to comment section-->
+        <comments> <!--Refers to comment section-->
+            <comment idref='5'/>
+        </comments>
         <URL>https://www.gousto.co.uk/menu?collection=quick-easy</URL> <!--Recipe URL-->
     </recipe>
     <recipe id='5'> <!--A single recipe -->
         <title>Honey Glazed Chicken and Harissa Veg Flatbread</title>
-        <author idref='8'/>
+        <author idref='2'/>
         <information> <!--Container box for recipe details-->
             <description>This Honey Glazed Chicken and Harissa Veg Flatbread is a luxurious dinner night option, made with premium ingredients for a real taste of luxury at home!</description>
             <quantity>4</quantity> <!--How many servings-->
@@ -519,7 +523,7 @@
 
 <recipe id='6'> <!--A single recipe -->
         <title>Goats Cheese Crostini with Chick Pea Salad, Tomatoes and Zaatar</title>
-        <author idref='8'/>
+        <author idref='1'/>
         <information> <!--Container box for recipe details-->
             <description>Creamy goat's cheese sits on top of a crunchy garlic-scented crostini and ripe tomatoes mingle with nutty chickpeas. As if that wasn't enough, you'll be finishing everything off with some charred courgette slices and a sprinkling of fragrant zahtar. Enjoy!</description>
             <quantity>4</quantity> <!--How many servings-->
@@ -652,6 +656,25 @@
             <pref idref='vegan'/>
         </gastronomy_preferences>
     </customer>
+    <customer id='2'> <!-- A single customer -->
+        <name>Lady Jade</name>
+        <address>
+            <street>32 Breadstick Road</street>
+            <city>Pepper City</city>
+            <zipcode>22222</zipcode>
+        </address>
+        <contact>
+            <email>jadelady@email.com</email>
+            <telephone>0664218852</telephone>
+        </contact>
+        <subscriptions>
+            <recipebox idref='2'/>
+        </subscriptions>
+        <gastronomy_preferences>
+            <pref idref='seafood'/> 
+            <pref idref='vegan'/>
+        </gastronomy_preferences>
+    </customer>
 </customers>
 
 <!--########################################################################################################################-->
@@ -697,7 +720,7 @@
         <name>Diced Chorizo</name>
         <type>Sausage</type>
         <seasonality>All-year</seasonality>
-        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+        <supplier idref='2'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='bellPepper'> <!-- A single ingredient -->
         <name>Bell pepper</name>
@@ -715,7 +738,7 @@
         <name>Mixed Beans</name>
         <type>Vegtable</type> 
         <seasonality>All-year</seasonality>
-        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+        <supplier idref='2'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='garlic_clove'> <!-- A single ingredient -->
         <name>Garlic clove</name>
@@ -781,7 +804,7 @@
         <name>Ketjap Manis</name>
         <type>Sauce</type> 
         <seasonality>All-year</seasonality>
-        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+        <supplier idref='2'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='indoSpiceMix'> <!-- A single ingredient -->
         <name>Indonesian Style Spice Mix</name>
@@ -841,7 +864,7 @@
         <name>Honey</name>
         <type>Sugar</type> 
         <seasonality>All-year</seasonality>
-        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+        <supplier idref='2'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='saltPeanuts'> <!-- A single ingredient -->
         <name>Salted Peanuts</name>
@@ -927,6 +950,18 @@
             <telephone>0108080808</telephone>
         </contact>
     </supplier>
+    <supplier id='2'> <!-- A single supplier + ID -->
+        <name>FoodEx.</name>
+        <address>
+            <street>2 Marble Road</street>
+            <city>Fudge Town</city>
+            <zipcode>58300</zipcode>
+        </address>
+        <contact>
+            <email>foodex@email.com</email>
+            <telephone>0125987432</telephone>
+        </contact>
+    </supplier>
 </suppliers>
 
 <!--########################################################################################################################-->
@@ -935,7 +970,7 @@
     <order id='1'>
         <customer idref='1'/>
         <recipebox idref='1'/>
-        <invoice_amount currency="euro">50.0</invoice_amount>
+        <invoice_amount currency="euro">50.00</invoice_amount>
     </order>
 </orders>
 
@@ -1010,8 +1045,11 @@
 <!--########################################################################################################################-->
 <!--AUTHORS-->
 <authors>
-    <author id='8'> <!-- A single author -->
+    <author id='1'> <!-- A single author -->
         <name>Jane Doe</name>
+    </author>
+    <author id='2'> <!-- A single author -->
+        <name>Millie Brown</name>
     </author>
 </authors>
 
@@ -1025,7 +1063,7 @@
         <comment_desc>Amazing recipe!</comment_desc>
     </comment>
     <comment id='2'>
-        <customer idref='1'/> <!--Customer who left feedback-->
+        <customer idref='2'/> <!--Customer who left feedback-->
         <recipe idref='2'/>
         <rating>3.2</rating>
         <comment_desc>Could have used more spices...</comment_desc>
@@ -1034,7 +1072,19 @@
         <customer idref='1'/> <!--Customer who left feedback-->
         <recipe idref='2'/>
         <rating>1.2</rating>
-        <comment_desc>Could have used more spices...</comment_desc>
+        <comment_desc>The taste wasn't there for me.</comment_desc>
+    </comment>
+    <comment id='4'>
+        <customer idref='1'/> <!--Customer who left feedback-->
+        <recipe idref='3'/>
+        <rating>3.8</rating>
+        <comment_desc>It came out watery...</comment_desc>
+    </comment>     
+    <comment id='5'>
+        <customer idref='2'/> <!--Customer who left feedback-->
+        <recipe idref='4'/>
+        <rating>5.0</rating>
+        <comment_desc>Absolutely amazing!</comment_desc>
     </comment>           
 </user_feedback>
 
