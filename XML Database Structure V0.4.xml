@@ -1021,7 +1021,7 @@
         <customer idref='1'/> <!--Customer who left feedback-->
         <recipe idref='1'/>
         <rating>4.2</rating>
-        <comment>Amazing recipe!</comment>
+        <comment_desc>Amazing recipe!</comment_desc>
     </comment>              
 </user_feedback>
 
