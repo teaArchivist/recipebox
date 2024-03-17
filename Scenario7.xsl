@@ -2,6 +2,8 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:output method="text" encoding="UTF-8" indent="yes" />
 
+    <!--We are retrieving every recipebox, with their recipes, and the ingredient list for each recipe-->
+
     <!--TEMPLATE 1
     We match the template to the root node. We use xsl:text to create the containers, inspired by a model found at
     https://xml2json.duttke.de/

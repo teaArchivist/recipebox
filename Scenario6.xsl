@@ -2,6 +2,8 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:output method="xml" encoding="UTF-8" indent="yes" />
 
+<!--We are retrieving every recipebox, with their recipes, and the ingredient list for each recipe-->
+
     <!--TEMPLATE 1
     We match the template to the root node and create a container "recipeboxes"/
     We then apply a template to each element recipebox (XML source file) that has at least one "recipe" element-->

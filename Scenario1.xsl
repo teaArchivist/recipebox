@@ -3,6 +3,9 @@
     <!--This line below was necessary when using xsltransform.net-->
     <xsl:output method="html" doctype-public="XSLT-compat" omit-xml-declaration="yes" encoding="UTF-8" indent="yes" />
 
+    <!--Retrieving all recipes that have low sugar content (below 5g) in the nutrition info
+    and sort them from lowest to highest-->
+
     <!--TEMPLATE 1
     We match to the root of the XML source file.-->
     <xsl:template match="/">
