@@ -124,7 +124,7 @@
                 </ingredient>
                 <ingredient idref='lime'>
                     <amount>1</amount>
-                    <unit idref='unit(s)'/>
+                    <unit idref='units'/>
                 </ingredient>
             </ingredients>  
             <steps> <!--Container box for cooking instructions-->
@@ -728,6 +728,12 @@
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
+    <ingredient id='thyme'> <!-- A single ingredient -->
+        <name>Thyme</name>
+        <type>Herb</type> 
+        <seasonality>All-year</seasonality>
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+    </ingredient>
     <ingredient id='parsley'> <!-- A single ingredient -->
         <name>Parsley</name>
         <type>Herb</type> 
@@ -872,7 +878,7 @@
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
-    <ingredient id='ciabetta'> <!-- A single ingredient -->
+    <ingredient id='ciabatta'> <!-- A single ingredient -->
         <name>Ciabatta</name>
         <type>Bread</type> 
         <seasonality>All-year</seasonality>
@@ -893,6 +899,12 @@
     <ingredient id='water'> <!-- A single ingredient -->
         <name>Water</name>
         <type>Liquid</type> 
+        <seasonality>All-year</seasonality>
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+    </ingredient>
+    <ingredient id='carrot'> <!-- A single ingredient -->
+        <name>Carrot</name>
+        <type>Vegetable</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>

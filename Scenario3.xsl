@@ -5,16 +5,14 @@
     <xsl:template match="/">
         <html>
             <head>
-                <title> Quick and Easy Recipes</title>
+                <title>Summer Recipes</title>
             </head>
             <body>
-                <h2>Here is the list of <xsl:value-of select="count(//recipes/recipe[information/value_information/tag_values/tag_value[@idref='summer'])"/> recipes</h2>
+                <h2>Here is the list of <xsl:value-of select="count(//recipe[information/value_information/tag_values/tag_value[@idref='summer']])"/> summer recipes:</h2>
 
-                <xsl:for-each select="//recipes/recipe[information/value_information/tag_values/tag_value[@idref='summer']">
-                    <xsl:sort select="//recipes/recipe[information/value_information/tag_values/tag_value[@idref='summer']" data-type="number" order="ascending"/>
+                <xsl:for-each select="//recipe[information/value_information/tag_values/tag_value[@idref='summer']]">
                     <p>
                         <b><xsl:value-of select="title"/></b>
-                        <xsl:value-of select="information/value_information/tag_values/tag_value[@idref='summer']"/>
                     </p>
                 </xsl:for-each>
             </body>
