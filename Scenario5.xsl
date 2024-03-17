@@ -8,7 +8,7 @@
                 <title>Most Popular Recipes</title>
             </head>
             <body>
-                <h2>Here is the list of <xsl:value-of select="count(//recipes/recipe"/> recipes</h2>
+                <h2>Here is the list of <xsl:value-of select="count(//recipes/recipe)"/> recipes</h2>
 
 				  <xsl:template match="/">
 					<xsl:element name="user_feedback">
@@ -16,7 +16,7 @@
 							<xsl:sort select="rating" order="ascending" />
 					  </xsl:apply-templates>
 					</xsl:element>  
-				  </xsl:template>
+				  </xsl:template>s
 				  
 				  <xsl:template match="user_feedback">
 					<xsl:copy>

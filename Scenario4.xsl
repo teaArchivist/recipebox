@@ -5,12 +5,12 @@
     <xsl:template match="/">
         <html>
             <head>
-                <title>Comfort Food List</title>
+                <title>Comfort Food</title>
             </head>
             <body>
                 <h2>Here is the list of <xsl:value-of select="count(//recipes/recipe[information/value_information/tag_values/tag_value[@idref='comfortfood']])"/> recipes</h2>
 
-                <xsl:for-each select="//recipes/recipe[information/value_information/tag_values/tag_value[@idref='comfortfood']"/>
+                <xsl:for-each select="//recipes/recipe[information/value_information/tag_values/tag_value[@idref='comfortfood']]">
                     <p>
                         <b><xsl:value-of select="title"/></b>
                         <xsl:value-of select="information/value_information/tag_values/tag_value[@idref='comfortfood']"/>
