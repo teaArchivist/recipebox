@@ -12,7 +12,7 @@ These variables are then used to calculate outputs in the table for position (re
 <!--Create a key to link comments in recipe to comment-->
     <xsl:key name="recipe-comments" match="comment" use="@recipe"/>
 
-    <!-- Root Template -->
+    <!--Match to the root element -->
     <xsl:template match="/">
         <recipeboxes>
             <table border="1">
@@ -21,16 +21,16 @@ These variables are then used to calculate outputs in the table for position (re
                     <th>Title</th>
                     <th>Average Rating</th>
                 </tr>
-                <!-- Apply sorting and calculate average rating -->
+                <!--Select all recipes that have a comment-->
                 <xsl:for-each select="//recipes/recipe[.//comment]">
-                    <!-- Group recipes by ID -->
+                    <!--Sort them by their average rating-->
                     <xsl:sort select="sum(key('recipe-comments', @id)/rating) div count(key('recipe-comments', @id))" data-type="number" order="descending"/>
-                    <!-- Calculate average rating -->
+                    <!--Define variables for recipe ID, comments, total rating, and average rating-->
                     <xsl:variable name="recipeId" select="@id"/>
                     <xsl:variable name="comments" select="//user_feedback/comment[recipe/@idref = $recipeId]"/>
                     <xsl:variable name="totalRatings" select="sum($comments/rating)"/>
                     <xsl:variable name="averageRating" select="format-number($totalRatings div count($comments), '0.00')"/>
-                    <!-- Output recipe details -->
+                    <!--In the table, output the recipe rank, its name, and average rating-->
                     <tr>
                         <td><xsl:number value="position()"/></td>
                         <td><xsl:value-of select="title"/></td>
