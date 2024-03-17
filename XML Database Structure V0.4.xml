@@ -383,6 +383,7 @@
                 <tag_values> <!--recipe tags e.g. comfort food, quick & easy-->
                     <tag_value idref='quickeasy'/>
                     <tag_value idref='vegetarian'/>
+                    <tag_value idref='summer'/>
                 </tag_values>
                 <nutrition>
                     <nutr_value idref='calories'>187</nutr_value>
