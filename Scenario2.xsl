@@ -2,6 +2,9 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:output method="html" doctype-public="XSLT-compat" omit-xml-declaration="yes" encoding="UTF-8" indent="yes" />
 
+<!--This scenario is ouputing recipes that are Quick and Easy.
+Template match to recipes with a tag_value of "quickeasy" to gather and output of recipes that are quick and easy to make for customers.
+The quick and easy recipes are then sorted by number and descending, and include the recipe title and that it's quick and easy.-->
     <xsl:template match="/">
         <html>
             <head>
