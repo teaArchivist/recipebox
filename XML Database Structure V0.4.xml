@@ -277,8 +277,8 @@
                     <cat_value idref='mains'/>
                 </cat_values>
                 <allge_values> <!--allergen information (**IF NO VALUE, IS THE CONVENTION TO LEAVE IT LIKE THIS?**)-->
-                    <allge_value id='not_glutenfree' />
-                    <allge_value id='sulphites' />
+                    <allge_value idref='not_glutenfree' />
+                    <allge_value idref='sulphites' />
                 </allge_values>
                 <tag_values> <!--recipe tags e.g. comfort food, quick & easy-->
                     <tag_value idref='quickeasy'/>
@@ -372,13 +372,13 @@
                     <cat_value idref='mains'/>
                 </cat_values>
                 <allge_values> <!--allergen information (**IF NO VALUE, IS THE CONVENTION TO LEAVE IT LIKE THIS?**)-->
-                    <allge_value id='not_glutenfree' />
-                    <allge_value id='milk' />
-                    <allge_value id='soya' />
-                    <allge_value id='nut' />
-                    <allge_value id='peanut' />
-                    <allge_value id='sesame' />
-                    <allge_value id='mustard' />
+                    <allge_value idref='not_glutenfree' />
+                    <allge_value idref='milk' />
+                    <allge_value idref='soya' />
+                    <allge_value idref='nut' />
+                    <allge_value idref='peanut' />
+                    <allge_value idref='sesame' />
+                    <allge_value idref='mustard' />
                 </allge_values>
                 <tag_values> <!--recipe tags e.g. comfort food, quick & easy-->
                     <tag_value idref='quickeasy'/>
@@ -398,7 +398,238 @@
         <comments/> <!--Linked to customerID and recipeID. Should show commnet text-->
         <URL>https://www.gousto.co.uk/menu?collection=quick-easy</URL> <!--Recipe URL-->
     </recipe>
+    <recipe id='chickenHarissa_vegFlatbread'> <!--A single recipe -->
+        <title>Honey Glazed Chicken and Harissa Veg Flatbread</title>
+        <author idref='8'/>
+        <information> <!--Container box for recipe details-->
+            <description>This Honey Glazed Chicken and Harissa Veg Flatbread is a luxurious dinner night option, made with premium ingredients for a real taste of luxury at home!</description>
+            <quantity>4</quantity> <!--How many servings-->
+            <tools> <!--Cooking utensils-->
+                <tool idref='aluminum_foil'/>
+                <tool idref='baking_tray'/>
+                <tool id='sm_bowl' />
+                <tool id='knife' />
+                <tool id='pan' />
+                <tool id='oven' />
+            </tools>
+            <time> <!--Container box for time details (**HOW TO LINK TO MEASUREMENTS**)-->
+                <preptime>50 minutes</preptime>
+                <cooktime>35 minutes</cooktime>S
+                <totaltime>85 minutes</totaltime>
+            </time>
+            <ingredients> <!--Container box for ingredients-->
+                <ingredient idref='sweet_potato'>
+                    <amount>2</amount>
+                    <unit idref='units'/>
+                </ingredient>
+                <ingredient idref='red_onion'>
+                    <amount>1</amount>
+                    <unit idref='units'/>
+                </ingredient>
+                <ingredient idref='bell_pepper'>
+                    <amount>2</amount>
+                    <unit idref='units'/>
+                </ingredient>
+                 <ingredient idref='babyPlum_tomatoes'>
+                    <amount>250</amount>
+                    <unit idref='g'/>
+                </ingredient>
+                <ingredient idref='harissa_paste'>
+                    <amount>100</amount>
+                    <unit idref='g'/>
+                </ingredient>
+                <ingredient idref='cider_vinegar'>
+                    <amount>30</amount>
+                    <unit idref='mL'/>
+                </ingredient>
+                <ingredient idref='diced_chickenThigh'>
+                    <amount>520</amount>
+                    <unit idref='g'/>
+                </ingredient>
+                <ingredient idref='honey'>
+                    <amount>30</amount>
+                    <unit idref='g'/>
+                </ingredient>
+                <ingredient idref='feta'>
+                    <amount>200</amount>
+                    <unit idref='g'/>
+                </ingredient>
+                 <ingredient idref='greek_yoghurt'>
+                    <amount>150</amount>
+                    <unit idref='g'/>
+                </ingredient>
+                <ingredient idref='greek_flatbreads'>
+                    <amount>4</amount>
+                    <unit idref='units'/>
+                </ingredient>
+                <ingredient idref='sugar'>
+                    <amount>4.94</amount>
+                    <unit idref='mL'/>
+                </ingredient>
+            </ingredients>  
+            <steps> <!--Container box for cooking instructions-->
+                <step>1. Preheat your oven to 220°C/200°C fan/gas mark 7. Chop the sweet potato into 2cm wide wedges (no need to peel).
+                    Pop the wedges onto a large baking tray. Drizzle with oil, season with salt and pepper, then toss to coat. Spread out in a single layer. TIP: Use two baking trays if necessary.
+                    When the oven is hot, roast on the top shelf until golden, 25-35 mins. Turn halfway through.</step>
+                <step>2. Meanwhile, halve, peel and slice the red onion as thinly as you can. 
+                        Halve the bell pepper and discard the core and seeds. Slice into thin strips. Halve the tomatoes.
+                        Pop the sliced pepper and tomatoes onto another baking tray. Drizzle with oil and half the harissa paste, then season with salt and pepper. Use your hands to coat the veg in the harissa.
+                        Roast on the middle shelf of your oven until golden and soft, 15-20 mins.</step>
+                <step>3. While everything roasts, pop the sliced onion into a small bowl and add the cider vinegar and sugar for the pickle (see pantry for amount). Add a pinch of salt, mix together and set aside.</step>
+                <step>4. Heat a drizzle of oil in a large frying pan on a medium-high heat.
+                        Once hot, add the diced chicken and season with salt and pepper. Fry until golden brown on the outside and cooked through, 8-10 mins. IMPORTANT: Wash your hands after handling raw chicken and its packaging. It's cooked when no longer pink in the middle.
+                        Once browned, drizzle the honey over the chicken and cook for 1 min more, stirring to glaze the chicken. TIP: If your honey has hardened, pop it in a bowl of hot water for 1 min.</step>
+                <step>5. When the wedges have 5-10 mins left, crumble over half the Greek style salad cheese and return to the oven for the remaining cooking time.
+                        In another small bowl, combine the yoghurt with the remaining harissa paste. Drain your pickled onions.
+                        Pop the flatbreads (1 per person) in the oven until warm and starting to turn golden, 3-4 mins. </step>   
+                <step>6. When everything's ready, pop the flatbreads onto your plates and spread over half the harissa yoghurt. Top with the roasted veg, glazed chicken and pickled red onions.
+                        Finish with a sprinkle of the remaining Greek style salad cheese.
+                        Drizzle over the remaining harissa yoghurt and serve the sweet potato wedges alongside.
+                        Enjoy! </step>          
+            </steps>
+            <value_information> <!--Container box for recipe categories, allergens, tags, and nutrition information -->
+                <cat_values> <!--recipe category-->
+                    <cat_value idref='entrees'/>
+                    <cat_value idref='sides'/>
+                </cat_values>
+                <allge_values> <!--allergen information (**IF NO VALUE, IS THE CONVENTION TO LEAVE IT LIKE THIS?**)-->
+                    <allge_value idref='not_glutenfree' />
+                    <allge_value idref='milk' />
+                    <allge_value idref='sulphites' />
+                </allge_values>
+                <tag_values> <!--recipe tags e.g. comfort food, quick & easy-->
+                    <tag_value idref='summer'/>
+                </tag_values>
+                <nutrition> Per 100 grams:
+                    <nutr_value idref='calories'>143<unit id="kcal"/></nutr_value>
+                    <nutr_value idref='fat'>6.33<unit id="g"/></nutr_value>
+                    <nutr_value idref='protein'>8.21<unit id="g"/></nutr_value>
+                    <nutr_value idref='carbs'>17.99<unit id="g"/></nutr_value>
+                    <nutr_value idref='sugar'>4.94<unit id="g"/></nutr_value>
+                    <nutr_value idref='sodium'>0.43<unit id="g"/></nutr_value>
+                    <nutr_value idref='fiber'>4<unit id="g"/></nutr_value>
+                </nutrition> <!--(**HOW TO LINK / HAVE TO CALCULATE**)-->
+            </value_information>
+        </information>
+        <comments/> <!--Linked to customerID and recipeID. Should show commnet text-->
+        <URL>
+        <a href="https://www.hellofresh.co.uk/recipes/honey-glazed-chicken-and-harissa-veg-flatbread-6491c3bb25862a444bdb63fc"/>
+        </URL> <!--Recipe URL-->
+    </recipe>
 
+<recipe id='goatCheese_chickSalad'> <!--A single recipe -->
+        <title>Goats Cheese Crostini with Chick Pea Salad, Tomatoes and Zaatar</title>
+        <author idref='8'/>
+        <information> <!--Container box for recipe details-->
+            <description>Creamy goat's cheese sits on top of a crunchy garlic-scented crostini and ripe tomatoes mingle with nutty chickpeas. As if that wasn't enough, you'll be finishing everything off with some charred courgette slices and a sprinkling of fragrant zahtar. Enjoy!</description>
+            <quantity>4</quantity> <!--How many servings-->
+            <tools> <!--Cooking utensils-->
+                <tool idref='aluminum_foil'/>
+                <tool idref='baking_tray'/>
+                <tool idref='lg_bowl' />
+                <tool idref='chopping_board' />
+                <tool idref='serrated_knife' />
+                <tool idref='knife' />
+                <tool idref='grater' />
+                <tool idref='sieve' />
+                <tool idref='grill_pan' />
+                <tool idref='paper_towel' />
+                <tool idref='plate' />
+                <tool idref='oven' />
+            </tools>
+            <time> <!--Container box for time details (**HOW TO LINK TO MEASUREMENTS**)-->
+                <preptime>40 minutes</preptime>
+                <cooktime>0 minutes</cooktime>S
+                <totaltime>40 minutes</totaltime>
+            </time>
+            <ingredients> <!--Container box for ingredients-->
+                <ingredient idref='wholemeal_baguette'>
+                    <amount>1</amount>
+                    <unit idref='units'/>
+                </ingredient>
+                <ingredient idref='red_onion'>
+                    <amount>1</amount>
+                    <unit idref='units'/>
+                </ingredient>
+                <ingredient idref='vine_tomatoes'>
+                    <amount>2</amount>
+                    <unit idref='units'/>
+                </ingredient>
+                 <ingredient idref='goat_cheese'>
+                    <amount>2</amount>
+                    <unit idref='units'/>
+                </ingredient>
+                <ingredient idref='garlic_clove'>
+                    <amount>2</amount>
+                    <unit idref='units'/>
+                </ingredient>
+                <ingredient idref='red_vinegar'>
+                    <amount>2</amount>
+                    <unit idref='dash'/>
+                </ingredient>
+                <ingredient idref='parsley'>
+                    <amount>1</amount>
+                    <unit idref='bunch'/>
+                </ingredient>
+                <ingredient idref='courgette'>
+                    <amount>1</amount>
+                    <unit idref='units'/>
+                </ingredient>
+                <ingredient idref='zatar'>
+                    <amount>20</amount>
+                    <unit idref='g'/>
+                </ingredient>
+                 <ingredient idref='oliveOil'>
+                    <amount>9.8</amount>
+                    <unit idref='mL'/>
+                </ingredient>
+                <ingredient idref='salt'>
+                    <amount>2</amount>
+                    <unit idref='dash'/>
+                </ingredient>
+                <ingredient idref='pepper'>
+                    <amount>1</amount>
+                    <unit idref='dash'/>
+                </ingredient>
+            </ingredients>  
+            <steps> <!--Container box for cooking instructions-->
+                <step>1. Preheat your oven to 180°C. Cut the baguette into 1cm thick slices (2 per person) and place on a lined baking tray. Peel the garlic and gently rub the clove over the surface of each slice (keep the clove once you've done this). Drizzle on the olive oil (amount specified in the ingredient list) and season with salt and black pepper. Bake on the top shelf of your oven until golden brown, about 10 mins.</step>
+                <step>2. Peel and quarter the red onion. Separate the layers of each quarter and set aside. Chop the tomato into wedges and pop in a large bowl. Grate the garlic (or use a garlic press) and add it to the tomato. Season with salt and add half the zahtar spice blend. Mix well. Remove the top and bottom from the courgette and slice into 1cm rounds. Drain and rinse the chickpeas in a sieve. Roughly chop the parsley leaves (stalks and all).</step>
+                <step>3. Put a drizzle of oil in a frying pan over medium-high heat. Add the onion and cook, stirring occasionally, 3 mins. When it starts to brown, lower the heat to medium, season with salt and the red wine vinegar and a pinch of sugar (if you have some). Let the red wine vinegar bubble away until it has almost evaporated, then add a splash of water. Cook for 5 mins, then add to the bowl with the tomato.</step>
+                <step>4. Wipe the pan out with some kitchen paper and then return it to high heat (no oil). Once hot, arrange the courgette slices in the pan in a single layer. Cook until beginning to blacken slightly, 4 mins on each side. TIP: You may need to do this in batches. Remove from the pan, allow to cool slightly.</step>
+                <step>5. Meanwhile, cut the goat’s cheese into even slices (four per person). Put two slices of goat’s cheese on each slice of crostini and place on your baking tray. Bake on the top shelf of your oven until the cheese starts to melt, 7 mins.</step>   
+                <step>6. Mix the chickpeas and parsley into the tomato and stir in the olive oil (amount specified in the ingredient list). Spoon a generous amount of the chickpea salad onto plates, add a few slices of courgette and top with a goat's cheese crostini. Finish with a sprinkling of the remaining zahtar spice blend. Enjoy! </step>          
+            </steps>
+            <value_information> <!--Container box for recipe categories, allergens, tags, and nutrition information -->
+                <cat_values> <!--recipe category-->
+                    <cat_value idref='entree'/>
+                    <cat_value idref='salad'/>
+                </cat_values>
+                <allge_values> <!--allergen information (**IF NO VALUE, IS THE CONVENTION TO LEAVE IT LIKE THIS?**)-->
+                    <allge_value idref='not_glutenfree' />
+                    <allge_value idref='milk' />
+                    <allge_value idref='sulphites' />
+                </allge_values>
+                <tag_values> <!--recipe tags e.g. comfort food, quick & easy-->
+                    <tag_value idref='summer'/>
+                    <tag_value idref='vegatarian'/>
+                </tag_values>
+                <nutrition> Per 100 grams:
+                    <nutr_value idref='calories'>129<unit id="kcal"/></nutr_value>
+                    <nutr_value idref='fat'>7.91<unit id="g"/></nutr_value>
+                    <nutr_value idref='protein'>6.29<unit id="g"/></nutr_value>
+                    <nutr_value idref='carbs'>7.72<unit id="g"/></nutr_value>
+                    <nutr_value idref='sugar'>1.83<unit id="g"/></nutr_value>
+                    <nutr_value idref='sodium'>0.61<unit id="g"/></nutr_value>
+                    <nutr_value idref='fiber'>2.7<unit id="g"/></nutr_value>
+                </nutrition> <!--(**HOW TO LINK / HAVE TO CALCULATE**)-->
+            </value_information>
+        </information>
+        <comments/> <!--Linked to customerID and recipeID. Should show commnet text-->
+        <URL>
+        <a href="https://www.hellofresh.co.uk/recipes/goats-cheese-crostini-5978a5e9c9fd0878ca26cde2"/>
+        </URL> <!--Recipe URL-->
+    </recipe>
 </recipes>
 
 <!--########################################################################################################################-->
@@ -464,6 +695,12 @@
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
+    <ingredient id='courgette'> <!-- A single ingredient -->
+        <name>Courgette</name>
+        <type>Vegtable</type> <!-- Fruit, spice, etc. -->
+        <seasonality>All-year</seasonality>
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+    </ingredient>
     <ingredient id='mixBeans'> <!-- A single ingredient -->
         <name>Mixed Beans</name>
         <type>Vegtable</type> <!-- Fruit, spice, etc. -->
@@ -478,6 +715,12 @@
     </ingredient>
     <ingredient id='basil'> <!-- A single ingredient -->
         <name>Basil</name>
+        <type>Herb</type> <!-- Fruit, spice, etc. -->
+        <seasonality>All-year</seasonality>
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+    </ingredient>
+    <ingredient id='parsley'> <!-- A single ingredient -->
+        <name>Parsley</name>
         <type>Herb</type> <!-- Fruit, spice, etc. -->
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
@@ -512,6 +755,12 @@
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
+    <ingredient id='goat_cheese'> <!-- A single ingredient -->
+        <name>Goat Cheese</name>
+        <type>Cheese</type> <!-- Fruit, spice, etc. -->
+        <seasonality>All-year</seasonality>
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+    </ingredient>
     <ingredient id='ketjapManis'> <!-- A single ingredient -->
         <name>Ketjap Manis</name>
         <type>Sauce</type> <!-- Fruit, spice, etc. -->
@@ -526,6 +775,12 @@
     </ingredient>
     <ingredient id='peri_seasoning'> <!-- A single ingredient -->
         <name>Peri Peri Seasoning</name>
+        <type>Spice mix</type> <!-- Fruit, spice, etc. -->
+        <seasonality>All-year</seasonality>
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+    </ingredient>
+    <ingredient id='zatar'> <!-- A single ingredient -->
+        <name>Zatar</name>
         <type>Spice mix</type> <!-- Fruit, spice, etc. -->
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
@@ -545,6 +800,12 @@
     <ingredient id='red-wine_paste'> <!-- A single ingredient -->
         <name>Red Wine Stock Paste</name>
         <type>Paste</type> <!-- Fruit, spice, etc. -->
+        <seasonality>All-year</seasonality>
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+    </ingredient>
+    <ingredient id='red_vinegar'> <!-- A single ingredient -->
+        <name>Red Wine Vinegar</name>
+        <type>Vinegar</type> <!-- Fruit, spice, etc. -->
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
@@ -584,6 +845,12 @@
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
+    <ingredient id='vine_tomatoes'> <!-- A single ingredient -->
+        <name>Vine-Ripened Tomatoes</name>
+        <type>Vegtable</type> <!-- Fruit, spice, etc. -->
+        <seasonality>All-year</seasonality>
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+    </ingredient>
     <ingredient id='lime'> <!-- A single ingredient -->
         <name>Lime</name>
         <type>Fruit</type> <!-- Fruit, spice, etc. -->
@@ -598,6 +865,12 @@
     </ingredient>
     <ingredient id='ciabetta'> <!-- A single ingredient -->
         <name>Ciabatta</name>
+        <type>Bread</type> <!-- Fruit, spice, etc. -->
+        <seasonality>All-year</seasonality>
+        <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
+    </ingredient>
+    <ingredient id='wholemeal_baguette'> <!-- A single ingredient -->
+        <name>Wholemeal baguette</name>
         <type>Bread</type> <!-- Fruit, spice, etc. -->
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
@@ -653,8 +926,17 @@
     <tool id='knife'>
         <name>Knife</name>
     </tool>
+    <tool id='serrated_knife'>
+        <name>Serrated Knife</name>
+    </tool>
     <tool id='bowl'>
         <name>Bowl</name>
+    </tool>
+    <tool id='lg_bowl'>
+        <name>Large Bowl</name>
+    </tool>
+    <tool id='plate'>
+        <name>Plate</name>
     </tool>
     <tool id='pot'>
         <name>Pot</name>
@@ -668,8 +950,17 @@
     <tool id='med_saucepan'>
         <name>Medium saucepan</name>
     </tool>
+    <tool id='grill_pan'>
+        <name>Grill Pan</name>
+    </tool>
+    <tool id='chopping_board'>
+        <name>Chopping board</name>
+    </tool>
     <tool id='sieve'>
         <name>Sieve</name>
+    </tool>
+    <tool id='grater'>
+        <name>Grater</name>
     </tool>
     <tool id='rolling_pin'>
         <name>Rolling Pin</name>
@@ -679,6 +970,12 @@
     </tool>
     <tool id='pan'>
         <name>Pan</name>
+    </tool>
+    <tool id='aluminum_foil'>
+        <name>Aluminum foil</name>
+    </tool>
+    <tool id='paper_towel'>
+        <name>Paper Towel</name>
     </tool>
     <tool id='garlic_press'>
         <name>Garlic Press</name>
@@ -727,6 +1024,7 @@
         <tag_value id='lowcalorie'>Low calorie</tag_value>
         <tag_value id='quickeasy'>Quick and Easy</tag_value>
         <tag_value id='comfortfood'>Comfort Food</tag_value>
+        <tag_value id='summer'>Summer Recipes</tag_value>
     </recipe_tag>
     <allergens>
         <allge_value id='nut'>Nuts</allge_value>

@@ -1,104 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<recipebox_database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="recipebox.xsd">
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:output method="html" doctype-public="XSLT-compat" omit-xml-declaration="yes" encoding="UTF-8" indent="yes" />
 
-<recipes> <!--RECIPE DATABASE: holds the recipes-->
-    <recipe id='indoBeefNoodles'> <!--A single recipe -->
-        <title>Indonesian Inspired Beef Noodles with Stir-Fried Pepper, Lime and Peanuts</title>
-        <author idref='8'/>
-        <information> <!--Container box for recipe details-->
-            <description>Looking for a quick and tasty midweek dinner option? Try cooking up our Indonesian Inspired Beef Noodles in just 20-25 minutes for a delicious and speedy meal.</description>
-            <quantity>4</quantity> <!--How many servings-->
-            <tools> <!--Cooking utensils-->
-                <tool idref='kettle'/>
-                <tool idref='lg_fryingpan'/>
-                <tool idref='sieve'/>
-                <tool idref='med_saucepan'/>
-                <tool idref='rolling_pin'/>
-            </tools>
-            <time> <!--Container box for time details (**HOW TO LINK TO MEASUREMENTS**)-->
-                <preptime>25 minutes</preptime>
-                <cooktime>20 minutes</cooktime>S
-                <totaltime>45 minutes</totaltime>
-            </time>
-            <ingredients> <!--Container box for ingredients-->
-                <ingredient idref='beefMince'>
-                    <amount>480</amount>
-                    <unit idref='g'/>
-                </ingredient>
-                <ingredient idref='bellPepper'>
-                    <amount>2</amount>
-                    <unit idref='units'/>
-                </ingredient>
-                 <ingredient idref='eggNoodle'>
-                    <amount>250</amount>
-                    <unit idref='g'/>
-                </ingredient>
-                <ingredient idref='indoSpiceMix'>
-                    <amount>2</amount>
-                    <unit idref='sachets'/>
-                </ingredient>
-                <ingredient idref='ketjapManis'>
-                    <amount>100</amount>
-                    <unit idref='g'/>
-                </ingredient>
-                <ingredient idref='riceVinegar'>
-                    <amount>30</amount>
-                    <unit idref='mL'/>
-                </ingredient>
-                <ingredient idref='honey'>
-                    <amount>30</amount>
-                    <unit idref='g'/>
-                </ingredient>
-                <ingredient idref='saltPeanuts'>
-                    <amount>50</amount>
-                    <unit idref='g'/>
-                </ingredient>
-                <ingredient idref='lime'>
-                    <amount>1</amount>
-                    <unit idref='unit(s)'/>
-                </ingredient>
-            </ingredients>  
-            <steps> <!--Container box for cooking instructions-->
-                <step>1.
-                a. Boil a full kettle.
-                b. Halve the bell pepper and remove the core and seeds. Slice into thin strips.
-                c. Heat a large frying pan on medium-high heat (no oil).
-                d. Once hot, add the beef mince and sliced pepper. 
-                Fry until browned and tender, 5-6 mins. Use a spoon to break it up as it cooks. 
-                IMPORTANT: Wash your hands and equipment after handling raw mince. </step>
-                <step>2. 
-                    a. Meanwhile, pour the boiled water into a medium saucepan with 1/4 tsp salt on high heat.
-                    b. Add the noodles and cook until tender, 4 mins. 
-                    c. Once cooked, drain in a sieve and run under cold water to stop them sticking together. </step>
-                <step>3.a. Once the mince is cooked, drain and discard any excess fat. IMPORTANT: The mince is cooked when no longer pink in the middle.
-                        b. Add the Indonesian style spice mix and cook until fragrant, 1 min.
-                        c. Stir in the ketjap manis, rice vinegar, honey and water for the sauce (see pantry for amount). Bring to the boil and simmer, 3-4 mins. 
-                        TIP: If your honey has hardened, pop it in a bowl of hot water for 1 min.</step>
-                <step>4.a. Meanwhile, crush the peanuts in the unopened sachet using a rolling pin.
-                        b. Halve the lime (see ingredients for amount).</step>
-                <step>5. a. When the sauce has thickened, add the cooked noodles, a good squeeze of lime and half the peanuts to the pan.
-                        b. Stir to coat the noodles in the sauce and cook until piping hot, 1-2 mins.
-                        c. Taste, and season with salt and pepper if needed. Add a splash more water if the noodles look a little dry.</step>
-                <step>6. a. Share the beef noodles between your bowls.
-                        b. Finish with a sprinkle of the remaining peanuts for those who'd like them.
-                        Enjoy!</step>             
-            </steps>
-            <value_information> <!--Container box for recipe categories, allergens, tags, and nutrition information -->
-                <cat_values> <!--recipe category-->
-                    <cat_value idref='mains'/>
-                </cat_values>
-                <allge_values/> <!--allergen information (**IF NO VALUE, IS THE CONVENTION TO LEAVE IT LIKE THIS?**)-->
-                <tag_values> <!--recipe tags e.g. comfort food, quick & easy-->
-                    <tag_value idref='quickeasy'/>
-                    <tag_value idref='comfortfood'/>
-                </tag_values>
-                <nutrition /> <!--(**HOW TO LINK / HAVE TO CALCULATE**)-->
-            </value_information>
-        </information>
-        <comments/> <!--Linked to customerID and recipeID. Should show commnet text-->
-        <URL>
-        <a href="https://www.hellofresh.co.uk/recipes/indonesian-inspired-beef-noodles-651557c5be675f371f89ef48"/>
-        </URL> <!--Recipe URL-->
-    </recipe>
-</recipes>
-</recipebox_database>
+    <xsl:template match="/">
+        <html>
+            <head>
+                <title> Quick and Easy Recipes</title>
+            </head>
+            <body>
+                <h2>Here is the list of <xsl:value-of select="count(//recipes/recipe[information/value_information/tag_values/tag_value[@idref='quickeasy'])"/> recipes</h2>
+
+                <xsl:for-each select="//recipes/recipe[information/value_information/tag_values/tag_value[@idref='quickeasy']">
+                    <xsl:sort select="//recipes/recipe[information/value_information/tag_values/tag_value[@idref='quickeasy']" data-type="number" order="ascending"/>
+                    <p>
+                        <b><xsl:value-of select="title"/></b>
+                        <xsl:value-of select="information/value_information/tag_values/tag_value[@idref='quickeasy']"/>
+                    </p>
+                </xsl:for-each>
+            </body>
+        </html>
+    </xsl:template>
+</xsl:stylesheet>
