@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="Scenario1.xsl"?>
+<?xml-stylesheet type="text/xsl" href="Scenario6.xsl"?>
 <recipebox_database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="recipebox.xsd">
 
 <!--########################################################################################################################-->
@@ -657,7 +657,19 @@
 <!--RECIPEBOXES-->
 <recipeboxes>
     <recipebox id='1'> <!-- A single recipe box -->
-        <recipe idref='1'/>
+        <recipes>
+            <recipe idref='1'/>
+        </recipes>
+        <tags> 
+            <tag idref='vegan'/>
+        </tags>
+        <price currency="euro">45.00</price>
+    </recipebox>
+    <recipebox id='2'> <!-- A single recipe box -->
+        <recipes>
+            <recipe idref='2'/>
+            <recipe idref='3'/>
+        </recipes>
         <tags> 
             <tag idref='vegan'/>
         </tags>
