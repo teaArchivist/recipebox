@@ -3,7 +3,7 @@
   <!-- Match the root element -->
   <xsl:template match="/">
     <!-- Apply templates to each recipe box -->
-    <xsl:apply-templates select="//recipebox"/>
+    <xsl:apply-templates select="//recipeboxes/recipebox"/>
   </xsl:template>
 
   <!-- Match recipe box elements -->
@@ -20,7 +20,7 @@
       <p>Price: <xsl:value-of select="concat(price, ' ', price/@currency)"/></p>
 
       <!-- Retrieve recipes -->
-      <xsl:for-each select="recipe">
+      <xsl:for-each select="//recipes/recipe">
         <!-- Retrieve recipe details using key() function -->
         <xsl:variable name="recipeDetails" select="key('RecipeKey', @idref)"/>
 
