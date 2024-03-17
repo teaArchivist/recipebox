@@ -21,7 +21,7 @@
                 <tool idref='pot'/>
                 <tool idref='cutting_board'/>
             </tools>
-            <time> <!--Container box for time details (**HOW TO LINK TO MEASUREMENTS**)-->
+            <time> <!--Container box for time details-->
                 <preptime>10 minutes</preptime>
                 <cooktime>20 minutes</cooktime>
                 <totaltime>30 minutes</totaltime>
@@ -46,26 +46,26 @@
                 <step>4. Bake at 180°C for 15 minutes.</step>
             </steps>
             <value_information> <!--Container box for recipe categories, allergens, tags, and nutrition information -->
-                <cat_values> <!--recipe category-->
+                <cat_values>
                     <cat_value idref='mains'/>
                 </cat_values>
-                <allge_values/> <!--allergen information (**IF NO VALUE, IS THE CONVENTION TO LEAVE IT LIKE THIS?**)-->
-                <tag_values> <!--recipe tags e.g. comfort food, quick & easy-->
+                <allge_values/>
+                <tag_values>
                     <tag_value idref='quickeasy'/>
                     <tag_value idref='comfortfood'/>
                 </tag_values>
                 <nutrition>
-                    <nutr_value idref='calories'>350</nutr_value>
-                    <nutr_value idref='fat'>15g</nutr_value>
-                    <nutr_value idref='protein'>10g</nutr_value>
-                    <nutr_value idref='carbs'>45g</nutr_value>
-                    <nutr_value idref='sugar'>4g</nutr_value>
-                    <nutr_value idref='sodium'>500mg</nutr_value>
-                    <nutr_value idref='fiber'>8g</nutr_value>
+                    <nutr_value idref='calories' measure='kcal'>350</nutr_value>
+                    <nutr_value idref='fat' measure='g'>15g</nutr_value>
+                    <nutr_value idref='protein' measure='g'>10g</nutr_value>
+                    <nutr_value idref='carbs' measure='g'>45g</nutr_value>
+                    <nutr_value idref='sugar' measure='g'>4g</nutr_value>
+                    <nutr_value idref='sodium' measure='g'>500mg</nutr_value>
+                    <nutr_value idref='fiber' measure='g'>8g</nutr_value>
                 </nutrition>
             </value_information>
         </information>
-        <comments> <!--Linked to customerID and recipeID. Should show commnet text-->
+        <comments> <!--Refers to comment section-->
             <comment idref="1"/>
         </comments>
         <URL>https://www.recipewebsite.com/recipe/chickentenders</URL> <!--Recipe URL-->
@@ -84,7 +84,7 @@
                 <tool idref='med_saucepan'/>
                 <tool idref='rolling_pin'/>
             </tools>
-            <time> <!--Container box for time details (**HOW TO LINK TO MEASUREMENTS**)-->
+            <time> <!--Container box for time details-->
                 <preptime>25 minutes</preptime>
                 <cooktime>20 minutes</cooktime>
                 <totaltime>45 minutes</totaltime>
@@ -153,26 +153,26 @@
                         Enjoy!</step>             
             </steps>
             <value_information> <!--Container box for recipe categories, allergens, tags, and nutrition information -->
-                <cat_values> <!--recipe category-->
+                <cat_values>
                     <cat_value idref='mains'/>
                 </cat_values>
-                <allge_values/> <!--allergen information (**IF NO VALUE, IS THE CONVENTION TO LEAVE IT LIKE THIS?**)-->
-                <tag_values> <!--recipe tags e.g. comfort food, quick & easy-->
+                <allge_values/>
+                <tag_values> 
                     <tag_value idref='quickeasy'/>
                     <tag_value idref='comfortfood'/>
                 </tag_values>
                 <nutrition>
-                    <nutr_value idref='calories'>350</nutr_value>
-                    <nutr_value idref='fat'>15g</nutr_value>
-                    <nutr_value idref='protein'>10g</nutr_value>
-                    <nutr_value idref='carbs'>45g</nutr_value>
-                    <nutr_value idref='sugar'>10g</nutr_value>
-                    <nutr_value idref='sodium'>500mg</nutr_value>
-                    <nutr_value idref='fiber'>8g</nutr_value>
-                </nutrition> <!--(**HOW TO LINK / HAVE TO CALCULATE**)-->
+                    <nutr_value idref='calories' measure='kcal'>350</nutr_value>
+                    <nutr_value idref='fat' measure='g'>15g</nutr_value>
+                    <nutr_value idref='protein' measure='g'>10g</nutr_value>
+                    <nutr_value idref='carbs' measure='g'>45g</nutr_value>
+                    <nutr_value idref='sugar' measure='g'>10g</nutr_value>
+                    <nutr_value idref='sodium' measure='g'>500mg</nutr_value>
+                    <nutr_value idref='fiber' measure='g'>8g</nutr_value>
+                </nutrition> 
             </value_information>
         </information>
-       <comments>
+       <comments> <!--Refers to comment section-->
        </comments>
         <URL>https://www.hellofresh.co.uk/recipes/indonesian-inspired-beef-noodles-651557c5be675f371f89ef48</URL> <!--Recipe URL-->
     </recipe>
@@ -189,7 +189,7 @@
                 <tool idref='sieve'/>
                 <tool idref='garlic_press'/>
             </tools>
-            <time> <!--Container box for time details (**HOW TO LINK TO MEASUREMENTS**)-->
+            <time> <!--Container box for time details-->
                 <preptime>20 minutes</preptime>
                 <cooktime>10 minutes</cooktime>
                 <totaltime>30 minutes</totaltime>
@@ -276,25 +276,25 @@
                 <cat_values> <!--recipe category-->
                     <cat_value idref='mains'/>
                 </cat_values>
-                <allge_values> <!--allergen information (**IF NO VALUE, IS THE CONVENTION TO LEAVE IT LIKE THIS?**)-->
+                <allge_values>
                     <allge_value idref='not_glutenfree' />
                     <allge_value idref='sulphites' />
                 </allge_values>
-                <tag_values> <!--recipe tags e.g. comfort food, quick & easy-->
+                <tag_values>
                     <tag_value idref='quickeasy'/>
                 </tag_values>
                 <nutrition>
-                    <nutr_value idref='calories'>350</nutr_value>
-                    <nutr_value idref='fat'>15g</nutr_value>
-                    <nutr_value idref='protein'>10g</nutr_value>
-                    <nutr_value idref='carbs'>45g</nutr_value>
-                    <nutr_value idref='sugar'>10g</nutr_value>
-                    <nutr_value idref='sodium'>500mg</nutr_value>
-                    <nutr_value idref='fiber'>8g</nutr_value>
-                </nutrition> <!--(**HOW TO LINK / HAVE TO CALCULATE**)-->
+                    <nutr_value idref='calories' measure='kcal'>350</nutr_value>
+                    <nutr_value idref='fat' measure='g'>15g</nutr_value>
+                    <nutr_value idref='protein' measure='g'>10g</nutr_value>
+                    <nutr_value idref='carbs' measure='g'>45g</nutr_value>
+                    <nutr_value idref='sugar' measure='g'>10g</nutr_value>
+                    <nutr_value idref='sodium' measure='g'>500mg</nutr_value>
+                    <nutr_value idref='fiber' measure='g'>8g</nutr_value>
+                </nutrition>
             </value_information>
         </information>
-        <comments/> <!--Linked to customerID and recipeID. Should show commnet text-->
+        <comments/><!--Refers to comment section-->
         <URL>https://www.hellofresh.co.uk/recipes/peri-peri-pork-and-bean-stew-659594b6aa12a55eb352d9de</URL> <!--Recipe URL-->
     </recipe>
     <recipe id='4'> <!--A single recipe -->
@@ -308,7 +308,7 @@
                 <tool idref='bowl' />
                 <tool idref='pot' />
             </tools>
-            <time> <!--Container box for time details (**HOW TO LINK TO MEASUREMENTS**)-->
+            <time> <!--Container box for time details-->
                 <preptime>5 minutes</preptime>
                 <cooktime>5 minutes</cooktime>
                 <totaltime>10minutes</totaltime>
@@ -371,7 +371,7 @@
                 <cat_values> <!--recipe category-->
                     <cat_value idref='mains'/>
                 </cat_values>
-                <allge_values> <!--allergen information (**IF NO VALUE, IS THE CONVENTION TO LEAVE IT LIKE THIS?**)-->
+                <allge_values> <!--allergen information-->
                     <allge_value idref='not_glutenfree' />
                     <allge_value idref='milk' />
                     <allge_value idref='soya' />
@@ -386,20 +386,20 @@
                     <tag_value idref='summer'/>
                 </tag_values>
                 <nutrition>
-                    <nutr_value idref='calories'>187</nutr_value>
-                    <nutr_value idref='fat'>4.5</nutr_value>
-                    <nutr_value idref='protein'>8</nutr_value>
-                    <nutr_value idref='carbs'>26</nutr_value>
-                    <nutr_value idref='sugar'>2.5</nutr_value>
-                    <nutr_value idref='sodium'>0.06</nutr_value>
-                    <nutr_value idref='fiber'>2.7</nutr_value>
-                </nutrition> <!--(**HOW TO LINK / HAVE TO CALCULATE**)-->
+                    <nutr_value idref='calories' measure='kcal'>187</nutr_value>
+                    <nutr_value idref='fat' measure='g'>4.5</nutr_value>
+                    <nutr_value idref='protein' measure='g'>8</nutr_value>
+                    <nutr_value idref='carbs' measure='g'>26</nutr_value>
+                    <nutr_value idref='sugar' measure='g'>2.5</nutr_value>
+                    <nutr_value idref='sodium' measure='g'>0.06</nutr_value>
+                    <nutr_value idref='fiber' measure='g'>2.7</nutr_value>
+                </nutrition>
             </value_information>
         </information>
-        <comments/> <!--Linked to customerID and recipeID. Should show commnet text-->
-        <URL><a href='https://www.gousto.co.uk/menu?collection=quick-easy' /></URL> <!--Recipe URL-->
+        <comments/> <!--Refers to comment section-->
+        <URL>https://www.gousto.co.uk/menu?collection=quick-easy</URL> <!--Recipe URL-->
     </recipe>
-    <recipe id='chickenHarissa_vegFlatbread'> <!--A single recipe -->
+    <recipe id='5'> <!--A single recipe -->
         <title>Honey Glazed Chicken and Harissa Veg Flatbread</title>
         <author idref='8'/>
         <information> <!--Container box for recipe details-->
@@ -408,14 +408,14 @@
             <tools> <!--Cooking utensils-->
                 <tool idref='aluminum_foil'/>
                 <tool idref='baking_tray'/>
-                <tool id='sm_bowl' />
-                <tool id='knife' />
-                <tool id='pan' />
-                <tool id='oven' />
+                <tool idref='sm_bowl' />
+                <tool idref='knife' />
+                <tool idref='pan' />
+                <tool idref='oven' />
             </tools>
-            <time> <!--Container box for time details (**HOW TO LINK TO MEASUREMENTS**)-->
+            <time> <!--Container box for time details-->
                 <preptime>50 minutes</preptime>
-                <cooktime>35 minutes</cooktime>S
+                <cooktime>35 minutes</cooktime>
                 <totaltime>85 minutes</totaltime>
             </time>
             <ingredients> <!--Container box for ingredients-->
@@ -489,36 +489,34 @@
                         Enjoy! </step>          
             </steps>
             <value_information> <!--Container box for recipe categories, allergens, tags, and nutrition information -->
-                <cat_values> <!--recipe category-->
+                <cat_values> 
                     <cat_value idref='entrees'/>
                     <cat_value idref='sides'/>
                 </cat_values>
-                <allge_values> <!--allergen information (**IF NO VALUE, IS THE CONVENTION TO LEAVE IT LIKE THIS?**)-->
+                <allge_values> 
                     <allge_value idref='not_glutenfree' />
                     <allge_value idref='milk' />
                     <allge_value idref='sulphites' />
                 </allge_values>
-                <tag_values> <!--recipe tags e.g. comfort food, quick & easy-->
+                <tag_values> 
                     <tag_value idref='summer'/>
                 </tag_values>
-                <nutrition> Per 100 grams:
-                    <nutr_value idref='calories'>143<unit id="kcal"/></nutr_value>
-                    <nutr_value idref='fat'>6.33<unit id="g"/></nutr_value>
-                    <nutr_value idref='protein'>8.21<unit id="g"/></nutr_value>
-                    <nutr_value idref='carbs'>17.99<unit id="g"/></nutr_value>
-                    <nutr_value idref='sugar'>4.94<unit id="g"/></nutr_value>
-                    <nutr_value idref='sodium'>0.43<unit id="g"/></nutr_value>
-                    <nutr_value idref='fiber'>4<unit id="g"/></nutr_value>
-                </nutrition> <!--(**HOW TO LINK / HAVE TO CALCULATE**)-->
+                <nutrition>
+                    <nutr_value idref='calories' measure='kcal'>143</nutr_value>
+                    <nutr_value idref='fat' measure='g'>6.33</nutr_value>
+                    <nutr_value idref='protein' measure='g'>8.21</nutr_value>
+                    <nutr_value idref='carbs' measure='g'>17.99</nutr_value>
+                    <nutr_value idref='sugar' measure='g'>4.94</nutr_value>
+                    <nutr_value idref='sodium' measure='g'>0.43</nutr_value>
+                    <nutr_value idref='fiber' measure='g'>4</nutr_value>
+                </nutrition>
             </value_information>
         </information>
-        <comments/> <!--Linked to customerID and recipeID. Should show commnet text-->
-        <URL>
-        <a href="https://www.hellofresh.co.uk/recipes/honey-glazed-chicken-and-harissa-veg-flatbread-6491c3bb25862a444bdb63fc"/>
-        </URL> <!--Recipe URL-->
+        <comments/> <!--Refers to comment section-->
+        <URL>https://www.hellofresh.co.uk/recipes/honey-glazed-chicken-and-harissa-veg-flatbread-6491c3bb25862a444bdb63fc"</URL> <!--Recipe URL-->
     </recipe>
 
-<recipe id='goatCheese_chickSalad'> <!--A single recipe -->
+<recipe id='6'> <!--A single recipe -->
         <title>Goats Cheese Crostini with Chick Pea Salad, Tomatoes and Zaatar</title>
         <author idref='8'/>
         <information> <!--Container box for recipe details-->
@@ -538,9 +536,9 @@
                 <tool idref='plate' />
                 <tool idref='oven' />
             </tools>
-            <time> <!--Container box for time details (**HOW TO LINK TO MEASUREMENTS**)-->
+            <time> <!--Container box for time details-->
                 <preptime>40 minutes</preptime>
-                <cooktime>0 minutes</cooktime>S
+                <cooktime>0 minutes</cooktime>
                 <totaltime>40 minutes</totaltime>
             </time>
             <ingredients> <!--Container box for ingredients-->
@@ -602,34 +600,32 @@
                 <step>6. Mix the chickpeas and parsley into the tomato and stir in the olive oil (amount specified in the ingredient list). Spoon a generous amount of the chickpea salad onto plates, add a few slices of courgette and top with a goat's cheese crostini. Finish with a sprinkling of the remaining zahtar spice blend. Enjoy! </step>          
             </steps>
             <value_information> <!--Container box for recipe categories, allergens, tags, and nutrition information -->
-                <cat_values> <!--recipe category-->
+                <cat_values>
                     <cat_value idref='entree'/>
                     <cat_value idref='salad'/>
                 </cat_values>
-                <allge_values> <!--allergen information (**IF NO VALUE, IS THE CONVENTION TO LEAVE IT LIKE THIS?**)-->
+                <allge_values>
                     <allge_value idref='not_glutenfree' />
                     <allge_value idref='milk' />
                     <allge_value idref='sulphites' />
                 </allge_values>
-                <tag_values> <!--recipe tags e.g. comfort food, quick & easy-->
+                <tag_values> 
                     <tag_value idref='summer'/>
-                    <tag_value idref='vegatarian'/>
+                    <tag_value idref='vegetarian'/>
                 </tag_values>
-                <nutrition> Per 100 grams:
-                    <nutr_value idref='calories'>129<unit id="kcal"/></nutr_value>
-                    <nutr_value idref='fat'>7.91<unit id="g"/></nutr_value>
-                    <nutr_value idref='protein'>6.29<unit id="g"/></nutr_value>
-                    <nutr_value idref='carbs'>7.72<unit id="g"/></nutr_value>
-                    <nutr_value idref='sugar'>1.83<unit id="g"/></nutr_value>
-                    <nutr_value idref='sodium'>0.61<unit id="g"/></nutr_value>
-                    <nutr_value idref='fiber'>2.7<unit id="g"/></nutr_value>
-                </nutrition> <!--(**HOW TO LINK / HAVE TO CALCULATE**)-->
+                <nutrition>
+                    <nutr_value idref='calories' measure='kcal'>129</nutr_value>
+                    <nutr_value idref='fat' measure='g'>7.91</nutr_value>
+                    <nutr_value idref='protein' measure='g'>6.29</nutr_value>
+                    <nutr_value idref='carbs' measure='g'>7.72</nutr_value>
+                    <nutr_value idref='sugar' measure='g'>1.83</nutr_value>
+                    <nutr_value idref='sodium' measure='g'>0.61</nutr_value>
+                    <nutr_value idref='fiber' measure='g'>2.7</nutr_value>
+                </nutrition> 
             </value_information>
         </information>
-        <comments/> <!--Linked to customerID and recipeID. Should show commnet text-->
-        <URL>
-        <a href="https://www.hellofresh.co.uk/recipes/goats-cheese-crostini-5978a5e9c9fd0878ca26cde2"/>
-        </URL> <!--Recipe URL-->
+        <comments/> <!--Refers to comment section-->
+        <URL>https://www.hellofresh.co.uk/recipes/goats-cheese-crostini-5978a5e9c9fd0878ca26cde2</URL> <!--Recipe URL-->
     </recipe>
 </recipes>
 
@@ -653,7 +649,7 @@
         <gastronomy_preferences>
             <pref idref='protein'/> 
             <pref idref='vegan'/>
-        </gastronomy_preferences> <!--Allergies, preferences, etc. LINK-->
+        </gastronomy_preferences>
     </customer>
 </customers>
 
@@ -662,7 +658,7 @@
 <recipeboxes>
     <recipebox id='1'> <!-- A single recipe box -->
         <recipe idref='1'/>
-        <tags> <!-- Add a tag to categorize the recipe box?-->
+        <tags> 
             <tag idref='vegan'/>
         </tags>
         <price currency="euro">45.00</price>
@@ -674,217 +670,217 @@
 <ingredients>
     <ingredient id='beefMince'> <!-- A single ingredient -->
         <name>Beef Mince</name>
-        <type>Meat</type> <!-- Fruit, spice, etc. -->
+        <type>Meat</type>
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='porkMince'> <!-- A single ingredient -->
         <name>Pork Mince</name>
-        <type>Meat</type> <!-- Fruit, spice, etc. -->
+        <type>Meat</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='dicChorizo'> <!-- A single ingredient -->
         <name>Diced Chorizo</name>
-        <type>Sausage</type> <!-- Fruit, spice, etc. -->
+        <type>Sausage</type>
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='bellPepper'> <!-- A single ingredient -->
         <name>Bell pepper</name>
-        <type>Vegtable</type> <!-- Fruit, spice, etc. -->
+        <type>Vegtable</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='courgette'> <!-- A single ingredient -->
         <name>Courgette</name>
-        <type>Vegtable</type> <!-- Fruit, spice, etc. -->
+        <type>Vegtable</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='mixBeans'> <!-- A single ingredient -->
         <name>Mixed Beans</name>
-        <type>Vegtable</type> <!-- Fruit, spice, etc. -->
+        <type>Vegtable</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='garlic_clove'> <!-- A single ingredient -->
         <name>Garlic clove</name>
-        <type>Vegtable</type> <!-- Fruit, spice, etc. -->
+        <type>Vegtable</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='basil'> <!-- A single ingredient -->
         <name>Basil</name>
-        <type>Herb</type> <!-- Fruit, spice, etc. -->
+        <type>Herb</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='parsley'> <!-- A single ingredient -->
         <name>Parsley</name>
-        <type>Herb</type> <!-- Fruit, spice, etc. -->
+        <type>Herb</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='mint'> <!-- A single ingredient -->
         <name>Mint</name>
-        <type>Herb</type> <!-- Fruit, spice, etc. -->
+        <type>Herb</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='blanche_peas'> <!-- A single ingredient -->
         <name>Blanched Peas</name>
-        <type>Vegtable</type> <!-- Fruit, spice, etc. -->
+        <type>Vegtable</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='fresh_tag'> <!-- A single ingredient -->
         <name>Fresh Tagliatelle</name>
-        <type>Pasta</type> <!-- Fruit, spice, etc. -->
+        <type>Pasta</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='eggNoodle'> <!-- A single ingredient -->
         <name>Egg Noodle Nest</name>
-        <type>Pasta</type> <!-- Fruit, spice, etc. -->
+        <type>Pasta</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='grate_italianCheese'> <!-- A single ingredient -->
         <name>Grated Italian Hard Cheese</name>
-        <type>Cheese</type> <!-- Fruit, spice, etc. -->
+        <type>Cheese</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='goat_cheese'> <!-- A single ingredient -->
         <name>Goat Cheese</name>
-        <type>Cheese</type> <!-- Fruit, spice, etc. -->
+        <type>Cheese</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='ketjapManis'> <!-- A single ingredient -->
         <name>Ketjap Manis</name>
-        <type>Sauce</type> <!-- Fruit, spice, etc. -->
+        <type>Sauce</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='indoSpiceMix'> <!-- A single ingredient -->
         <name>Indonesian Style Spice Mix</name>
-        <type>Spice mix</type> <!-- Fruit, spice, etc. -->
+        <type>Spice mix</type>
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='peri_seasoning'> <!-- A single ingredient -->
         <name>Peri Peri Seasoning</name>
-        <type>Spice mix</type> <!-- Fruit, spice, etc. -->
+        <type>Spice mix</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='zatar'> <!-- A single ingredient -->
         <name>Zatar</name>
-        <type>Spice mix</type> <!-- Fruit, spice, etc. -->
+        <type>Spice mix</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='salt'> <!-- A single ingredient -->
         <name>Salt</name>
-        <type>Spice</type> <!-- Fruit, spice, etc. -->
+        <type>Spice</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='pepper'> <!-- A single ingredient -->
         <name>Pepper</name>
-        <type>Spice</type> <!-- Fruit, spice, etc. -->
+        <type>Spice</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='red-wine_paste'> <!-- A single ingredient -->
         <name>Red Wine Stock Paste</name>
-        <type>Paste</type> <!-- Fruit, spice, etc. -->
+        <type>Paste</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='red_vinegar'> <!-- A single ingredient -->
         <name>Red Wine Vinegar</name>
-        <type>Vinegar</type> <!-- Fruit, spice, etc. -->
+        <type>Vinegar</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='riceVinegar'> <!-- A single ingredient -->
         <name>Rice Vinegar</name>
-        <type>Vinegar</type> <!-- Fruit, spice, etc. -->
+        <type>Vinegar</type>
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='sugar'> <!-- A single ingredient -->
         <name>Sugar</name>
-        <type>Sugar</type> <!-- Fruit, spice, etc. -->
+        <type>Sugar</type>
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='honey'> <!-- A single ingredient -->
         <name>Honey</name>
-        <type>Sugar</type> <!-- Fruit, spice, etc. -->
+        <type>Sugar</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='saltPeanuts'> <!-- A single ingredient -->
         <name>Salted Peanuts</name>
-        <type>Nut</type> <!-- Fruit, spice, etc. -->
+        <type>Nut</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
         <ingredient id='pistachios'> <!-- A single ingredient -->
         <name>Pistachios</name>
-        <type>Nut</type> <!-- Fruit, spice, etc. -->
+        <type>Nut</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='fineChop_tomatoes'> <!-- A single ingredient -->
         <name>Finely Chopped Tomatoes</name>
-        <type>Vegtable</type> <!-- Fruit, spice, etc. -->
+        <type>Vegtable</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='vine_tomatoes'> <!-- A single ingredient -->
         <name>Vine-Ripened Tomatoes</name>
-        <type>Vegtable</type> <!-- Fruit, spice, etc. -->
+        <type>Vegtable</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='lime'> <!-- A single ingredient -->
         <name>Lime</name>
-        <type>Fruit</type> <!-- Fruit, spice, etc. -->
+        <type>Fruit</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='lemon'> <!-- A single ingredient -->
         <name>Lemon</name>
-        <type>Fruit</type> <!-- Fruit, spice, etc. -->
+        <type>Fruit</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='ciabetta'> <!-- A single ingredient -->
         <name>Ciabatta</name>
-        <type>Bread</type> <!-- Fruit, spice, etc. -->
+        <type>Bread</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='wholemeal_baguette'> <!-- A single ingredient -->
         <name>Wholemeal baguette</name>
-        <type>Bread</type> <!-- Fruit, spice, etc. -->
+        <type>Bread</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='oliveOil'> <!-- A single ingredient -->
         <name>Olive Oil</name>
-        <type>Oil</type> <!-- Fruit, spice, etc. -->
+        <type>Oil</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
     <ingredient id='water'> <!-- A single ingredient -->
         <name>Water</name>
-        <type>Liquid</type> <!-- Fruit, spice, etc. -->
+        <type>Liquid</type> 
         <seasonality>All-year</seasonality>
         <supplier idref='1'/> <!--Supplier that handles this ingredient delivery-->
     </ingredient>
@@ -998,7 +994,7 @@
 <!--USER COMMENTS-->
 <user_feedback>
     <comment id='1'>
-        <customer idref='1'/> <!--Customer who left feedback (ID needed)-->
+        <customer idref='1'/> <!--Customer who left feedback-->
         <recipe idref='1'/>
         <rating>4.2</rating>
         <comment>Amazing recipe!</comment>
@@ -1006,10 +1002,10 @@
 </user_feedback>
 
 <!--########################################################################################################################-->
-<!--RECIPE CATEGORISATION-->
-<recipe_categorisation> <!--RECIPE CATEGORIES: holds the categories, tags, and allergen categories for recipes-->
+<!--RECIPE CATEGORISATION: holds the categories, tags, and allergen categories for recipes-->
+<recipe_categorisation>
     <category>
-        <cat_value id='mains'>Mains</cat_value><!--ID naming to be easier to remember/identify?-->
+        <cat_value id='mains'>Mains</cat_value>
         <cat_value id='entrees'>Entrées</cat_value>
         <cat_value id='sides'>Sides</cat_value>
         <cat_value id='soups_stews'>Soups and Stews</cat_value>

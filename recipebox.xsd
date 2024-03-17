@@ -273,11 +273,11 @@
 <!--allergy value-->
 <xs:complexType name="allge_valuesType">
     <xs:sequence minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="allge_value" type="allge_valueType"/>
+        <xs:element name="allge_value" type="allge_valuelistType"/>
     </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="allge_valueTyp">
+<xs:complexType name="allge_valuelistType">
     <xs:attribute name="idref" type="xs:string"/>
 </xs:complexType>
 
@@ -304,6 +304,7 @@
     <xs:simpleContent>
         <xs:extension base="xs:string">
             <xs:attribute name="idref" type="xs:string"/>
+            <xs:attribute name="measure" type="xs:string"/>
         </xs:extension>
     </xs:simpleContent>
 </xs:complexType>
